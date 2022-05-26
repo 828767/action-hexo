@@ -16,7 +16,9 @@ language: zh-CN  #theme: maupassant，landscape，Annie
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+# theme: landscape
+# theme: maupassant
+theme: butterfly
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -71,6 +73,14 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
+archive_generator:
+  per_page: 40  #值为0表示不分页，按需填写
+  yearly: true  #是否按年生成归档
+  monthly: false  #为了加快生成速度，按月归档就不要了
+tag_generator:
+  per_page: 40  #值为0表示不分页，按需填写
+category_generator:
+  per_page: 40  #值为0表示不分页，按需填写
 
 # Category & Tag
 default_category: uncategorized
@@ -105,3 +115,38 @@ ignore:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# 基于jQuery的本地搜索引擎，需要安装hexo-generator-search插件使用
+##  path - file path. Default is search.xml .
+##  field - the search scope you want to search, you can chose:
+##  post (Default) - will only covers all the posts of your blog.
+##  page - will only covers all the pages of your blog.
+##  all - will covers all the posts and pages of your blog.
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# 图表，以主题具体实现为准，建议有公式的页面才加载
+# https://github.com/webappdevelp/hexo-filter-mermaid-diagrams
+# <script type="text/javascript" async
+#   src="https://unpkg.com/mermaid@9.1.1/dist/mermaid.min.js">
+# </script>
+# mermaid: ## mermaid url https://github.com/knsv/mermaid
+#   enable: true  # default true
+#   version: "9.1.1" # default v7.1.2
+#   options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    #startOnload: true  // default true
+
+# 数学公式，以主题具体实现为准，建议有公式的页面才加载
+# https://github.com/hexojs/hexo-math
+# <script type="text/javascript" async
+#   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+# </script>
+# math:
+#   engine: 'mathjax' # 'mathjax' or 'katex'
+#   mathjax:
+#     src: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML ##custom_mathjax_source
+#     config:
+      # MathJax config
