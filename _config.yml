@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 一网盟 #网站标题
-subtitle: '人生若只如初见' #网站副标题
+title: 易网盟 #网站标题
+subtitle: '一切都很美好' #网站副标题
 description: ''
 keywords:
-author: 一网盟
+author: 易网盟
 timezone: 'Asia/Shanghai'
 # language: en
 #language: zh-Hans #theme: yelee，next
@@ -19,10 +19,11 @@ language: zh-CN  #theme: maupassant，landscape，Annie
 # theme: landscape
 # theme: maupassant
 theme: butterfly
+# theme: matery
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://yiwangmeng.cn # 网址, 必须以 http[s]:// 开头
+url: https://yiwangmeng.cn # 网址, 必须以 http[s]:// 开头
 permalink: :title.html #链接发布格式
 permalink_defaults:
 pretty_urls:
@@ -127,6 +128,12 @@ search:
   field: post
   format: html
   limit: 10000
+
+# 在生成文章时生成中文拼音的永久链接，hexo-permalink-pinyin
+# permalink_pinyin:
+#   enable: true
+#   separator: '-' # default: '-'
+#   exclude: /ignore_post/   # Regex for which post should skip
 
 # 图表，以主题具体实现为准，建议有公式的页面才加载
 # https://github.com/webappdevelp/hexo-filter-mermaid-diagrams
