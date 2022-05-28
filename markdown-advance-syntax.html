@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Markdown高级语法 | 易网盟</title><meta name="keywords" content="流程图 UML图"><meta name="author" content="易网盟"><meta name="copyright" content="易网盟"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="只有少数编辑器支持，或者需要安装相应的扩展渲染，使用前请先预览确认。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown高级语法">
+<meta property="og:url" content="https://828767.github.io/action-hexo/markdown-advance-syntax.html">
+<meta property="og:site_name" content="易网盟">
+<meta property="og:description" content="只有少数编辑器支持，或者需要安装相应的扩展渲染，使用前请先预览确认。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-7.png">
+<meta property="article:published_time" content="2022-05-08T09:04:21.000Z">
+<meta property="article:modified_time" content="2022-05-08T09:04:21.000Z">
+<meta property="article:author" content="易网盟">
+<meta property="article:tag" content="混技能">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-7.png"><link rel="shortcut icon" href="/action-hexo/img/favicon.png"><link rel="canonical" href="https://828767.github.io/action-hexo/markdown-advance-syntax"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/action-hexo/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/action-hexo/',
+  algolia: undefined,
+  localSearch: {"path":"/action-hexo/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 易网盟","link":"链接: ","source":"来源: 易网盟","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Markdown高级语法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-05-08 17:04:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/action-hexo/atom.xml" title="易网盟" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/action-hexo/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/action-hexo/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/action-hexo/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/action-hexo/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-7.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/action-hexo/">易网盟</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/action-hexo/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Markdown高级语法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-08T09:04:21.000Z" title="发表于 2022-05-08 17:04:21">2022-05-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-05-08T09:04:21.000Z" title="更新于 2022-05-08 17:04:21">2022-05-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/action-hexo/categories/%E5%AD%A6%E7%BC%96%E7%A8%8B/">学编程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Markdown高级语法"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>只有少数编辑器支持，或者需要安装相应的扩展渲染，使用前请先预览确认。</p>
+<span id="more"></span>
+
+<h1 id="定义列表"><a href="#定义列表" class="headerlink" title="定义列表"></a>定义列表</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Term 1</span><br><span class="line">Term 2</span><br><span class="line">:   Definition A</span><br><span class="line">:   Definition B</span><br></pre></td></tr></table></figure>
+
+<p>会被编译成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">&lt;dd&gt;Term 1&lt;/dd&gt;</span><br><span class="line">&lt;dd&gt;Term 2&lt;/dd&gt;</span><br><span class="line">&lt;dt&gt;Definition A&lt;dt&gt;</span><br><span class="line">&lt;dt&gt;Definition A&lt;dt&gt;</span><br><span class="line">&lt;/dl&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>通过<code>[TOC]</code>标记来插入目录。</p>
+<p>在编辑器不支持<code>[TOC]</code>标记的情况下可以使用添加id的方法构建目录。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">## Directory</span><br><span class="line">* [1.Content one](#chapter1)</span><br><span class="line">* [2.Content two](#chapter2)</span><br><span class="line"></span><br><span class="line">## &lt;span id=&quot;chapter1&quot;&gt;1.Content one&lt;/span&gt;</span><br><span class="line">## &lt;span id=&quot;chapter2&quot;&gt;2.Content two&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="TeX公式"><a href="#TeX公式" class="headerlink" title="TeX公式"></a>TeX公式</h1><p>内联的TeX公式使用一个美元符号标记。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$</span><br></pre></td></tr></table></figure>
+
+<p>会被编译成<br>内联（行内）公式：$\Gamma(n) &#x3D; (n-1)!\quad\forall n\in\mathbb N$</p>
+<p>TeX公式块用独占一行的两个美元符号来标记。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\left \lbrace \sum_&#123;i=0&#125;^n i^3 = \frac&#123;(n^2+n)(n+6)&#125;&#123;9&#125; \right \rbrace$$</span><br></pre></td></tr></table></figure>
+
+<p>会被编译成</p>
+<p>$$\left \lbrace \sum_{i&#x3D;0}^n i^3 &#x3D; \frac{(n^2+n)(n+6)}{9} \right \rbrace$$</p>
+<p>如果你的编辑器不支持这个功能，可以手动解决。首先引入mathjax脚本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>之后，在需要插入公式的地方使用 <code>&lt;script&gt;</code> 标签包裹公式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;math/tex&quot;&gt;\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;math/tex; mode=display&quot;&gt;</span><br><span class="line">\Gamma(z) = \int_0^\infty t^&#123;z-1&#125;e^&#123;-t&#125;dt\,.</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>以上公式展示效果，在实际显示过程中，根据网络加载速度不同会有不同的解析展示速度，TeX的语法参考请见<a target="_blank" rel="noopener" href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">这里</a>。</p>
+<h1 id="UML图"><a href="#UML图" class="headerlink" title="UML图"></a>UML图</h1><p>语法为在代码块开始行后面加入语法声明，如 ```mermaid ，然后可以像这样来画uml时序图：</p>
+<pre class="mermaid">sequenceDiagram
+  Alice->>Bob: Hello Bob,how are you?
+  Note right of Bob: Bob thinks
+  Bob-->>Alice: I am fine thanks! and U?
+  Note left of Alice: SB</pre>
+
+<p>其MarkDown代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\`\`\`mermaid</span><br><span class="line">sequenceDiagram</span><br><span class="line">  Alice-&gt;&gt;Bob: Hello Bob,how are you?</span><br><span class="line">  Note right of Bob: Bob thinks</span><br><span class="line">  Bob--&gt;&gt;Alice: I am fine thanks! and U?</span><br><span class="line">  Note left of Alice: SB</span><br><span class="line">\`\`\` #代码块标识会被解析，实际上写代码块时不用添加转义符“\”</span><br></pre></td></tr></table></figure>
+
+<p>时序图的语法请见 <a target="_blank" rel="noopener" href="https://mermaidjs.github.io/sequenceDiagram.html">这里</a> 或 <a target="_blank" rel="noopener" href="http://bramp.github.io/js-sequence-diagrams/">这里</a>。</p>
+<p>uml流程图：</p>
+<pre class="mermaid">  graph LR;
+    A-->B & C-->D;</pre>
+
+<p>其实现代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\`\`\`mermaid</span><br><span class="line">graph LR;</span><br><span class="line">  A--&gt;B &amp; C--&gt;D;</span><br><span class="line">\`\`\`</span><br></pre></td></tr></table></figure>
+
+<p>流程图的语法请见 <a target="_blank" rel="noopener" href="https://mermaidjs.github.io/flowchart.html">这里</a>， 更复杂点的flowchart可以看 <a target="_blank" rel="noopener" href="http://adrai.github.io/flowchart.js/">这里</a> 。</p>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ol>
+<li><a href="/how-to-draw-flowchart-with-markdown.html">MarkDown文档中如何画出流程图</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/wizardforcel/markdown-simple-world">https://github.com/wizardforcel/markdown-simple-world</a></li>
+<li><a target="_blank" rel="noopener" href="http://stevenshi.me/2017/06/26/hexo-insert-formula/">http://stevenshi.me/2017/06/26/hexo-insert-formula/</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013282174/article/details/80666123">https://blog.csdn.net/u013282174/article/details/80666123</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.liuyude.com/How_to_make_your_HEXO_blog_support_handwriting_flowchart.html">https://www.liuyude.com/How_to_make_your_HEXO_blog_support_handwriting_flowchart.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://mermaidjs.github.io/">https://mermaidjs.github.io/</a></li>
+</ol>
+<script type="text/javascript" async
+  src="https://unpkg.com/mermaid@9.1.1/dist/mermaid.min.js">
+</script>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://828767.github.io/action-hexo">易网盟</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://828767.github.io/action-hexo/markdown-advance-syntax.html">https://828767.github.io/action-hexo/markdown-advance-syntax.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://828767.github.io/action-hexo" target="_blank">易网盟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/action-hexo/tags/%E6%B7%B7%E6%8A%80%E8%83%BD/">混技能</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-7.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/ShareJS/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/ShareJS/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/action-hexo/guide-how-to-build-site-0.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" onerror="onerror=null;src='/action-hexo/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">从零开始建个小站 - 教程导航</div></div></a></div><div class="next-post pull-right"><a href="/action-hexo/hexo-pug-notes.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-4.png" onerror="onerror=null;src='/action-hexo/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">网页模板 pug 基本语法</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/action-hexo/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">易网盟</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/action-hexo/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/action-hexo/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/action-hexo/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://yiwangmeng.com"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是个静态网站演示</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E5%88%97%E8%A1%A8"><span class="toc-number">1.</span> <span class="toc-text">定义列表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">2.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TeX%E5%85%AC%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">TeX公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UML%E5%9B%BE"><span class="toc-number">4.</span> <span class="toc-text">UML图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3"><span class="toc-number">5.</span> <span class="toc-text">参考文档</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-12.html" title="从零开始建个小站 - 常见问题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-3.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 常见问题"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-12.html" title="从零开始建个小站 - 常见问题">从零开始建个小站 - 常见问题</a><time datetime="2022-06-02T12:20:20.000Z" title="发表于 2022-06-02 20:20:20">2022-06-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-11.html" title="从零开始建个小站 - 实操：内容增/删/改"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 实操：内容增/删/改"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-11.html" title="从零开始建个小站 - 实操：内容增/删/改">从零开始建个小站 - 实操：内容增/删/改</a><time datetime="2022-05-31T12:20:20.000Z" title="发表于 2022-05-31 20:20:20">2022-05-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-10.html" title="从零开始建个小站 - 实操：个性设置"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-9.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 实操：个性设置"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-10.html" title="从零开始建个小站 - 实操：个性设置">从零开始建个小站 - 实操：个性设置</a><time datetime="2022-05-30T12:20:20.000Z" title="发表于 2022-05-30 20:20:20">2022-05-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-9.html" title="从零开始建个小站 - 实操：本地测试预览"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 实操：本地测试预览"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-9.html" title="从零开始建个小站 - 实操：本地测试预览">从零开始建个小站 - 实操：本地测试预览</a><time datetime="2022-05-29T12:20:20.000Z" title="发表于 2022-05-29 20:20:20">2022-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-8.html" title="从零开始建个小站 - 实操：代码拉到本地"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/material-5.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 实操：代码拉到本地"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-8.html" title="从零开始建个小站 - 实操：代码拉到本地">从零开始建个小站 - 实操：代码拉到本地</a><time datetime="2022-05-28T12:20:20.000Z" title="发表于 2022-05-28 20:20:20">2022-05-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 易网盟</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/action-hexo/js/utils.js"></script><script src="/action-hexo/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/action-hexo/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
