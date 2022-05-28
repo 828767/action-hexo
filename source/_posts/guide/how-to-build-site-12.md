@@ -15,5 +15,5 @@ tags:
 
     <div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-QQ-260489333.png" width="200" height="260" ></div>
     <div style="float:none;clear:both;"></div>
-2. GitHub咋打不开？
+2. **GitHub咋打不开？**
     各地网络管制松紧度不一样，无法访问就上梯子吧。

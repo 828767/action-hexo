@@ -33,7 +33,7 @@ tags:
 - 自动渲染发布到当前项目仓库pages分支，如果不设置为私有仓库可作为项目主页访问
 - pages分支只保留最后1次提交记录
 
-1. 打开[这个模板仓库](https://github.com/828767/action-hugo "hugo框架模板")主页面
+1. 打开 [这个模板仓库](https://github.com/828767/ "hugo/hexo框架模板") 主页面，根据自己的需求选择 `action-hugo` 或者 `action-hexo` 等仓库任选其一
 2. 在文件列表上方，单击 `Use this template（使用此模板）`
     
     ![使用模板](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
