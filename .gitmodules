@@ -7,3 +7,6 @@
 [submodule "themes/matery"]
 	path = themes/matery
 	url = https://github.com/blinkfox/hexo-theme-matery.git
+[submodule "themes/Academia"]
+	path = themes/Academia
+	url = https://github.com/PhosphorW/hexo-theme-academia.git

@@ -16,6 +16,7 @@ pids
 *.pid.lock
 .DS_Store
 Thumbs.db
+.vscode
 
 # hexo
 db.json
