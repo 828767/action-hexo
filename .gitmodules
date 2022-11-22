@@ -10,3 +10,9 @@
 [submodule "themes/Academia"]
 	path = themes/Academia
 	url = https://github.com/PhosphorW/hexo-theme-academia.git
+[submodule "themes/fluid"]
+	path = themes/fluid
+	url = https://github.com/fluid-dev/hexo-theme-fluid.git
+[submodule "themes/next"]
+	path = themes/next
+	url = https://github.com/next-theme/hexo-theme-next
