@@ -1,9 +1,12 @@
 # 一网盟 Hexo 仓库使用说明
 本仓库为hexo网站源码，其中可能包含私密信息，请务必设置仓库可见性为 `Private` 。
 ## 功能简介
-1. 本仓库有提交变更责自动触发渲染HTML
-2. 自动发布到：`owner.github.io` ，分支：`pages-hexo`
-3. 如果网址非 `github.io`，则自动生成 `CNAME`
+1. 本仓库有提交变更则自动触发渲染 HTML
+2. 本地端不需要渲染和发布工序，只需要维护 MarkDown 源文档，提交同步到 GitHub 云端仓库即可
+3. HTML 静态页自动发布到：`owner.github.io` 「需自行建立 pages 仓库和配置授权」，分支：`pages-hexo`
+4. 如果网址非 `github.io`，则自动生成 `CNAME`
+   
+![本仓库方案](https://cdn.jsdelivr.net/gh/828767/static/images/github_page_free.png)
 
 ## 本地预览环境
 为更好地预览即将发布的内容，建议将本仓库克隆到本地电脑维护 MarkDown 源码，那么本地就需要安装一个预览环境。
