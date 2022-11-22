@@ -4,7 +4,7 @@
 1. 本仓库有提交变更则自动触发渲染 HTML
 2. 本地端不需要渲染和发布工序，只需要维护 MarkDown 源文档，提交同步到 GitHub 云端仓库即可
 3. HTML 静态页自动发布到：`owner.github.io` 「需自行建立 pages 仓库和配置授权」，分支：`pages-hexo`
-4. 如果网址非 `github.io`，则自动生成 `CNAME`
+4. 如果网址非 `github.io`，则自动生成 `CNAME` 「需自行在DNS托管商处做好cname解析」
    
 ![本仓库方案](https://cdn.jsdelivr.net/gh/828767/static/images/github_page_free.png)
 
