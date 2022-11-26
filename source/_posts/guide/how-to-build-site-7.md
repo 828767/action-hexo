@@ -11,7 +11,7 @@ tags:
 好在 `hugo` 和 `hexo` 配置结构大同小异，而且都支持将配置文件放在网站根目录下，只需要修改配置，今后主题更新只需要同步配置其他也互不影响。
 <!-- more -->
 # 5.1 认识文件
-```
+```bash
 action-hexo    #hexo程序工作目录
 |   README.md #说明文档
 |   .gitignore  #指定Git提交时忽略的文件规则
@@ -38,7 +38,7 @@ action-hexo    #hexo程序工作目录
 
 # 5.2 网站设置
 从上文可知，网站基础配置需要在 `hexo程序工作目录` 中的 `_config.yml` 进行配置：
-```
+```yml
 # Site
 title: 易网盟 #网站标题
 subtitle: '专注网站建设优化' #网站副标题

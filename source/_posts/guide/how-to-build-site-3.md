@@ -21,7 +21,7 @@ Windows 系统安装完成后，会在右键菜单添加 `Git Bash Here` 入口�
 ![Git Bash Here](https://cdn.jsdelivr.net/gh/828767/static/images/git_menu_gitbashhere.png)
 
 如果以前未使用过 Git，一般都需要设置用户名和邮箱，随便一个目录空白地方 点右键「Windows系统，其他系统打开系统终端输命令」》 `Git Bash Here` ，运行以下命令设置：
-```
+```bash
 git config --global user.name name #设置Git用户名
 git config --global user.email "email" #设置Git邮箱
 ```
@@ -31,7 +31,7 @@ git config --global user.email "email" #设置Git邮箱
 跨平台的JavaScript运行环境和包管理工具。一样的，到 [Nodejs官网](https://nodejs.org/zh-cn/) 下载安装包，建议选择长期维护版，默认安装完成即可。
 
 安装完成后，在前文安装完成的 `Git Bash` 或者系统终端中输入命令 `npm version` 验证安装结果：
-```
+```bash
 $ npm version
 {
   npm: '8.5.5',
@@ -41,14 +41,14 @@ $ npm version
 ```
 # 1.3 安装 hexo
 前文安装完成 `npm` 包管理器后，就可以安装 `hexo` 预览客户端了，打开前文安装完成的 `Git Bash` 或者系统终端，输入以下命令：
-```
+```bash
 # 墙内设置npm淘宝源，加快下载速度
 npm config set registry https://registry.npm.taobao.org
 # 系统全局安装hexo
 npm install -y hexo-cli
 ```
 安装完成后可使用命令 `hexo version` 验证：
-```
+```bash
 $ hexo version
 INFO  Validating config
 hexo: 6.2.0

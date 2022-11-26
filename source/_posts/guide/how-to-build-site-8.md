@@ -32,7 +32,7 @@ git config --global --unset https.proxy
 ```
 
 或者也可以通过编辑 Git 配置文件直接配置，打开 `用户目录/.gitconfig` ，Windows系统如 `C:\Users\ywm\.gitconfig` ，增加如下内容：
-```
+```toml
 # 这是个使用 clash 代理的默认端口示例，具体请看代理软件配置
 [core]
 	gitproxy = socks5://127.0.0.1:7890

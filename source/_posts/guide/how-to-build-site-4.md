@@ -10,7 +10,7 @@ tags:
 <!-- more -->
 # 2.1 git clone
 还是在 `Git Bash` 中，输入这样的命令：
-```
+```bash
 cd d:\Git   #先切换到要存放Git文件的目录路径
 git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆到本地
 ```
@@ -22,7 +22,7 @@ git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆�
 
 # 2.2 安装依赖包
 仓库中只包含网站必须的内容源码文件，一些依赖包文件是忽略提交的，所以本地需要重新安装，在仓库根目录路径下运行以下命令：
-```
+```bash
 npm install
 ```
 
@@ -31,7 +31,7 @@ npm install
 
 # 2.3 预览测试
 在仓库根目录路径下运行 `hexo s` 即可启动预览服务：
-```
+```bash
 user@IAY MINGW64 /d/Git/action-hexo (main)
 $ hexo s
 INFO  Validating config
@@ -49,13 +49,13 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 3. `hexo new page "pageName"` ：新建页面，会在 `source` 目录下生成 `pageName` 文件夹及对应 `index.md`
 
 上面用到的命令对应缩写：
-```
+```bash
 hexo s == hexo server
 hexo n == hexo new
 ```
 
 更多命令可自行学习
-```
+```bash
 hexo help  # 查看帮助
 hexo version  #查看Hexo的版本
 ```

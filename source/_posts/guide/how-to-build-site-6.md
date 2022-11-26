@@ -43,7 +43,7 @@ tags:
 ![新建文章示例](https://cdn.jsdelivr.net/gh/828767/static/images/hexo-edit.gif)
 
 不管是Hugo还是Hexo，他们都只是一种渲染框架，所以MarkDown源代码都需要特定的 `Front-matter` 标记，也就是两行 `---` 中间的那段。
-```
+```yml
 ---
 title: '网页模板 pug 基本语法'
 categories: 学编程
@@ -71,7 +71,7 @@ top:
 ## 4.3 快速模板
 在使用 `hexo n` 命令新建文章时，其实是遵循模板规则。打开 `scaffolds` 目录，可见有文章，页面等模板文件，打开源码可见如下内容
 
-```
+```yml
 ---
 title: {{ title }} //自动替换标题
 date: {{ date }} //创建时间
@@ -81,7 +81,7 @@ tags:	//没内容就留空，但该 tags: 项会创建
 
 比如在 `post.md` 添加新内容如下：
 
-```
+```yml
 ---
 title: {{ title }}
 date: {{ date }}
