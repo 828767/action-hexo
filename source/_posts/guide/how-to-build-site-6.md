@@ -54,7 +54,9 @@ updated: 2021-12-10 15:22:51
 toc: true
 comments: true
 keywords: ''
-description: 'pug原名jade，因版权问题更名为pug，即哈巴狗。如果 `Front-matter` 内容有跨行或特殊符号等，请用英文引号包起来，就如本段示例。'
+description: 'pug原名jade，因版权问题更名为pug，即哈巴狗。如果 `Front-matter` 内容
+
+有跨行或特殊符号等，请用英文引号包起来，就如本段示例。'
 top:
 ---
 ```
