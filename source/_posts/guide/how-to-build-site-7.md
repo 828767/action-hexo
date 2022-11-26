@@ -1,48 +1,58 @@
 ---
-title: '从零开始建个小站 - 实操：打通发布流程'
+title: '从零开始建个小站 - 5. 个性化设置'
 date: 2022-05-27 20:20:20
 categories:
   - 做网站
 tags:
   - 教程
 ---
-截止当前，我们已经准备好了建站需要的存储仓库，接着还需要配置相应的权限才能顺利对外发布。
+项目仓库克隆下来，网站的各项设置都是默认的，一些标题，作者之类的需要根据自己的实际情况进行修改，个性设置主要是网站根目录的网站基础配置和主题配置。
 
-## 配置发布令牌
-还记得 GitHub 设置中配置的 `Personal access token` 么，前面叮嘱复制保存下来，下面该派上用场了：
+好在 `hugo` 和 `hexo` 配置结构大同小异，而且都支持将配置文件放在网站根目录下，只需要修改配置，今后主题更新只需要同步配置其他也互不影响。
+<!-- more -->
+# 5.1 认识文件
+```
+action-hexo    #hexo程序工作目录
+|   README.md #说明文档
+|   .gitignore  #指定Git提交时忽略的文件规则
+|   package.json  #依赖包记录，不要动
+|   _config.yml  #网站基础配置文件，定义网站标题，作者等
+|   _config.butterfly.yml  #butterfly这个主题的配置文件，来源于且优先级高于主题目录下的_config.yml
+|
++---node_modules  #hexo的依赖环境，不要动，一般都会添加到.gitignore忽略
++---scaffolds  #文章/页面/草稿模板，不会就不要动
+|
++---source  #网站内容根目录，网络路径为：/
+|   favicon.ico #网站图标，网络路径为：/favicon.ico
+|   \---images  #自建文件夹用来放图片资源，网网络路径为：/images
+|   |   GoodHexo.png  #/images下的图片，引用地址为：/images/GoodHexo.png，也可以相对路径：../images/GoodHexo.png
+|   \---_posts  #你所有的文章都存在这个目录底下
+|   |   hello-world.md  #示例文章源文件，该MarkDown文件会被hexo渲染成HTML页发布
+|   |
++---themes  #主题存放目录
+|   \---landscape #默认主题
+|   \---fluid #另一个主题
+|   |
+```
+![认识hexo文件](https://cdn.jsdelivr.net/gh/828767/static/images/hexo-files-tree.png)
 
-1. 导航到刚创建的项目仓库主页面，在仓库名称下，单击  `Settings（设置）`
-   
-    ![Settings（设置）](https://docs.github.com/assets/cb-21851/images/help/repository/repo-actions-settings.png)
-    
-2. 点击左侧的 `Secrets》Actions`，新建仓库机密
+# 5.2 网站设置
+从上文可知，网站基础配置需要在 `hexo程序工作目录` 中的 `_config.yml` 进行配置：
+```
+# Site
+title: 易网盟 #网站标题
+subtitle: '专注网站建设优化' #网站副标题
+description: 'Hexo + GitHub免费仓库托管方案，微软不倒，羊毛到老！' #网站描述
+keywords: 静态网站  #网站关键词，不是所有的主题都支持
+author: 易网盟  #作者
+timezone: 'Asia/Shanghai' #时区，一般中国时区
+# language: en  #网站语言，默认 en，请根据主题文档设置
+language: zh-CN
+```
+打开查看内容就能知道大概了，都有对应的注释，请根据自己实际情况修改填写，或者可以参阅 [官方配置文档](https://hexo.io/docs/configuration.html)。
+# 5.3 主题设置
+主题设置每个主题都不一样，所以需要根据实际使用的主题文档去配置，一般在主题目录下都会有个 `README.md` ，请打开或者找到主题在线文档去阅读，主题让装啥就装啥，让咋改就咋改。
 
-    ![新建仓库机密](https://cdn.jsdelivr.net/gh/828767/static/images/repo_set_repo_secret.png)
+为了以后更新主题时不覆盖我们已经配置好的内容，可以将主题目录下的 `_config.yml` 复制到 `hexo程序工作目录` 下，并重命名为：`_config.主题名.yml` ，如：`_config.fluid.yml` 。
 
-3. 在 `Name（名称）`输入框中键入机密的名称必须为：`ACTION_ACCESS_TOKEN` ，`Value` 框粘贴之前复制保存的那串值
-    
-    ![ADD ACTION_ACCESS_TOKEN](https://cdn.jsdelivr.net/gh/828767/static/images/repo_set_repo_secret1.png)
-
-4. 最后单击 `Add secret（添加密码）` 保存完成
-
-    ![ACTION_ACCESS_TOKEN](https://cdn.jsdelivr.net/gh/828767/static/images/repo_set_repo_secret2.png)
-
-## 小试牛刀
-经过之前的一番操作，服务器上一切都准备就绪了，可以试试好使与否，直接在项目仓库中触发个提交就行，比如点击 `config.toml` 或 `config.yml` 编辑里面的url，然后保存提交。
-
-![提交变更试效果](https://cdn.jsdelivr.net/gh/828767/static/images/github_commit_first.png)
-
-项目仓库提交变更后，要不了一分钟会自动将源文件渲染并发布到pages仓库，到pages仓库中可见刚从项目仓库提交过来的分支，要对外访问则要设置为pages指定分支。
-
-![自动提交的分支](https://cdn.jsdelivr.net/gh/828767/static/images/github_repo_new_branch.png)
-
-## 设置pages分支
-前文已经提到pages分支了，用户pages仓库为：`<owner>.github.io`，其他则为项目仓库，设置方法都是一样的：
-
-1. 导航到pages仓库主页，点击 `Settings（设置）`，点击左侧 `Pages` 标签，选择对应的分支
-
-    ![Pages-branch](https://cdn.jsdelivr.net/gh/828767/static/images/githubpages_select_branch.png)
-
-2. 点击保存后，大约5分钟，就可以通过页面上提示的地址对外访问了。
-    
-    ![<owner>.github.io](https://docs.github.com/assets/cb-27618/images/help/pages/click-pages-url-to-preview.png)
+然后按照主题说明文档在新复制的主题配置中按需进行配置，以后主题有更新，如果涉及到该配置文件变更，请将最新内容同步到 `_config.主题名.yml` 中即可。

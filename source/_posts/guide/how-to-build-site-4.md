@@ -1,42 +1,61 @@
 ---
-title: '从零开始建个小站 - GitHub设置'
+title: '从零开始建个小站 - 2. 拉取仓库到本地'
 date: 2022-05-24 20:20:20
 categories:
   - 做网站
 tags:
   - 教程
 ---
-## 注册GitHub账号
-如果已有账号则跳过此步骤，直接登录设置即可。如果还没有账号，请访问 https://github.com ，完成注册和邮箱认证，一般用户选择免费套餐就足够用了：
+前面的准备工作已完成，剩下就是将仓库文件克隆同步到本地电脑，方便后续维护与预览。
+<!-- more -->
+# 2.1 git clone
+还是在 `Git Bash` 中，输入这样的命令：
+```
+cd d:\Git   #先切换到要存放Git文件的目录路径
+git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆到本地
+```
 
-![免费套餐额度](https://cdn.jsdelivr.net/gh/828767/static/images/github.com_join_recommended_plan.png)
+以上请将仓库地址换成自己的仓库实际地址，建议从仓库页面上复制，获取方法：打开仓库主页》在文件列表右上方有个 `Code` ，点击下拉复制，如下图所示：
+
+![获取项目仓库地址](https://cdn.jsdelivr.net/gh/828767/static/images/github_clone_https_url.png)
 
 
-## 生成 `Personal access token`
-取消了用户密码认证后，`PAT`「`Personal access token`」成了 GitHub 官方默认的HTTPS认证方式，比SSH密钥安全性差点，但配置简单点。
+# 2.2 安装依赖包
+仓库中只包含网站必须的内容源码文件，一些依赖包文件是忽略提交的，所以本地需要重新安装，在仓库根目录路径下运行以下命令：
+```
+npm install
+```
 
-1. 登录后，在任何页面的右上角，单击右上角个人资料照片，然后单击 `Settings（设置）`
-2. 在左侧栏中，单击  `<>开发者设置`》`Personal access tokens（个人访问令牌）`
+以上命令实际上是下载 `package.json` 中定义好的依赖包，等依赖包下载完成，整个本地预览环境就全部安装完成了。
 
-    ![Personal access tokens](https://docs.github.com/assets/cb-7169/images/help/settings/personal_access_tokens_tab.png)
 
-3. 单击 `Generate new token（生成新令牌）`，如需密码验证输密码验证即可。
+# 2.3 预览测试
+在仓库根目录路径下运行 `hexo s` 即可启动预览服务：
+```
+user@IAY MINGW64 /d/Git/action-hexo (main)
+$ hexo s
+INFO  Validating config
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
+```
+以上输出信息中，`/d/Git/action-hexo (main)` 就是所谓 `运行路径` ，Windows系统表示 `d:\Git\action-hexo` 目录，当前在 `main` 分支。
 
-    `Note` 行里随便填，写给自己看的，过期时间建议选择 `No Expiration（永不过期）`
+浏览器中打开 `http://localhost:4000` 就可以预览，按 `Ctrl+C` 组合键停止，一些主题或者网站设置变更需要重启该预览服务才能看到效果。
 
-    ![Generate new token](https://cdn.jsdelivr.net/gh/828767/static/images/personal_access_token.png)
+# 2.4 用得到的命令
 
-    <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #8a6d3b;; background-color: #fcf8e3; border-color: #faebcc;">作为安全防范措施，GitHub 会自动删除一年内未使用的个人访问令牌。 </div>
+1. `hexo server` ：开启本地预览服务，默认端口 `4000`，可以添加 ` -p port` 指定预览端口，`Ctrl + C` 关闭，一些网站更改需要重启预览才能看到效果
+2. `hexo new "postName"` ：新建文章，`postName` 不建议是中文，也不要添加特殊符号，生成MarkDown 文件在 `source/_post` 目录下，`hexo new` 默认新生成的就是 `post` 类型
+3. `hexo new page "pageName"` ：新建页面，会在 `source` 目录下生成 `pageName` 文件夹及对应 `index.md`
 
-4. 如下勾选相关权限
-   
-    ![repo](https://cdn.jsdelivr.net/gh/828767/static/images/personal_access_token_scopes.png)    
-    ![admin/user](https://cdn.jsdelivr.net/gh/828767/static/images/personal_access_token_scopes1.png)
+上面用到的命令对应缩写：
+```
+hexo s == hexo server
+hexo n == hexo new
+```
 
-5. 最后点击 `Generate token` 生成个人访问令牌。
-
-    ![Generate token](https://docs.github.com/assets/cb-10912/images/help/settings/generate_token.png)
-
-添加完成后，会显示刚添加的令牌，该令牌明文只会显示一次，所以请 <font color=red>务必复制保存下来备用</font>否则就需要删除重新生成，后面项目仓库和本地访问认证都能用得到该令牌。
-
-![令牌明文内容](https://cdn.jsdelivr.net/gh/828767/static/images/personal_access_tokens.png)
+更多命令可自行学习
+```
+hexo help  # 查看帮助
+hexo version  #查看Hexo的版本
+```

@@ -19,7 +19,7 @@ mathjax: true
 
 # 定义列表
 
-```
+```MarkDown
 Term 1
 Term 2
 :   Definition A
@@ -28,7 +28,7 @@ Term 2
 
 会被编译成
 
-```
+```HTML
 <dl>
 <dd>Term 1</dd>
 <dd>Term 2</dd>
@@ -43,7 +43,7 @@ Term 2
 
 在编辑器不支持`[TOC]`标记的情况下可以使用添加id的方法构建目录。
 
-```
+```MarkDown
 ## Directory
 * [1.Content one](#chapter1)
 * [2.Content two](#chapter2)
@@ -57,7 +57,7 @@ Term 2
 
 内联的TeX公式使用一个美元符号标记。
 
-```
+```MarkDown
 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
 ```
 
@@ -66,7 +66,7 @@ $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
 
 TeX公式块用独占一行的两个美元符号来标记。
 
-```
+```MarkDown
 $$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$
 ```
 
@@ -76,13 +76,13 @@ $$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$
 
 如果你的编辑器不支持这个功能，可以手动解决。首先引入mathjax脚本：
 
-```
+```HTML
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 ```
 
 之后，在需要插入公式的地方使用 `<script>` 标签包裹公式：
 
-```
+```MarkDown
 <script type="math/tex">\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N</script>
 
 <script type="math/tex; mode=display">
@@ -104,7 +104,7 @@ sequenceDiagram
 ```
 
 其MarkDown代码如下：
-```
+```MarkDown
 \`\`\`mermaid
 sequenceDiagram
   Alice->>Bob: Hello Bob,how are you?
@@ -125,7 +125,7 @@ uml流程图：
 ```
 
 其实现代码如下：
-```
+```MarkDown
 \`\`\`mermaid
 graph LR;
   A-->B & C-->D;

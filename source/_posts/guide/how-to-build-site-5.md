@@ -1,79 +1,70 @@
 ---
-title: '从零开始建个小站 - 配置SSH密钥'
+title: '从零开始建个小站 - 3. 搞个编辑器'
 date: 2022-05-25 20:20:20
 categories:
   - 做网站
 tags:
   - 教程
 ---
-相对于前文提到的 {% post_link guide-how-to-build-site-4 'GitHub设置 - Personal access token' %}，使用 SSH 密钥是另一种更安全的方式。
 
-## 生成SSH密钥
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #8a6d3b;; background-color: #fcf8e3; border-color: #faebcc;">
-<strong>注意：</strong> 
-<p>2021年8月14号开始，GitHub弃用账密验证Git操作，改用token或SSH密钥</p>
-<p>GitHub 在 2022 年 3 月 15 日通过删除较旧的不安全密钥类型提高了安全性，不再支持 DSA 密钥 (<code>ssh-dss</code>)。</p>
-<p>在 2021 年 11 月 2 日之前 <code>valid_after</code> 的 RSA 密钥 (<code>ssh-rsa</code>) 可以继续使用任何签名算法。 在该日期之后生成的 RSA 密钥必须使用 SHA-2 签名算法。 某些较旧的客户端可能需要升级才能使用 SHA-2 签名。</p></div>
+工欲善其事必先利其器，一个好用的编辑器可以事半功倍。
+<!-- more -->
+# 3.1 下载安装编辑器
+VSCODE 就是个不错的选择，自行到 [微软官方网站](https://code.visualstudio.com/download) 去下载安装，优点：
+1. 全目录管理，一个界面可以管理整个目录下的文件
+2. 语法格式显示，也能实时预览
+3. 与Git集成，可以界面化操作Git提交同步，比较等
+4. 集成命令终端，预览调试方便
+ 
+![VSCODE](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-hexo.png)
 
-当前就相当于强制用户使用超长随机串密码，安全加强是好事，遵循规则使用 `SHA-2` 签名规则密钥即可：
+其他如 Atom、Sublime Text、Typroa 之类的编辑器，甚至是专业的代码编辑器请自行研究。
 
-```ssh
-# 生成密钥对，一路回车默认即可
-# 如已有其他密钥对在用，自己改下生成的文件名以防覆盖
-ssh-keygen -t ed25519 -C "Your_Email"
-```
+# 3.2 文件一站式管理
+VSCODE 可以很方便地对网站进行管理：
 
-如果您使用的是不支持 `ed25519` 算法的旧系统，请使用：
-```ssh
-ssh-keygen -t rsa -b 4096 -C "Your_Email"
-```
-更多密钥相关详细信息可参阅 [GitHub官方文档][new-SSH-key]
+克隆完成后，通过快捷方式 `Ctrl+K Ctrl+O` 或者菜单 `File（文件）》Open Folder（打开文件夹）` 打开刚克隆完的仓库目录。
 
-如果你是一路回车生成密钥对，那么生成的密钥对会保存在：`~/.ssh/` 目录下，`~` 表示用户目录，如操作系统登录用户名是 `xyz` ，那么在Windows下路径则为 `C:\Users\xyz\.ssh` ,macOS/Linux下路径为 `/home/xyz/.ssh` ，其中：
-```ssh
-~/.ssh/id_ed25519 //私钥，保存在本地
-~/.ssh/id_ed25519.pub //公钥，配置到异端
-```
+![打开文件夹](https://cdn.jsdelivr.net/gh/828767/static/images/vscode_markdown_editor.png)
 
-到此，本地Git环境已准备妥当，下一步将公钥配置到GitHub中就能使用了。
+也可以直接调出命令行终端：
+
+启动 `vscode` ，通过快捷 `CTRL+~` 或者菜单 `Terminal》New Terminal（新建终端）`
+
+![新建终端](https://cdn.jsdelivr.net/gh/828767/static/images/vscode_new_terminal.png)
+	
+至此，我们就可以在 `vscode` 中便捷地增删改网站源文件了。
 
 
-## 配置密钥
+# 3.3 界面化Git操作
+VSCODE 很好地集成了Git操作，在我们增删改文件后，可以直接在编辑器界面与 Git 仓库提交同步：
+![Git操作界面概览](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-git.png)
 
-为了使用方便，给GitHub添加一个用户密钥，一个密钥可作用于整个账号的增删改查操作。
+提交只是本地操作，要同步到外网，还需要进一步 **推送或同步** 。如果想一次性完成提交和推送，可以在填写完变更信息后，点击提交右侧的下拉按钮选择提交并推送。
 
-1. 将 SSH 公钥内容复制到剪贴板「假设都按前面的默认操作」
-    <details open><summary>Windows</summary>
+![Git提交并推送](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-git-push.png)
 
-    打开 `Git Bash` ，复制粘贴如下命令
-    ```ssh
-    clip < ~/.ssh/id_ed25519.pub
-    //该命令自动将公钥存到剪贴板，直接用文本编辑器打开公钥再复制也是一样的
-    ```
+基本的演示如动图：
 
-    </details>
-    <details><summary>macOS/Linux</summary>
+![简单的Git提交演示](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-git-commit.gif)
 
-    打开 Terminal（终端），复制粘贴如下命令：
-    ```ssh
-    cat ~/.ssh/id_ed25519.pub
-    // 执行完将打印出来的公钥内容完整复制待用
-    ```
+直接填写变更说明提交表示把所有变更提交，如果只想提交指定某个文件，那么如上图所示，点击变更文件后面的 `＋` 单独暂存变更并提交，其他未暂存变更的文件不会被提交。
 
-    </details>
+第一次使用时会提示是否直接提交等提示，请正确选择是，允许等。同时，推送到仓库需要授权，如果是 `SSH` 仓库地址，请正确配置 SSH 秘钥，`https` 仓库地址打开的时候可以选择浏览器授权，打开浏览器输入账号密码登录后点击授权，直到出现如下提示就表示授权成功。
 
-2.  登录GitHub账号后，在任何页面的右上角，单击右上角个人资料照片，然后单击弹出下拉中的 `Settings（设置）`
+![https仓库授权](https://cdn.jsdelivr.net/gh/828767/static/images/git-repo-authentication.jpg)
 
-3. 选择左侧 `Access`》 点击 `SSH and GPG keys`，点击 `New SSH key（新 SSH 密钥）`
-    
-    ![Add New SSH key](https://cdn.jsdelivr.net/gh/828767/static/images/github_set_access_new_ssh.png)
+更多操作建议去学习下 Git 基础知识，可求助我们的战略合作伙伴 Google 和百度。
 
-4. 在 `Title`（标题）字段中，为新密钥添加描述性标签便于识别用途。 例如，如果您使用在个人Mac上，此密钥名称可能是 `Personal MacBook`。
+虽然项目仓库主页直接增删改文件都可以，但网页上只能一个一个文件操作，建议还是同步到本地使用，借助编辑器事半功倍，也相当于多了个源码本地备份。
 
-5. 将前面复制的公钥串粘贴到 `Key`（密钥）字段
-    
-    ![粘贴公钥串](https://docs.github.com/assets/cb-24796/images/help/settings/ssh-key-paste.png)
+# 3.4 MarkDown 插件
+作为 MarkDown 编辑器和文件管理器，建议安装以下插件：
+1. Git History
+2. GitLens supercharges
+3. Markdown All in One
+4. Markdown Preview Mermaid Support
+5. Markdown Table
+6. Markdown Shortcuts
 
-6. 最后点击 `Add SSH key（添加 SSH 密钥）` 完成添加
-
-</details>
+其他有用的插件请自行探索。

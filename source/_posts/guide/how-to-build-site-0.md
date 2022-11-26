@@ -27,6 +27,3 @@ sticky: 99
 7. {% post_link guide-how-to-build-site-7 %}
 8. {% post_link guide-how-to-build-site-8 %}
 9. {% post_link guide-how-to-build-site-9 %}
-10. {% post_link guide-how-to-build-site-10 %}
-11. {% post_link guide-how-to-build-site-11 %}
-12. {% post_link guide-how-to-build-site-12 %}

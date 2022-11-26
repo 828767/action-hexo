@@ -19,7 +19,7 @@ keywords: 静态网站  #网站关键词，不是所有的主题都支持
 author: 易网盟  #作者
 timezone: 'Asia/Shanghai' #时区，一般中国时区
 # language: en  #网站语言，默认 en，请根据主题文档设置
-#language: zh-Hans #theme: yelee，next
+# language: zh-Hans #theme: yelee，next
 language: zh-CN  #theme: maupassant，landscape，Annie
 
 # Extensions 

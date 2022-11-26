@@ -17,12 +17,14 @@
 
 Windows 系统安装完成后，会在右键菜单添加 `Git Bash Here` 入口，方便后续使用。
 
-如果以前未使用过Git，一般都需要设置用户名和邮箱，随便一个目录空白地方 点右键「Windows系统，其他系统打开系统终端输命令」》 `Git Bash Here` ，运行以下命令设置：
+![Git Bash Here](https://cdn.jsdelivr.net/gh/828767/static/images/git_menu_gitbashhere.png)
+
+如果以前未使用过 Git，一般都需要设置用户名和邮箱，随便一个目录空白地方 点右键「Windows系统，其他系统打开系统终端输命令」》 `Git Bash Here` ，运行以下命令设置：
 ```
 git config --global user.name name #设置Git用户名
 git config --global user.email "email" #设置Git邮箱
 ```
-> 这里只是最基本的Git设置，后续提交同步 GitHub 等需要授权另外教程再说，或者自行求助战略合作伙伴 Google 或百度。
+> 这里只是最基本的Git信息设置，后续提交同步 GitHub 等需要额外授权另外教程再说，或者自行求助战略合作伙伴 Google 或百度。
 
 
 ### **nodejs**
@@ -61,7 +63,7 @@ cd d:\Git   #先切换到要存放Git文件的目录路径
 git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆
 ```
 
-仓库中只包含网站必须的源码文件，一些依赖包文件是忽略提交的，所以本地需要重新安装，在仓库根目录路径下运行以下命令：
+仓库中只包含网站必须的内容源码文件，一些依赖包文件是忽略提交的，所以本地需要重新安装，在仓库根目录路径下运行以下命令：
 ```
 npm install
 ```
@@ -87,6 +89,8 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
  
 ![VSCODE](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-hexo.png)
 
+其他如 Atom、Sublime Text、Typroa 之类的编辑器，甚至是专业的代码编辑器请自行研究。
+
 作为MarkDown编辑器，建议安装以下插件：
 1. Git History
 2. GitLens supercharges
@@ -95,10 +99,16 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 5. Markdown Table
 6. Markdown Shortcuts
 
-其他请自行探索。
+其他有用的插件请自行探索。
 
 ## 其他事项
 1. 任何增删改都需要提交同步到本仓库，同步后上端会自动处理，等几分钟刷新缓存就能看到效果了
 2. 提交前可以本地预览，效果满意了再提交
 3. 根目录下的 `_config.yml` 为网址基础配置，主题内容相关请到 `_config.主题名.yml` 中去设置修改， `_config.主题名.yml` 来源于 `themes/主题名/_config.yml` ，如主题有更新请自行同步
 4. Git基础用法和MarkDown语法等很多基础知识都可以自行求助战略合作伙伴 Google 或百度，遇问题解决问题
+5. 关于怎么用入门教程汇总参考：[从零开始建个小站](https://yiwangmeng.cn/guide-how-to-build-site-0.html)
+
+
+## Stargazers over time
+
+![Stargazers over time](https://starchart.cc/828767/action-hexo.svg)
