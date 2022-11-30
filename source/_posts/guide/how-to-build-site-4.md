@@ -19,6 +19,11 @@ git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆�
 
 ![获取项目仓库地址](https://cdn.jsdelivr.net/gh/828767/static/images/github_clone_https_url.png)
 
+第一次使用GitHub账号需要授权，默认会有如下图授权提示弹窗，选择从浏览器登录授权，打开浏览器后按提示输入账号密码登录后点击授权，直到出现授权成功的提示就表示授权成功。
+
+![连接GitHub账号授权](https://cdn.jsdelivr.net/gh/828767/static/images/github-auth-connect.png)
+
+![浏览器登录授权成功](https://cdn.jsdelivr.net/gh/828767/static/images/git-repo-authentication.jpg)
 
 # 2.2 安装依赖包
 仓库中只包含网站必须的内容源码文件，一些依赖包文件是忽略提交的，所以本地需要重新安装，在仓库根目录路径下运行以下命令：

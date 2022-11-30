@@ -25,7 +25,7 @@ Windows 系统安装完成后，会在右键菜单添加 `Git Bash Here` 入口�
 git config --global user.name name #设置Git用户名
 git config --global user.email "email" #设置Git邮箱
 ```
-> 这里只是最基本的Git信息设置，后续提交同步 GitHub 等需要额外授权
+> 这里只是最基本的Git信息设置，后续提交同步 GitHub 等需要额外授权，详见站内后文：{% post_link guide-how-to-build-site-4 %}
 
 # 1.2  安装 nodejs
 跨平台的JavaScript运行环境和包管理工具。一样的，到 [Nodejs官网](https://nodejs.org/zh-cn/) 下载安装包，建议选择长期维护版，默认安装完成即可。
