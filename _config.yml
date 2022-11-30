@@ -33,7 +33,7 @@ theme: butterfly  #时尚的博客主题，配置文件：_config.butterfly.yml
 # theme: fluid #Material Design 风格主题，配置文件：_config.fluid.yml
 # theme: next #简约的博客主题，配置文件：_config.next.yml
 # theme: academia #学术简历主题，配置文件：_config.academia.yml
-# theme: yelee #双栏博客主题，配置文件：_config.yelee.yml
+# theme: yelee #双栏博客主题，配置文件：_config.yelee.yml，该主题切到其他主题后如果样式不对，请运行一遍 hexo  clean 命令
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
