@@ -17,20 +17,23 @@ action-hexo    #hexo程序工作目录
 |   .gitignore  #指定Git提交时忽略的文件规则
 |   package.json  #依赖包记录，不要动
 |   _config.yml  #网站基础配置文件，定义网站标题，作者等
-|   _config.butterfly.yml  #butterfly这个主题的配置文件，来源于且优先级高于主题目录下的_config.yml
+|   _config.fluid.yml  #fluid这个主题的配置文件，来源于且优先级高于主题目录下的_config.yml
 |
 +---node_modules  #hexo的依赖环境，不要动，一般都会添加到.gitignore忽略
 +---scaffolds  #文章/页面/草稿模板，不会就不要动
 |
 +---source  #网站内容根目录，网络路径为：/
 |   favicon.ico #网站图标，网络路径为：/favicon.ico
-|   \---images  #自建文件夹用来放图片资源，网网络路径为：/images
+|   \---images  #自建文件夹用来放图片资源，网络路径为：/images
 |   |   GoodHexo.png  #/images下的图片，引用地址为：/images/GoodHexo.png，也可以相对路径：../images/GoodHexo.png
 |   \---_posts  #你所有的文章都存在这个目录底下
 |   |   hello-world.md  #示例文章源文件，该MarkDown文件会被hexo渲染成HTML页发布
+|   \---about  #自建的一个叫 about 的页面目录
+|   |   index.md  #about 页面内容，网络路径为：/about/
 |   |
 +---themes  #主题存放目录
 |   \---landscape #默认主题
+|   \---butterfly #另一个主题
 |   \---fluid #另一个主题
 |   |
 ```
