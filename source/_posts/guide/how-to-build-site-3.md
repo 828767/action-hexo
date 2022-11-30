@@ -1,6 +1,6 @@
 ---
 title: '从零开始建个小站 - 1. 搭个本地预览环境'
-date: 2022-05-23 20:20:20
+date: 2022-06-06 20:20:20
 categories:
   - 做网站
 tags:
@@ -45,7 +45,7 @@ $ npm version
 # 墙内设置npm淘宝源，加快下载速度
 npm config set registry https://registry.npm.taobao.org
 # 系统全局安装hexo
-npm install -y hexo-cli
+npm install -g hexo-cli
 ```
 安装完成后可使用命令 `hexo version` 验证：
 ```bash
