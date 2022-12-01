@@ -10,15 +10,24 @@ tags:
 工欲善其事必先利其器，一个好用的编辑器可以事半功倍。
 <!-- more -->
 # 3.1 下载安装编辑器
-VSCODE 就是个不错的选择，自行到 [微软官方网站](https://code.visualstudio.com/download) 去下载安装，优点：
+VSCODE 就是个不错的选择，自行到 [微软官方网站](https://code.visualstudio.com/download) 去下载安装。
+ 
+![VSCODE](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-hexo.png)
+
+VSCODE 是当前最流行的编辑器，免费开源，专业和业余都能胜任：
 1. 全目录管理，一个界面可以管理整个目录下的文件
 2. 语法格式显示，也能实时预览
 3. 与Git集成，可以界面化操作Git提交同步，比较等
 4. 集成命令终端，预览调试方便
- 
-![VSCODE](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-hexo.png)
 
-其他如 Atom、Sublime Text、Typroa 之类的编辑器，甚至是专业的代码编辑器请自行研究。
+
+VSCODE 可以在当前界面直接调出命令行终端，方便输入命令使用：
+
+启动 `VSCODE` ，Windows 版可以通过快捷 `CTRL+~` 或者菜单 `Terminal》New Terminal（新建终端）`
+
+![新建终端](https://cdn.jsdelivr.net/gh/828767/static/images/vscode_new_terminal.png)
+
+其他如 Atom、Sublime Text、Typroa 之类的编辑器也都可以，甚至是专业的代码编辑器请自行研究。
 
 # 3.2 文件一站式管理
 VSCODE 可以很方便地对网站进行管理：
@@ -26,12 +35,6 @@ VSCODE 可以很方便地对网站进行管理：
 克隆完成后，通过快捷方式 `Ctrl+K Ctrl+O` 或者菜单 `File（文件）》Open Folder（打开文件夹）` 打开刚克隆完的仓库目录。
 
 ![打开文件夹](https://cdn.jsdelivr.net/gh/828767/static/images/vscode_markdown_editor.png)
-
-也可以直接调出命令行终端：
-
-启动 `vscode` ，通过快捷 `CTRL+~` 或者菜单 `Terminal》New Terminal（新建终端）`
-
-![新建终端](https://cdn.jsdelivr.net/gh/828767/static/images/vscode_new_terminal.png)
 	
 至此，我们就可以在 `vscode` 中便捷地增删改网站源文件了。
 
