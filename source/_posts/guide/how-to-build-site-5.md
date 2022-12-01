@@ -43,7 +43,7 @@ VSCODE 可以很方便地对网站进行管理：
 VSCODE 很好地集成了Git操作，在我们增删改文件后，可以直接在编辑器界面与 Git 仓库提交同步：
 ![Git操作界面概览](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-git.png)
 
-提交只是本地操作，要同步到外网，还需要进一步 **推送或同步** ，界面上有好几处 `同步` 、`push` 等功能按钮，或者直接点 VSCODE 窗口左下角那个 `循环图标` 即可完成Git数据同步。
+提交只是本地操作，要同步到外网，还需要进一步 **推送或同步** ，界面上有好几处 `同步` 、`push` 等功能按钮，或者直接点 VSCODE 窗口左下角状态栏上 🔄 即可完成Git数据同步。
 
 ![Git同步状态](https://cdn.jsdelivr.net/gh/828767/static/images/github-sync.png)
 
