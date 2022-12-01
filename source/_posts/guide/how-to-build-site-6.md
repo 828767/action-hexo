@@ -7,7 +7,11 @@ tags:
   - 教程
 ---
 
-本实操仅针对 {% post_link guide-how-to-build-site-2 "建站方案选择" %} 中提及的免费方案：**hugo/hexo + GitHub + GitHub免费二级域名/自备域名**，另外的付费方案自带网站后台，界面化的一体操作没什么好演示的，如有需要可求助我们的战略合作伙伴Google和百度。
+本实操仅针对 {% post_link guide-how-to-build-site-2 "建站方案选择" %} 中提及的免费方案：**hugo/hexo + GitHub + GitHub免费二级域名/自备域名** ，另外的付费方案自带网站后台，界面化的一体操作没什么好演示的，如有需要可求助我们的战略合作伙伴Google和百度。
+
+针对 GitHub 仓库版方案，我们需要做的就两步：
+
+![内容增删改](https://cdn.jsdelivr.net/gh/828767/static/images/github-zsg.png)
 
 强调三点：
 1. 所有的增删改都需要同步到上端仓库后网络上才能看到变更！！！
@@ -35,7 +39,7 @@ tags:
 ### 4.1.2 **复制已有再修改**
 `复制已有` 就是字面意思，不用打开命令行终端输命令，直接到 `source/_post` 目录下找个已存在的 MarkDown 文件，如：把网站自带的 `hello-world.md` 这个文件**复制一份改名**为 `new-post.md` ，然后打开该源码文件，把标题，日期等信息按实际内容需求改好，填充新内容就成了。
 
-## 4.2 格式格式
+## 4.2 **格式！格式！**
 前文新建文章或页面说明都提到了需要遵循格式。
 
 一个MarkDown 源码文件，除了 `Front-matter` 头部信息，其他的就是基本的 MarkDown 语法，MarkDown 语法是页面内容展示，错误与否都只是关系到展示内容样式，而 `Front-matter` 则直接关系到 hexo 能不能把 MarkDown 源码文件正确渲染成 HTML ，所以遵循正确的 `Front-matter` 至关重要。
@@ -59,8 +63,9 @@ description: 'pug原名jade，因版权问题更名为pug，即哈巴狗。如�
 有跨行或特殊符号等，请用英文引号包起来，就如本段示例。'
 top:
 ---
+这里开始就是正文内容了……
 ```
-以上 `Front-matter` 是 Hexo 程序的，其中设置项也需要对应的主题支持，如果不是 Hexo 基础 `Front-matter` ，具体需要添加什么根据主题文档来。
+以上示例是 Hexo 程序的 `Front-matter` 头部信息，其中一些设置项也需要对应的主题支持，如果不是 Hexo 基础 `Front-matter` ，具体需要添加什么根据主题文档来。
 
 > 注意：每一个参数的 : 或者 - 后，都需要至少留一个空格，如果不填值就无所谓，或者将参数行删除都行，就是不能不留空格直接写，否则会报错，格式有错误时 VSCODE 也会显色提示，请留意。
 
@@ -68,9 +73,20 @@ top:
 1. [Hugo-Front-Matter](https://gohugo.io/content-management/front-matter/)
 2. [Hexo-Front-matter](https://hexo.io/zh-cn/docs/front-matter)
 
-对于增删改后的内容，我们可以启动本地预览查看效果，没问题了再通过Git提交并推送到上端仓库，静待上端渲染及刷新完缓存就能看到最终结果了。
+在完成了 `Front-matter` 信息设定后，我们就可以在第二个 `---` 行下方填充自己想要的内容。内容书写格式默认使用 MarkDown 语法，你直接写 HTML 代码也行，甚至你可以不顾语法当记事本或者Word写是没问题的，无非就是少了些格式样式。
+> MarkDown 语法边用边学都没问题，本来就没几个语法，可参考 {% post_link guide-how-to-build-site-8 %} 中 `MarkDown语法` 章节
 
-## 4.3 快速模板
+## 4.3 提交同步数据
+对于增删改后的内容，我们可以启动本地预览查看效果，没问题了再通过 Git 提交并推送到上端仓库，静待上端渲染及刷新完缓存就能看到最终结果了。
+> 本地预览方法请参见 {% post_link guide-how-to-build-site-4 %} 中 `预览测试` 章节内容
+
+> Git 提交同步数据可用命令行，也可以使用 VSCODE 集成的界面化操作，详情请参考：{% post_link guide-how-to-build-site-5 %}
+
+
+## 4.4 使用快速模板
+
+在熟悉了 Hexo 的基础用法后，有些内容是制式固定的，或者想偷个懒一次性都添加好默认内容，那么我们就可以借助自定义快速模板来完成。
+
 在使用 `hexo n` 命令新建文章时，其实是遵循模板规则。打开 `scaffolds` 目录，可见有文章，页面等模板文件，打开源码可见如下内容
 
 ```yml
