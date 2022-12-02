@@ -20,7 +20,7 @@ Windows 系统安装完成后，会在右键菜单添加 `Git Bash Here` 入口�
 ![Git Bash Here](https://cdn.jsdelivr.net/gh/828767/static/images/git_menu_gitbashhere.png)
 
 如果以前未使用过 Git，一般都需要设置用户名和邮箱，随便一个目录空白地方 点右键「Windows系统，其他系统打开系统终端输命令」》 `Git Bash Here` ，运行以下命令设置：
-```
+```bash
 git config --global user.name name #设置Git用户名
 git config --global user.email "email" #设置Git邮箱
 ```
@@ -31,7 +31,7 @@ git config --global user.email "email" #设置Git邮箱
 跨平台的JavaScript运行环境和包管理工具。一样的，到 [Nodejs官网](https://nodejs.org/zh-cn/) 下载安装包，建议选择长期维护版，默认安装完成即可。
 
 安装完成后，在前文安装完成的 `Git Bash` 或者系统终端中输入命令 `npm version` 验证安装结果：
-```
+```bash
 $ npm version
 {
   npm: '8.5.5',
@@ -39,16 +39,22 @@ $ npm version
   ……
 }
 ```
+
+为了后面安装依赖包顺利完成，运行以下命令设置 npm 淘宝源：
+```bash
+# 墙内设置 npm 淘宝源，加快网络下载速度，墙外就不要做了
+npm config set registry https://registry.npm.taobao.org
+```
+
 ### **hexo**
 前文安装完成 `npm` 包管理器后，就可以安装 `hexo` 预览客户端了，打开前文安装完成的 `Git Bash` 或者系统终端，输入以下命令：
-```
-# 墙内设置npm淘宝源，加快下载速度
-npm config set registry https://registry.npm.taobao.org
-# 系统全局安装hexo
-npm install -y hexo-cli
+```bash
+# 系统全局安装hexo，方便从零开始
+# macOS 或 Linux 非 root 用户登录需要 sudo 权限运行
+npm install -g hexo-cli
 ```
 安装完成后可使用命令 `hexo version` 验证：
-```
+```bash
 $ hexo version
 INFO  Validating config
 hexo: 6.2.0
@@ -56,20 +62,24 @@ hexo-cli: 4.3.0
 ……
 ```
 
+macOS新版本默认启用的是 `zsh` 终端，`hexo` 安装完成后并未添加到 `zsh` 能识别的系统变量，会出现提示 `zsh: command not found: hexo` 的情况，可添加系统变量解决，具体方法请求助战略合作伙伴 Google和百度，或者就此烂过。
+
+> 也可以 [将系统默认终端改成 `bash`](https://support.apple.com/zh-cn/guide/terminal/trml113/mac)，或者使用后文提到的 VSCODE 集成终端，将 VSCODE 调用默认终端改成 `bash`，然后在 VSCODE 集成终端运行命令即可。
+
 ### **packages**
 前面的准备工作已完成，剩下就是将仓库文件克隆同步到本地电脑，还是在 `Git Bash` 中，输入这样的命令：
-```
+```bash
 cd d:\Git   #先切换到要存放Git文件的目录路径
 git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆
 ```
 
 仓库中只包含网站必须的内容源码文件，一些依赖包文件是忽略提交的，所以本地需要重新安装，在仓库根目录路径下运行以下命令：
-```
+```bash
 npm install
 ```
 
 以上命令实际上是下载 `package.json` 中定义好的依赖包，等依赖包下载完成，整个本地预览环境就全部安装完成了，在仓库根目录路径下运行 `hexo s` 即可启动预览服务：
-```
+```bash
 user@IAY MINGW64 /d/Git/action-hexo (main)
 $ hexo s
 INFO  Validating config
