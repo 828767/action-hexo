@@ -86,6 +86,8 @@ Begin a line with `> ` to create a block quote.
 
 [Complete list of github markdown emoji markup](https://gist.github.com/rxaviers/7360908)
 
+[另一个emoji表情大全](https://www.emojiall.com/zh-hans/all-emojis)
+
 ## References
 
 1. [Markdown 入门参考](http://xianbai.me/learn-md/article/about/readme.html)

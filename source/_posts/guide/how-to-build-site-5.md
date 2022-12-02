@@ -27,6 +27,11 @@ VSCODE 可以在当前界面直接调出命令行终端，方便输入命令使�
 
 ![新建终端](https://cdn.jsdelivr.net/gh/828767/static/images/vscode_new_terminal.png)
 
+该终端默认使用系统终端，功能上有些许差异，建议设置默认终端为 `Git Bash`，方法：点击终端窗口右上角 ➕ 右侧的 `下拉箭头`
+
+![设置默认终端](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-set-terminal-defalt.png)
+![选择Git Bash](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-set-terminal-git.png)
+
 其他如 Atom、Sublime Text、Typroa 之类的编辑器也都可以，甚至是专业的代码编辑器请自行研究。
 
 # 3.2 文件一站式管理
