@@ -286,7 +286,7 @@ follow_me:
 # Dependencies: https://github.com/sergeyzwezdin/hexo-related-posts
 related_posts:
   enable: false
-  display_in_home: false
+  icon: fa fa-signs-post
 
 # Post edit
 # Easily browse and edit blog source code online.
@@ -619,6 +619,7 @@ motion:
   async: false
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
+    menu_item: fadeInDown
     post_block: fadeIn
     post_header: fadeInDown
     post_body: fadeInDown
