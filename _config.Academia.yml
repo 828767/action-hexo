@@ -13,7 +13,9 @@ since: 2020
 menu:
   Publications: /#Publications
   About: /about/
-  Blog: https://yiwangmeng.com
+  Blog: https://yiwangmeng.cn
+  Guide: https://yiwangmeng.com
+
 
 # flink picture will load if avator link calls on error
 loading_bg:
