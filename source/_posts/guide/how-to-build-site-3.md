@@ -13,6 +13,8 @@ tags:
 <!-- more -->
 虽然也能在线增删改文件，但还是建议拉取仓库到本地电脑进行操作。在本地电脑操作，就有必要搭个本地预览环境。
 
+> 以下以 Windows 系统环境演示，其他操作系统请打开系统终端 terminal 直接输对应的命令
+
 # 1.1 安装 Git 客户端
 仓库文件管理借助大名鼎鼎的代码项目管理工具，到 [Git-SCM官网](https://git-scm.com/downloads) 下载安装包或者软件源默认安装完成即可。
 
@@ -20,7 +22,8 @@ Windows 系统安装完成后，会在右键菜单添加 `Git Bash Here` 入口�
 
 ![Git Bash Here](https://cdn.jsdelivr.net/gh/828767/static/images/git_menu_gitbashhere.png)
 
-如果以前未使用过 Git，一般都需要设置用户名和邮箱，随便一个目录空白地方 点右键「Windows系统，其他系统打开系统终端输命令」》 `Git Bash Here` ，运行以下命令设置：
+如果以前未使用过 Git，一般都需要设置用户名和邮箱，随便一个目录空白地方 点右键》 `Git Bash Here` ，运行以下命令设置：
+
 ```bash
 git config --global user.name name #设置Git用户名
 git config --global user.email "email" #设置Git邮箱
