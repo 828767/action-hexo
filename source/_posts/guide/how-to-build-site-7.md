@@ -37,7 +37,7 @@ action-hexo    #hexo程序工作目录
 |   \---fluid #另一个主题
 |   |
 ```
-![认识hexo文件](https://cdn.jsdelivr.net/gh/828767/static/images/hexo-files-tree.png)
+![认识hexo文件](https://cdn.jsdelivr.net/gh/828767/static/images/hexo-files-tree.png "Hexo 项目文件结构")
 
 # 5.2 网站设置
 从上文可知，网站基础配置需要在 `hexo程序工作目录` 中的 `_config.yml` 进行配置：
