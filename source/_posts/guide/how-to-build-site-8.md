@@ -58,6 +58,38 @@ git config --global --unset https.proxy
 
 > 打开 `.gitconfig` 文件可见之前配置的用户名称和email信息等，直接通过编辑配置文件和通过命令设置理是一样的效果。
 
+## 添加/删除 `submodule`
+本仓库包中自带的 Hexo 主题都是通过 `git submodule add` 管理的，主题只是作为一个链接提交，`themes` 目录下并不包含主题文件。
+
+如果想添加其他的主题，可以将主题文件提交，作为仓库项目的一部分，也可以以 `submodule` 方式应用，添加只需要一条命令：
+```Bash
+git submodule add --depth=1 ttps://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+```
+
+这样该主题文件夹只是以一个指定版本链接的形式存在于本仓库项目中，如果想完整下载到本地，添加 `--recurse-submodules` 参数就能一起克隆：
+```Bash
+git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆到本地
+```
+
+如果不需要其中某个主题，可以通过以下方法删除掉，以删除 `themes/ananke` 这个主题为例：
+1. 删除 `.gitmodules` 中这部分
+   ```toml
+   [submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+   ```
+2. 删除 `.git/config` 中以下部分
+   ```toml
+   [submodule "themes/ananke"]
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+	active = true
+   ```
+3. 删除 `.git\modules\themes` 目录下的 `ananke` 文件夹
+4. 删除 `themes\ananke` 文件夹
+
+至此，该 `submodule` 就从版本库中删除了，将结果提交同步即可。
+
+
 # 6.2 Hexo 高级用法
 如果只是普通的写写博客，做个小展示网站什么的，高级语法也不需要。但用上些高级语法，功能就更强大，在处理大量同质内容时就事半功倍了，直接见官方文档吧：
 1. [Hexo：标签插件（Tag Plugins）](https://hexo.io/zh-cn/docs/tag-plugins)
