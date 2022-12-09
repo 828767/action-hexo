@@ -9,7 +9,7 @@ tags:
 既然这是篇小白零基础建站教程，那么就不会涉及带门槛的方案，只是简单罗列了适合新手的案例，其他同等方案或者更复杂方案等熟悉了可以再自行研究。
 <!-- more -->
 # 方案对比
-## 免费：**hugo/hexo + GitHub + GitHub免费二级域名/自备域名**
+## 免费：**Hugo/Hexo/... + GitHub + GitHub免费二级域名/自备域名**
 
 ```mermaid
  flowchart LR;
@@ -21,7 +21,7 @@ tags:
 - 优点：有免费资源，静态页速度快，网站源文件通过 git 版本管理安全可靠
 - 缺点：需要点 MarkDown 语法知识，缺小白界面化管理后台
 
-## 付费：**WordPress/Typecho/Zblog + 自备服务器 + 自备域名**
+## 付费：**WordPress/Typecho/... + 自备服务器 + 自备域名**
 
 ```mermaid
  flowchart LR;

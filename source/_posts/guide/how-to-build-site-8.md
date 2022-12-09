@@ -135,12 +135,13 @@ Begin a line with `> ` to create a block quote.
 ```Markdown
 ![图片alt](图片链接 "图片title")
 ```
+图片链接有两种方法引用，任意一种都可以，各有利弊，自行选择。
 
 方法1：上传到图床，然后通过图床地址引用
 
 ```Markdown
 #图床就是别人提供给你的存储空间和网络
-![图床引用](https://s1.ax1x.com/2022/12/06/z6rzA1.jpg "imgse.com 图床引用示例")
+![图床引用](https://s1.ax1x.com/2022/12/06/z6rzA1.jpg "imgse图床引用示例")
 ```
 
 方法2：图片文件存在项目内，本地引用
