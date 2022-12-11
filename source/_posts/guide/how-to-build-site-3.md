@@ -15,8 +15,11 @@ tags:
 
 > 以下以 Windows 系统环境演示，其他操作系统请打开系统终端 terminal 直接输对应的命令
 
+
+> 到以下涉及软件官网下载如果速度慢，可以从 [墙内淘宝源下载](https://registry.npmmirror.com/binary.html)。
+
 # 1.1 安装 Git 客户端
-仓库文件管理借助大名鼎鼎的代码项目管理工具，到 [Git-SCM官网](https://git-scm.com/downloads) 下载安装包或者软件源默认安装完成即可。
+仓库文件管理借助大名鼎鼎的代码项目管理工具，到 [Git-SCM官网](https://git-scm.com/downloads) 或者 [墙内淘宝源](https://registry.npmmirror.com/binary.html?path=git-for-windows/ "Windows版，其他系统自带或直接命令安装") 下载安装包或者软件源默认安装完成即可。
 
 Windows 系统安装完成后，会在右键菜单添加 `Git Bash Here` 入口，方便后续使用。
 
@@ -31,7 +34,7 @@ git config --global user.email "email" #设置Git邮箱
 > 这里只是最基本的Git信息设置，后续提交同步 GitHub 等需要额外授权，详见站内后文：{% post_link guide-how-to-build-site-4 %}
 
 # 1.2  安装 nodejs
-跨平台的 JavaScript 运行环境和包管理工具。同样的，到 [Nodejs官网](https://nodejs.org/zh-cn/) 下载安装包，建议选择长期维护版，默认安装完成即可。
+`nodejs` 是跨平台的 JavaScript 运行环境和包管理工具。同样的，到 [Nodejs官网](https://nodejs.org/zh-cn/) 或者 [墙内淘宝源](https://registry.npmmirror.com/binary.html?path=node/) 下载安装包，建议选择长期维护版，默认安装完成即可。
 
 安装完成后，在前文安装完成的 `Git Bash` 或者系统终端中输入命令 `npm version` 验证安装结果：
 ```bash
