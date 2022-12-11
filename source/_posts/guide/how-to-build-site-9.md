@@ -57,3 +57,21 @@ MarkDown语法已经很简单易懂了，这里有一个章节列了几个常用
 
 ## 我添加的图片怎么不显示
 请自行按 MarkDown 或者 HTML 语法添加图片，也可以打开本站自带的示例源码依葫芦画瓢，语法具体可见：{% post_link guide-how-to-build-site-8 %} 中 `MarkDown 语法` 及后续贴出的相关教程。
+
+## 要修改网址怎么办
+网站网址在 `_config.yml` 中修改如下配置：
+```yml
+#  网址, 必须以 http[s]:// 开头
+#  没有自己的域名就用免费 username.github.io
+url: https://yiwangmeng.cn
+```
+
+如果用自己的域名，请修改配置的同时，在域名解析托管商处做好 `CNAME` 解析，一般都是添加这样的两条记录：
+- 记录/名称/`Name`：`@` 和 `www`
+- 方式/类型/`Type`：`CNAME`
+- 记录值/解析目标/`Target`：`username.github.io`
+
+`username` 是你 GitHub 用户名，所以当你想更改 GitHub 提供的免费二级域名时，需要：
+1. 先更改自己的用户名
+2. 其次同步修改这个 `username.github.io` 的 Pages 仓库名
+3. 然后配置中或者 DNS 解析记录也要相应的同步修改
