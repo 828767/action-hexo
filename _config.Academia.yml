@@ -5,7 +5,7 @@ avatar: /img/avatar.jpg
 author: 'Jason'
 author_bio: 'Your biography can be writed down here.'
 
-since: 2020
+since: 2022
 
 # Top Menu 顶部菜单
 # #title 为页内跳转，单页模式
@@ -15,6 +15,7 @@ menu:
   About: /about/
   Blog: https://yiwangmeng.cn
   Guide: https://yiwangmeng.com
+  Introduction: /#Introduction
 
 
 # flink picture will load if avator link calls on error
