@@ -56,7 +56,7 @@ git config --global --unset https.proxy
 	proxy = socks5://127.0.0.1:7890
 ```
 
-> 打开 `.gitconfig` 文件可见之前配置的用户名称和email信息等，直接通过编辑配置文件和通过命令设置理是一样的效果。
+> 打开 `.gitconfig` 文件可见之前配置的用户名称和email信息等，直接通过编辑配置文件和通过命令设置是一样的效果。
 
 ## 添加/删除 `submodule`
 本仓库包中自带的 Hexo 主题都是通过 `git submodule add` 管理的，主题只是作为一个链接提交，`themes` 目录下并不包含主题文件。
