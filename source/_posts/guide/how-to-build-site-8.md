@@ -86,6 +86,7 @@ git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆�
    ```
 3. 删除 `.git\modules\themes` 目录下的 `ananke` 文件夹
 4. 删除 `themes\ananke` 文件夹
+5. 运行 `git rm --cached themes\ananke` 清理 Git 缓存。
 
 至此，该 `submodule` 就从版本库中删除了，将结果提交同步即可。
 
