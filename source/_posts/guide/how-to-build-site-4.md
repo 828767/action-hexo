@@ -12,7 +12,7 @@ tags:
 还是在 `Git Bash` 中，输入这样的命令：
 ```bash
 cd d:\Git   #先切换到要存放Git文件的目录路径
-git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆到本地
+git clone --recurse-submodules 源码仓库地址 #带子模块一起克隆到本地
 ```
 
 以上请将仓库地址换成自己的仓库实际地址，建议从仓库页面上复制，获取方法：打开仓库主页》在文件列表右上方有个 `Code` ，点击下拉复制，如下图所示：
