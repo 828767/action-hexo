@@ -51,16 +51,22 @@ author: 易网盟  #作者
 timezone: 'Asia/Shanghai' #时区，一般中国时区
 # language: en  #网站语言，默认 en，请根据主题文档设置
 language: zh-CN
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://yiwangmeng.cn # 网址必须以 http[s]:// 开头，没有自己的域名就用免费 username.github.io
+permalink: :title.html #链接发布格式
 ```
 打开查看内容就能知道大概了，都有对应的注释，请根据自己实际情况修改填写，或者可以参阅 [官方配置文档](https://hexo.io/docs/configuration.html)。
+> 如果网站网址是配置自有域名，请在域名解析托管商添加对应 `CNAME` 解析，可参考：{% post_link guide-how-to-build-site-9 %} 中相关章节：`要修改网址怎么办`。
 # 5.3 主题设置
 主题设置每个主题都不一样，所以需要根据实际使用的主题文档去配置，一般在主题目录下都会有个 `README.md` ，请打开或者找到主题在线文档去阅读，主题让装啥就装啥，让咋改就咋改。
 
 为了以后更新主题时不覆盖我们已经配置好的内容，可以将主题目录下的 `_config.yml` 复制到 `hexo根目录` 下，并重命名为：`_config.主题名.yml` ，如：`_config.fluid.yml` 。
 
 > `_config.主题名.yml` 来源于 `themes/主题名/_config.yml`，如主题有更新请自行同步
-> 
-> Hexo 会将 `_config.主题名.yml` 和 `themes/主题名/_config.yml` 配置合并使用，相同配置项则以 `_config.主题名.yml` 中的值为准
+
+> Hexo 会将 `_config.主题名.yml` 和 `themes/主题名/_config.yml` 配置内容 **合并**  **合并**  **合并** 使用，相同配置项则以 `_config.主题名.yml` 中的值为准
 
 
 然后按照主题说明文档在新复制的主题配置中按需进行配置，以后主题有更新，如果涉及到该配置文件变更，请将最新内容同步到 `_config.主题名.yml` 中即可。

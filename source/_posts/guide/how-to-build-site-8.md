@@ -63,12 +63,12 @@ git config --global --unset https.proxy
 
 如果想添加其他的主题，可以将主题文件提交，作为仓库项目的一部分，也可以以 `submodule` 方式应用，添加只需要一条命令：
 ```Bash
-git submodule add --depth=1 ttps://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+git submodule add --depth=1 主题仓库地址 themes/主题名
 ```
 
 这样该主题文件夹只是以一个指定版本链接的形式存在于本仓库项目中，如果想完整下载到本地，添加 `--recurse-submodules` 参数就能一起克隆：
 ```Bash
-git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆到本地
+git clone --recurse-submodules 源码仓库地址 #带子模块一起克隆到本地
 ```
 
 如果不需要其中某个主题，可以通过以下方法删除掉，以删除 `themes/ananke` 这个主题为例：
@@ -86,9 +86,8 @@ git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆�
    ```
 3. 删除 `.git\modules\themes` 目录下的 `ananke` 文件夹
 4. 删除 `themes\ananke` 文件夹
-5. 运行 `git rm --cached themes\ananke` 清理 Git 缓存。
 
-至此，该 `submodule` 就从版本库中删除了，将结果提交同步即可。
+以上变更提交 Git 版本库后，运行 `git rm --cached themes\ananke` 可清理 Git 工作区缓存。至此，该 `submodule` 就从版本库中删除了，将结果提交同步即可。
 
 
 # 6.2 Hexo 高级用法

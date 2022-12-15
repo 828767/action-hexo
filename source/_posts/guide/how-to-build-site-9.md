@@ -59,14 +59,14 @@ MarkDown语法已经很简单易懂了，这里有一个章节列了几个常用
 请自行按 MarkDown 或者 HTML 语法添加图片，也可以打开本站自带的示例源码依葫芦画瓢，语法具体可见：{% post_link guide-how-to-build-site-8 %} 中 `MarkDown 语法` 及后续贴出的相关教程。
 
 ## 要修改网址怎么办
-网站网址在 `_config.yml` 中修改如下配置：
+网站网址在网站配置 `_config.yml` 中修改如下配置项：
 ```yml
 #  网址, 必须以 http[s]:// 开头
 #  没有自己的域名就用免费 username.github.io
 url: https://yiwangmeng.cn
 ```
 
-如果用自己的域名，请修改配置的同时，在域名解析托管商处做好 `CNAME` 解析，一般都是添加这样的两条记录：
+如果用自己的域名，请修改配置的同时，在域名解析托管商处做好 `CNAME` 解析，**一般都是**添加这样的两条记录：
 - 记录/名称/`Name`：`@` 和 `www`
 - 方式/类型/`Type`：`CNAME`
 - 记录值/解析目标/`Target`：`username.github.io`
