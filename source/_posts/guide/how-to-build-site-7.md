@@ -60,7 +60,24 @@ permalink: :title.html #链接发布格式
 打开查看内容就能知道大概了，都有对应的注释，请根据自己实际情况修改填写，或者可以参阅 [官方配置文档](https://hexo.io/docs/configuration.html)。
 > 如果网站网址是配置自有域名，请在域名解析托管商添加对应 `CNAME` 解析，可参考：{% post_link guide-how-to-build-site-9 %} 中相关章节：`要修改网址怎么办`。
 # 5.3 主题设置
-主题设置每个主题都不一样，所以需要根据实际使用的主题文档去配置，一般在主题目录下都会有个 `README.md` ，请打开或者找到主题在线文档去阅读，主题让装啥就装啥，让咋改就咋改。
+首先在上文 [网站设置](#5-2-网站设置) 中切换启用自己喜欢的主题，行首以 `#` 开头表示注释掉了不启用：
+```yml
+# Extensions 
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+# 只能启用1个主题，启用后本地使用 `hexo s` 命令即可启动预览服务进行预览
+# 切换主题后如果预览样式不对，请启动预览服务前运行一遍 `hexo clean` 命令
+# theme: landscape  #默认主题，最简单
+# theme: maupassant #简洁的博客主题，配置文件：_config.maupassant.yml
+theme: butterfly  #时尚的博客主题，配置文件：_config.butterfly.yml
+# theme: matery #响应式布局多媒体主题，配置文件：_config.matery.yml
+# theme: fluid #Material Design 风格主题，配置文件：_config.fluid.yml
+# theme: next #简约的博客主题，配置文件：_config.next.yml
+# theme: Academia #学术简历主题，配置文件：_config.Academia.yml
+# theme: yelee #双栏博客主题，配置文件：_config.yelee.yml
+```
+
+接下来就对指定的主题进行配置，具体到主题功能设置每个主题都不一样，所以需要根据实际使用的主题文档去配置，一般在主题目录下都会有个 `README.md` ，请打开或者找到主题在线文档去阅读，主题让装啥就装啥，让咋改就咋改。
 
 为了以后更新主题时不覆盖我们已经配置好的内容，可以将主题目录下的 `_config.yml` 复制到 `hexo根目录` 下，并重命名为：`_config.主题名.yml` ，如：`_config.fluid.yml` 。
 
