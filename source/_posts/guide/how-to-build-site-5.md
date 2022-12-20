@@ -10,7 +10,7 @@ tags:
 工欲善其事必先利其器，一个好用的编辑器可以事半功倍。
 <!-- more -->
 # 3.1 下载安装编辑器
-VSCODE 就是个不错的选择，自行到 [微软官方网站](https://code.visualstudio.com/download) 去下载安装。
+VSCODE 就是个不错的选择，自行到 [微软官方网站](https://code.visualstudio.com/download) 去下载安装，`建议选择安装到系统版本`。
  
 ![VSCODE](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-hexo.png)
 
@@ -32,6 +32,8 @@ VSCODE 可以在当前界面直接调出命令行终端，方便输入命令使�
 ![设置默认终端](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-set-terminal-defalt.png)
 ![选择Git Bash](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-set-terminal-git.png)
 
+> Windows 11 系统上，不知道什么原因系统变量可能会失效，导致无法运行 `npm` 或者 `hexo` 命令，那么请直接使用 `Git Bash Here` 终端即可，或者自己去添加对应系统变量解决。
+
 其他如 Atom、Sublime Text、Typroa 之类的编辑器也都可以，甚至是专业的代码编辑器请自行研究。
 
 # 3.2 文件一站式管理
@@ -43,6 +45,7 @@ VSCODE 可以很方便地对网站进行管理：
 	
 至此，我们就可以在 `vscode` 中便捷地增删改网站源文件了。
 
+> 文件修改后，请`记得要保存`，`记得要保存`，`记得要保存`
 
 # 3.3 界面化Git操作
 VSCODE 很好地集成了Git操作，在我们增删改文件后，可以直接在编辑器界面与 Git 仓库提交同步：

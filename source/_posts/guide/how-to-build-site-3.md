@@ -33,6 +33,9 @@ git config --global user.email "email" #设置Git邮箱
 ```
 > 这里只是最基本的Git信息设置，后续提交同步 GitHub 等需要额外授权，详见站内后文：{% post_link guide-how-to-build-site-4 %}
 
+
+`Git Bash Here` 这个右键菜单，在哪个目录下点就会将工作路径自动切换到哪，可以省去切换工作路径的麻烦，小白可以多用用。
+
 # 1.2  安装 nodejs
 `nodejs` 是跨平台的 JavaScript 运行环境和包管理工具。同样的，到 [Nodejs官网](https://nodejs.org/zh-cn/) 或者 [墙内淘宝源](https://registry.npmmirror.com/binary.html?path=node/) 下载安装包，建议选择长期维护版，默认安装完成即可。
 
