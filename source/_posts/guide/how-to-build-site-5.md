@@ -10,8 +10,11 @@ tags:
 工欲善其事必先利其器，一个好用的编辑器可以事半功倍。
 <!-- more -->
 # 3.1 下载安装编辑器
-VSCODE 就是个不错的选择，自行到 [微软官方网站](https://code.visualstudio.com/download) 去下载安装，`建议选择安装到系统版本`。
- 
+VSCODE 就是个不错的选择，自行到 [微软官方网站](https://code.visualstudio.com/download) 去下载安装。
+> 如果墙内下载慢，可把下载地址中 `az764295.vo.msecnd.net`  改为 `vscode.cdn.azure.cn` 可实现秒下，如Windows版墙内地址：
+> 
+> https://vscode.cdn.azure.cn/stable/e8a3071ea4344d9d48ef8a4df2c097372b0c5161/VSCodeSetup-x64-1.74.2.exe
+
 ![VSCODE](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-hexo.png)
 
 VSCODE 是当前最流行的编辑器，免费开源，专业和业余都能胜任：
