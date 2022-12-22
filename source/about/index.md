@@ -19,7 +19,7 @@ toc: false
 
 如果您也一样热爱互联网，喜欢捣鼓软件，欢迎评论留言或与院长联系。
 
-QQ群：键盘侠 `260489333`，[**点此加群**](//shang.qq.com/wpa/qunwpa?idkey=88fc6f2b9ad38ce33c4f2445afcddfa0e8e4bc86f45ed67902a110c3337eda83)
+QQ群：键盘侠 `260489333`，[**点此加群**](https://jq.qq.com/?_wv=1027&k=bsazUgJ3)
 
 <div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-atm.png"  width="200" height="260" ></div>
 
