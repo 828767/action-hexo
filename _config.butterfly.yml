@@ -13,6 +13,10 @@ menu:
   Link: /link/ || fas fa-link
   About: /about/ || fas fa-heart
 
+nav_info:
+  logo: # image
+  display_title: true # true or false
+
 # Code Blocks (代碼相關)
 # --------------------------------------
 
