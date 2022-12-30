@@ -16,3 +16,6 @@
 [submodule "themes/nexmoe"]
 	path = themes/nexmoe
 	url = https://github.com/theme-nexmoe/hexo-theme-nexmoe.git
+[submodule "themes/stellar"]
+	path = themes/stellar
+	url = https://github.com/xaoxuu/hexo-theme-stellar.git

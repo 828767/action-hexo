@@ -39,6 +39,7 @@ theme: butterfly  #多功能主题，配置文件：_config.butterfly.yml
 # theme: Academia #学术简历主题，配置文件：_config.Academia.yml
 # theme: yelee #双栏博客主题，配置文件：_config.yelee.yml
 # theme: nexmoe #二次元主题，配置文件：_config.nexmoe.yml
+# theme: stellar #简约商务风主题，配置文件：_config.stellar.yml
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
