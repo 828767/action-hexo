@@ -59,7 +59,7 @@ git config --global --unset https.proxy
 > 打开 `.gitconfig` 文件可见之前配置的用户名称和email信息等，直接通过编辑配置文件和通过命令设置是一样的效果。
 
 ## 添加/删除 `submodule`
-本仓库包中自带的 Hexo 主题都是通过 `git submodule add` 管理的，主题只是作为一个链接提交，`themes` 目录下并不包含主题文件。
+本仓库包中自带的 Hexo 主题都是通过 `git submodule add` 管理的，主题只是作为一个链接提交，源码仓库中 `themes` 目录下并不包含主题文件。
 
 如果想添加其他的主题，可以将主题文件提交，作为仓库项目的一部分，也可以以 `submodule` 方式应用，添加只需要一条命令：
 ```Bash
@@ -86,8 +86,10 @@ git clone --recurse-submodules 源码仓库地址 #带子模块一起克隆到�
    ```
 3. 删除 `.git\modules\themes` 目录下的 `ananke` 文件夹
 4. 删除 `themes\ananke` 文件夹
+5. 在项目根目录路径下运行 `git rm --cached themes\ananke` 命令清理 Git 工作区缓存
+6. 将以上所有变更提交 Git 版本库
 
-以上变更提交 Git 版本库后，运行 `git rm --cached themes\ananke` 可清理 Git 工作区缓存。至此，该 `submodule` 就从版本库中删除了，将结果提交同步即可。
+至此，该 `submodule` 就从版本库中删除了，将结果提交同步到线上仓库即可。
 
 
 # 6.2 Hexo 高级用法

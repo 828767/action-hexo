@@ -6,8 +6,9 @@ categories:
 tags:
   - 教程
 ---
-## 文档看不懂/不想看/太麻烦/我不会……
+## 文档看不懂/不想看/太麻烦/我不会/不要发教程……
 懒那就没辙了，快发动你的钞能力！
+> `按次付费`，花了钱也不是该伺候你一辈子，有些人想付费站长也不乐意接，尊重是相互的！上帝来了也不会例外！
 
 <div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-atm.png"  width="200" height="260" ></div>
 
@@ -16,6 +17,10 @@ tags:
 <div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-QQ-260489333.png" width="200" height="260" ></div>
 <div style="clear:both"></div>
 
+## 问问题就发教程，为什么不直接给我解决？
+请看上一条！
+
+这问题问出来，其实站长已经不乐意搭理你了。劳动是按次付出的，有教程给你就照着教程去尝试解决。你有问题问站长，站长提供解决思路，这已经是友情帮助了，不要指望空手套站长24小时守着你这位上帝。
 
 ## GitHub咋打不开？
 各地网络管制松紧度不一样，无法访问就上梯子吧，配置方法请见：{% post_link guide-how-to-build-site-8 %} 中相关内容。
@@ -46,9 +51,11 @@ tags:
 或者把错误提示关键词丢给本站战略合作伙伴 Google和百度，让我们的战略伙伴助你一臂之力。
 
 ## MarkDown语法我不会😢
-MarkDown语法已经很简单易懂了，这里有一个章节列了几个常用到的基本语法： {% post_link guide-how-to-build-site-6 %} ，更多可以阅读后文更专业的MarkDown语法教程。
+MarkDown语法已经很简单易懂了，这里有一个章节列了几个常用到的基本语法： {% post_link guide-how-to-build-site-8 %} ，更多可以阅读后文更专业的MarkDown语法教程。
 
 对照教程敲一两遍就会了，用啥查啥临时抱佛脚都能应付得了。实在不会可以借助编辑器界面化操作，或者你就当Word或记事本写内容都行，无非就是少了点格式样式。
+
+> 在 {% post_link guide-how-to-build-site-5 %} 章节中推荐的 `VSCODE`，可以对 MarkDown 源码实时预览实现所见即所得编辑，装上 MarkDown 扩展后更是事半功倍，请自行摸索学习。
 
 ## 有没有后台？能不能在线维护？
 有做后台的方案，也有将 GitHub 仓库再拖到第三方平台去部署的方案，但都不推荐。本来 `hexo` 或 `hugo` 就只是个渲染框架，用的时候拎出来跑一圈，跑完就没啥事放生掉，有些人却要强迫这俩货长期营业，或者再转一次第三方，如果不是特殊需求，都属于舍本逐末瞎折腾。
@@ -57,6 +64,8 @@ MarkDown语法已经很简单易懂了，这里有一个章节列了几个常用
 
 ## 我添加的图片怎么不显示？
 请自行按 MarkDown 或者 HTML 语法添加图片，也可以打开本站自带的示例源码依葫芦画瓢，语法具体可见：{% post_link guide-how-to-build-site-8 %} 中 `MarkDown 语法` 及后续贴出的相关教程。
+
+> 如果是网络封锁严重的地区，建议将图片传图床后从图床引用，防止 `jsdelivr`、`Github` 等被屏蔽导致图片加载失败
 
 ## 要修改网址怎么办？
 网站网址在网站配置 `_config.yml` 中修改如下配置项：
@@ -83,3 +92,10 @@ url: https://yiwangmeng.cn
 > 如果有能力折腾修改主题的同学，恰好修改的主题是示例站自带，那么请注意 `submodule` 的问题。
 > 
 > 示例站自带主题在项目中只提交了源仓库版本链接，你本地修改了也不能提交到自己的仓库，请将要修改的主题从 `submodule` 中删除后再完整提交到自己的源码仓库中，删除 `submodule` 可参考：{% post_link guide-how-to-build-site-8 %} 中 `添加/删除 submodule` 相关内容。
+
+
+## VSCODE 里 Git 提交点 `commit` 后一直转圈圈？
+正如 {% post_link guide-how-to-build-site-5 %} 中 `界面化Git操作` 章节明确提示的内容：
+> 点 `commit` 前请务必填写 `message` ，告知后来人改了什么，为什么会有这次变更，这是 Git 版本管理基本规范。
+
+一直转圈圈请退出 `Git` 或者 `VSCODE` 后重新提交，记得 `提交前填写变更信息`、`提交前填写变更信息`、`提交前填写变更信息`！
