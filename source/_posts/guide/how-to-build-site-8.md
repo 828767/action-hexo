@@ -1,5 +1,5 @@
 ---
-title: '从零开始建个小站 - 6. 其他知识'
+title: '从零开始建个小站 - 其他知识'
 date: 2022-05-21 20:00:00
 categories:
   - 做网站
@@ -8,7 +8,7 @@ tags:
 ---
 想到什么写什么，如果没有你关心的问题，请一如既往的求助本站战略合作伙伴 Google和百度。
 <!-- more -->
-# 6.1 学会基本的 Git
+# 学会基本的 Git
 不管是敲代码还是码字工，大名鼎鼎的 Git 都应该学一点，团队一起码代码，汇聚天下豪杰一起写流水小说，事后回查都游刃有余。
 ## Git 基础
 网络上优秀教程一大片，不浪费时间精力了，随便找一个：[Git 教程 | 菜鸟教程](https://www.runoob.com/git/git-basic-operations.html)，边用边学就行，俺们也是这样过来的。
@@ -59,7 +59,8 @@ git config --global --unset https.proxy
 > 打开 `.gitconfig` 文件可见之前配置的用户名称和email信息等，直接通过编辑配置文件和通过命令设置是一样的效果。
 
 ## 添加/删除 `submodule`
-本仓库包中自带的 Hexo 主题都是通过 `git submodule add` 管理的，主题只是作为一个链接提交，源码仓库中 `themes` 目录下并不包含主题文件。
+本仓库包中自带的 Hexo 主题都是通过 `git submodule add` 管理的，主题只是作为一个版本链接提交，源码仓库中 `themes` 目录下并不包含主题文件。
+> 以 `submodule` 方式管理的文件是不能直接在主仓库进行增删改操作的，改了会出现 `Subproject commit xxxx-dirty` 提示，线上使用时将会出现找不到 `submodule` 版本的错误
 
 如果想添加其他的主题，可以将主题文件提交，作为仓库项目的一部分，也可以以 `submodule` 方式应用，添加只需要一条命令：
 ```Bash
@@ -92,12 +93,12 @@ git clone --recurse-submodules 源码仓库地址 #带子模块一起克隆到�
 至此，该 `submodule` 就从版本库中删除了，将结果提交同步到线上仓库即可。
 
 
-# 6.2 Hexo 高级用法
+# Hexo 高级用法
 如果只是普通的写写博客，做个小展示网站什么的，高级语法也不需要。但用上些高级语法，功能就更强大，在处理大量同质内容时就事半功倍了，直接见官方文档吧：
 1. [Hexo：标签插件（Tag Plugins）](https://hexo.io/zh-cn/docs/tag-plugins)
 2. [Hexo：数据文件（data-files）](https://hexo.io/zh-cn/docs/data-files)
 
-# 6.3 MarkDown 语法
+# MarkDown 语法
 ## 📌 **Titles**
 
 - Heading 1: `# A first-level title`
