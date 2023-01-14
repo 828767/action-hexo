@@ -377,8 +377,9 @@ tcaptcha:
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
   enable: false
-  appId:
-  appKey:
+  appId:  # 必填
+  appKey: # 必填
+  serverURLs: # 必填 https://你的api
   notify: false
   verify: false
   visitor: true
@@ -387,17 +388,6 @@ valine:
   placeholder: 'just go go' # Comment Box placeholder
   background: /medias/comment_bg.png
   coolpushkey: 
-
-# The configuration of the MiniValine comment module is not activated by default.
-# To use it, activate the configuration item.
-# MiniValine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项
-# See: https://github.com/MiniValine/MiniValine
-minivaline:
-  enable: false
-  # 更多选项 https://minivaline.js.org/docs/cn/#/Options 按照yml格式继续填写即可 （除了 [el] 选项）  
-  # emoticonUrl 等列表选项 可参考 https://github.com/MiniValine/hexo-next-minivaline
-  # 下面是一个例子：
-  serverURL: https://minivaline.your-domain.top
 
 # The configuration of the Waline comment module is not activated by default.
 # To use it, activate the configuration item.
@@ -472,8 +462,12 @@ libs:
   css:
     matery: /css/matery.css
     mycss: /css/my.css
+    post: /css/post.css
+    reward: /css/reward.css
+    dark: /css/dark.css
+    indexcover: /css/indexcover.css
     gallery: /css/gallery.css
-    fontAwesome: /libs/awesome/css/all.min.css # V6 20220313
+    fontAwesome: /libs/awesome/css/all.min.css # V6.1.2 20220809
     materialize: /libs/materialize/materialize.min.css # 1.0.0 20211109
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1
@@ -489,12 +483,14 @@ libs:
     justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.css
   js:
     matery: /js/matery.js
+    sc2tc: /js/tw_cn.js
     jquery: /libs/jquery/jquery-3.6.0.min.js  #3.6.0 20211109
     materialize: /libs/materialize/materialize.min.js # 1.0.0
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
     aos: /libs/aos/aos.js
     scrollProgress: /libs/scrollprogress/scrollProgress.min.js
     lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.10.0
+    typed: /libs/typed/typed.js
     clicklove: /libs/others/clicklove.js
     sakura: /libs/others/sakura.js
     star: /libs/others/star.js
@@ -650,6 +646,11 @@ instantpage:
 # 若为 false, 则 banner 默认为 /medias/banner/0.jpg
 banner:
   enable: true
+
+# 中文繁简转换开关
+# 显示在底部 footer 栏
+translate:
+  enable: false
 
 #ICP备案信息尾部显示
 icp:

@@ -5,7 +5,7 @@
 menu:
   # Home: / || fas fa-home
   # Archives: /archives/ || fas fa-archive
-  # Tags: /tags/ || fas fa-tags
+  Tags: /tags/ || fas fa-tags
   # Categories: /categories/ || fas fa-folder-open
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
@@ -13,9 +13,10 @@ menu:
   Link: /link/ || fas fa-link
   About: /about/ || fas fa-heart
 
-nav_info:
+nav:
   logo: # image
-  display_title: true # true or false
+  display_title: true
+  fixed: false # fixed navigation bar
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -32,7 +33,7 @@ code_word_wrap: false
 copy:
   enable: true
   copyright:
-    enable: true
+    enable: false
     limit_count: 50
 
 # social settings (社交圖標設置)
@@ -413,7 +414,7 @@ tidio:
   public_key:
 
 # daovoice
-# http://daovoice.io/
+# http://dashboard.daovoice.io/app
 daovoice:
   enable: false
   app_id:
@@ -457,9 +458,6 @@ baidu_analytics:
 # https://analytics.google.com/analytics/web/
 google_analytics:
 
-# CNZZ Analytics
-# https://www.umeng.com/
-cnzz_analytics:
 
 # Cloudflare Analytics
 # https://www.cloudflare.com/zh-tw/web-analytics/
