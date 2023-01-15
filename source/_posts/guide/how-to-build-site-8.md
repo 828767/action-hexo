@@ -87,10 +87,10 @@ git clone --recurse-submodules 源码仓库地址 #带子模块一起克隆到�
    ```
 3. 删除 `.git\modules\themes` 目录下的 `ananke` 文件夹
 4. 删除 `themes\ananke` 文件夹
-5. 在项目根目录路径下运行 `git rm --cached themes\ananke` 命令清理 Git 工作区缓存
-6. 将以上所有变更提交 Git 版本库
+5. 在 Git 中将以上变更暂存
+6. 在项目根目录路径下运行 `git rm --cached themes\ananke` 命令清理 Git 工作区缓存
 
-至此，该 `submodule` 就从版本库中删除了，将结果提交同步到线上仓库即可。
+至此，该 `submodule` 就从版本库中删除了，将所有变更结果提交同步到线上仓库即可。
 
 
 # Hexo 高级用法

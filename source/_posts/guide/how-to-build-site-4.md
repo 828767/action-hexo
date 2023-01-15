@@ -20,10 +20,17 @@ cd d:\Git   #先切换到要存放Git文件的目录路径
 git clone --recurse-submodules 源码仓库地址 #带子模块一起克隆到本地
 ```
 
-以上请将 `源码仓库地址` 换成自己的源码仓库实际地址，建议从仓库页面上复制，获取方法：打开源码仓库主页》在文件列表右上方有个 `Code` ，点击下拉复制，如下图所示可选择 `HTTPS`「首选」 或 `SSH`：
+如果第一次克隆时未带 `--recurse-submodules` 参数或者没有完整完成，可以 `在源码仓库根目录路径下` 运行以下命令继续完成更新：
+```bash
+#请在仓库根目录路径下运行以下命令
+git submodule update
+```
+
+以上命令中请将 `源码仓库地址` 换成自己的源码仓库实际地址，建议从仓库页面上复制。
+
+仓库地址获取方法：打开源码仓库主页》在文件列表右上方有个 `Code` ，点击下拉复制，如下图所示可选择 `HTTPS`「首选」 或 `SSH`：
 
 ![获取项目仓库地址](https://cdn.jsdelivr.net/gh/828767/static/images/github_clone_https_url.png)
-
 
 {% tabs 仓库链接协议 %}
 <!-- tab HTTPS -->
