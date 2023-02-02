@@ -92,6 +92,21 @@ git clone --recurse-submodules 源码仓库地址 #带子模块一起克隆到�
 
 至此，该 `submodule` 就从版本库中删除了，将所有变更结果提交同步到线上仓库即可。
 
+## Git 回滚到指定版本
+1. 在 `仓库文件夹下` 打开 `Git Bash Here` 输入 `git reflog` 命令，会返回这样的历史提交记录：   
+	```Bash
+	ef39b2d (HEAD -> main, origin/main, origin/HEAD) HEAD@{0}: commit: update
+	fa646fe HEAD@{14}: commit: 角色管理站点权限不可编辑bug修改
+	60b35d4 HEAD@{15}: commit: 拓扑图相关修改9
+	3173e7a HEAD@{16}: commit: 拓扑图相关修改8
+	d51db77 HEAD@{17}: commit: 拓扑图相关修改8
+	```
+2.  按 `q` 「英文状态下」退出 log 记录，然后输入回退到指定版本命令：`git reset xxx`，`xxx` 指某次提交的版本记录 `id`，如：
+	```Bash
+	# 添加 `--hard` 参数会将工作区变更全部擦除
+	git reset --hard 3173e7a
+	```
+3. 强制推送至远程：输入命令 `git push --force`，至此版本回退就成功了
 
 # Hexo 高级用法
 如果只是普通的写写博客，做个小展示网站什么的，高级语法也不需要。但用上些高级语法，功能就更强大，在处理大量同质内容时就事半功倍了，直接见官方文档吧：
