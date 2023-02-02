@@ -58,6 +58,8 @@ git config --global --unset https.proxy
 
 > 打开 `.gitconfig` 文件可见之前配置的用户名称和email信息等，直接通过编辑配置文件和通过命令设置是一样的效果。
 
+以上是针对 `http[s]://` 协议的代理设置方式，一般 `ssh://` 协议链接不需要代理，如果需要，可以参考此教程去设置：[Git 通过配置SSH代理访问 Github](https://segmentfault.com/a/1190000021998129 "懒得写教程，自己到此去仔细看")
+
 ## 添加/删除 `submodule`
 本仓库包中自带的 Hexo 主题都是通过 `git submodule add` 管理的，主题只是作为一个版本链接提交，源码仓库中 `themes` 目录下并不包含主题文件。
 > 以 `submodule` 方式管理的文件是不能直接在主仓库进行增删改操作的，改了会出现 `Subproject commit xxxx-dirty` 提示，线上使用时将会出现找不到 `submodule` 版本的错误
