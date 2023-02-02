@@ -43,7 +43,9 @@ git submodule update
 
 > 如果由于网络原因，`HTTPS` 协议无法拉取/推送仓库，可尝试使用 `SSH` 协议
 
-> 已拉取的仓库修改协议：用文本编辑器打开仓库目录下的 `.git/config` 修改对应 `url = 复制的仓库地址` ，别修改错了！
+> **已拉取的仓库修改协议**：用文本编辑器打开仓库目录下的 `.git/config` 修改对应 `url = 复制的仓库地址` ，别修改错了！
+>
+> 如果涉及到 `submodules`，也请在 `.gitmodules` 中将子模块项目一并修改为 `SSH` 地址
 
 <!-- endtab -->
 
@@ -115,6 +117,7 @@ ssh-keygen -t rsa -b 4096 -C "Your_Email"
     ![粘贴公钥串](https://docs.github.com/assets/cb-24796/images/help/settings/ssh-key-paste.png)
 
 6. 最后点击 `Add SSH key（添加 SSH 密钥）` 完成添加
+
 
 <!-- endtab -->
 {% endtabs %}
