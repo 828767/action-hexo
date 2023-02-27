@@ -20,10 +20,10 @@ cd d:\Git   #先切换到要存放Git文件的目录路径
 git clone --recurse-submodules 源码仓库地址 #带子模块一起克隆到本地
 ```
 
-如果第一次克隆时未带 `--recurse-submodules` 参数或者没有完整完成，可以 `在源码仓库根目录路径下` 运行以下命令继续完成更新：
+如果第一次克隆时未带 `--recurse-submodules` 参数或者没有完整完成，可以 `在源码仓库根目录路径下` 运行以下命令继续完成子模块更新：
 ```bash
 #请在仓库根目录路径下运行以下命令
-git submodule update
+git submodule init && git submodule update
 ```
 
 以上命令中请将 `源码仓库地址` 换成自己的源码仓库实际地址，建议从仓库页面上复制。
