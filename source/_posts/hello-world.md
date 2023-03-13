@@ -28,10 +28,3 @@ More info: [Server](https://hexo.io/docs/server.html)
 ### Academia
 本页之所以会作为 `Academia` 主题首页内容，是因为 `Front-Matter` 中添加了主题所要求的 `academia: true` 标识，该主题设置使用方法敬请查看 `Academia` 主题对应文档，或者参考 [此示例](/academia-example.html "仅为参考，请以主题文档及学术简历规范为准") 。
 
-## 图库
-> 需要相应主题支持，如：[butterfly](https://butterfly.js.org/posts/4aa8abbe/#Gallery%E7%9B%B8%E5%86%8A%E5%9C%96%E5%BA%AB)
-
-<div class="gallery-group-main">
-{% galleryGroup '自带主题' '主题预览截图' '/gallery/' https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png %}
-</div>
-

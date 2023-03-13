@@ -115,6 +115,16 @@ git clone --recurse-submodules 源码仓库地址 #带子模块一起克隆到�
 1. [Hexo：标签插件（Tag Plugins）](https://hexo.io/zh-cn/docs/tag-plugins)
 2. [Hexo：数据文件（data-files）](https://hexo.io/zh-cn/docs/data-files)
 
+
+Hexo标签语法能够快速实现一些功能，但并不是所有的主题都支持，当在内容中使用了标签语法，而主题不支持时，将出现渲染失败异常，如下面这段 `ButterFly` 主题支持的图库代码：
+```HTML 
+<div class="gallery-group-main">
+{% galleryGroup '自带主题' '主题预览截图' '/gallery/' https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png %}
+</div>
+```
+
+切换到其他主题要么功能未实现，要么直接渲染出错异常，需要删除对应的内容方可。
+
 # MarkDown 语法
 ## 📌 **Titles**
 
