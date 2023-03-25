@@ -61,6 +61,15 @@ local_search:
   preload: false
   CDN:
 
+# Docsearch
+# https://docsearch.algolia.com/
+docsearch:
+  enable: false
+  appId:
+  apiKey:
+  indexName:
+  option:
+
 # Math (數學)
 # --------------------------------------
 # About the per_page
@@ -419,12 +428,6 @@ daovoice:
   enable: false
   app_id:
 
-# gitter
-# https://gitter.im/
-gitter:
-  enable: false
-  room:
-
 # crisp
 # https://crisp.chat/en/
 crisp:
@@ -457,7 +460,6 @@ baidu_analytics:
 # Google Analytics
 # https://analytics.google.com/analytics/web/
 google_analytics:
-
 
 # Cloudflare Analytics
 # https://www.cloudflare.com/zh-tw/web-analytics/
@@ -638,16 +640,14 @@ subtitle:
   enable: true
   # Typewriter Effect (打字效果)
   effect: true
-  # Effect Speed Options (打字效果速度參數)
-  startDelay: 300 # time before typing starts in milliseconds
-  typeSpeed: 150 # type speed in milliseconds
-  backSpeed: 50 # backspacing speed in milliseconds
-  # loop (循環打字)
-  loop: true
+  # Customize typed.js (配置typed.js)
+  # https://github.com/mattboldt/typed.js/#customization
+  typed_option:
   # source 調用第三方服務
   # source: false 關閉調用
   # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
-  # source: 2  調用今日詩詞（簡體） https://www.jinrishici.com/
+  # source: 2  調用一句網（簡體） https://yijuzhan.com/
+  # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
   source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
@@ -707,6 +707,8 @@ aside:
     enable: true
     limit: 40 # if set 0 will show all
     color: false
+    orderby: random # Order of tags, random/name/length
+    order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
     sort_order: # Don't modify the setting unless you know how it works
   card_archives:
     enable: true
@@ -917,7 +919,7 @@ CDN:
   # when set it to local, you need to install hexo-butterfly-extjs
   third_party_provider: jsdelivr
 
-  # Add version number to CDN, true or false
+  # Add version number to url, true or false
   version: false
 
   # Custom format
@@ -931,8 +933,10 @@ CDN:
     # translate:
     # local_search:
     # algolia_js:
-    # algolia_search_v4:
-    # instantsearch_v4:
+    # algolia_search:
+    # instantsearch:
+    # docsearch_js:
+    # docsearch_css:
     # pjax:
     # gitalk:
     # gitalk_css:
@@ -956,8 +960,8 @@ CDN:
     # instantpage:
     # typed:
     # pangu:
-    # fancybox_css_v4:
-    # fancybox_v4:
+    # fancybox_css:
+    # fancybox:
     # medium_zoom:
     # snackbar_css:
     # snackbar:
@@ -965,7 +969,7 @@ CDN:
     # fireworks:
     # click_heart:
     # ClickShowText:
-    # fontawesomeV6:
+    # fontawesome:
     # flickr_justified_gallery_js:
     # flickr_justified_gallery_css:
     # aplayer_css:
@@ -976,3 +980,4 @@ CDN:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
+    # busuanzi:
