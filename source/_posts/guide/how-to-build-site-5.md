@@ -81,13 +81,13 @@ VSCODE 界面上其他按钮功能可以将鼠标移动到对应图形上方悬�
 
 虽然项目仓库主页直接增删改文件都可以，但网页上只能一个一个文件操作，建议还是同步到本地使用，借助编辑器事半功倍，也相当于多了个源码本地备份。
 
-# 3.4 MarkDown 插件
+# 3.4 推荐插件
 作为 MarkDown 编辑器和文件管理器，建议安装以下插件：
-1. Git History
-2. GitLens supercharges
-3. Markdown All in One
-4. Markdown Preview Mermaid Support
-5. Markdown Table
-6. Markdown Shortcuts
+1. `Git History`：界面化查看及管理 Git 提交记录
+2. `GitLens supercharges`：在文件内容中提示 Git 变更异同等信息
+3. `Markdown All in One`：MarkDown 预览及一些快捷方式
+4. `Markdown Preview Mermaid Support`：MarkDown 流程图、时序图等渲染支持
+5. `Markdown Table`：快速插入 MarkDown 表格或者转换成表格代码
+6. `Markdown Shortcuts`：MarkDown 各种语法快捷方式
 
 其他有用的插件请自行探索。
