@@ -8,7 +8,7 @@ tags:
 ---
 ## 文档看不懂/不想看/太麻烦/我不会/不要发教程……
 懒那就没辙了，快发动你的钞能力！
-> `按次付费`，花了钱也不是该伺候你一辈子，有些人想付费站长也不乐意接，毕竟彼此选择才有幸福感！
+> `按次付费`，花了钱也不是该伺候你一辈子，有些人想付费站长也不乐意接，毕竟彼此选择才能幸福！
 
 <div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-atm.png"  width="200" height="260" ></div>
 
@@ -25,7 +25,7 @@ tags:
 你有问题，站长提供解决思路，已经是友情帮助了，站长的时间精力也不是无限的。友好文明一点，指不定站长闲得慌还能友情远程搭把手，上帝就不要指望空手套站长24小时守着你了，站长的世界里人人平等！
 
 ## GitHub咋打不开？
-各地网络管制松紧度不一样，无法访问就上梯子吧。Windows 系统强烈推荐用 `winXray` 这个代理软件，简单好用，对 Git 兼容简直完美。
+各地网络管制松紧度不一样，无法访问就上梯子吧。Windows 系统强烈推荐用 [`winXray`](https://github.com/cdnf/winxray/tree/master "只知开源软件地址，代理服务请自己去找") 这个代理软件，简单好用，简直是[为 GitHub 而生](https://yiwangmeng.com/pcsoft-winxray "winXray简介")。
 
 1. Git 客户端仓库同步可以先尝试免梯子方法：配置好 `SSH` 密钥后使用 `SSH` 协议，方法可参考：{% post_link guide-how-to-build-site-4 %} 中 `生成 SSH 密钥对` 章节内容
 2. Git 客户端启用梯子配置方法请见：{% post_link guide-how-to-build-site-8 %} 中相关内容
