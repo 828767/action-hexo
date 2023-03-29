@@ -13,7 +13,7 @@ tags:
 VSCODE 就是个不错的选择，自行到 [微软官方网站](https://code.visualstudio.com/download) 去下载安装。
 > 如果墙内下载慢，可把下载地址中 `az764295.vo.msecnd.net`  改为 `vscode.cdn.azure.cn` 可实现秒下，如:
 > 
-> Windows版墙内地址：https://vscode.cdn.azure.cn/stable/e8a3071ea4344d9d48ef8a4df2c097372b0c5161/VSCodeSetup-x64-1.76.2.exe
+> Windows版墙内地址：https://vscode.cdn.azure.cn/stable/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/VSCodeSetup-x64-1.76.2.exe
 >
 > macOS版墙内地址：https://vscode.cdn.azure.cn/stable/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/VSCode-darwin-universal.zip
 
