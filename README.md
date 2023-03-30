@@ -63,7 +63,7 @@ hexo-cli: 4.3.0
 ……
 ```
 
-macOS新版本默认启用的是 `zsh` 终端，`hexo` 安装完成后并未添加到 `zsh` 能识别的系统变量，会出现提示 `zsh: command not found: hexo` 的情况，可添加系统变量解决，具体方法请求助战略合作伙伴 Google和百度，或者就此烂过。
+macOS新版本默认启用的是 `zsh` 终端，`hexo` 安装完成后并未添加到 `zsh` 能识别的系统变量，会出现提示 `zsh: command not found: hexo` 的情况，可添加系统变量解决，具体方法请求助战略合作伙伴 Google 和百度，或者就此烂过。
 
 > 也可以 [将系统默认终端改成 `bash`](https://support.apple.com/zh-cn/guide/terminal/trml113/mac)，或者使用后文提到的 VSCODE 集成终端，将 VSCODE 调用默认终端改成 `bash`，然后在 VSCODE 集成终端运行命令即可。
 
@@ -92,6 +92,8 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 浏览器中打开 `http://localhost:4000` 就可以预览，按 `Ctrl+C` 组合键停止，一些主题或者网站设置变更需要重启该预览服务才能看到效果。
 
 ## 编辑器推荐
+> 更详细使用教程请见：[从零开始建个小站 - 3. 搞个编辑器](https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-5.html)
+
 工欲善其事必先利其器，一个编辑器可以事半功倍，VSCODE 就是个不错的选择，自行到 [微软官方网站](https://code.visualstudio.com/download) 去下载安装，优点：
 1. 全目录管理，一个界面可以管理整个目录下的文件
 2. 语法格式显示，也能实时预览
@@ -101,14 +103,14 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 ![VSCODE](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-hexo.png)
 
 其他如 Atom、Sublime Text、Typroa 之类的编辑器，甚至是专业的代码编辑器请自行研究。
-
-作为MarkDown编辑器，建议安装以下插件：
-1. Git History
-2. GitLens supercharges
-3. Markdown All in One
-4. Markdown Preview Mermaid Support
-5. Markdown Table
-6. Markdown Shortcuts
+### 推荐插件
+作为 MarkDown 编辑器和文件管理器，建议安装以下插件：
+1. `Git History`：界面化查看及管理 Git 提交记录
+2. `GitLens supercharges`：在文件内容中提示 Git 变更异同等信息
+3. `Markdown All in One`：MarkDown 预览及一些快捷方式
+4. `Markdown Preview Mermaid Support`：MarkDown 流程图、时序图等渲染支持
+5. `Markdown Table`：快速插入 MarkDown 表格或者转换成表格代码
+6. `Markdown Shortcuts`：MarkDown 各种语法快捷方式
 
 其他有用的插件请自行探索。
 
@@ -116,8 +118,8 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 1. 任何增删改都需要提交同步到本仓库，同步后上端会自动处理，等几分钟刷新缓存就能看到效果了
 2. 提交前可以本地预览，效果满意了再提交
 3. 根目录下的 `_config.yml` 为网址基础配置，主题内容相关请到 `_config.主题名.yml` 中去设置修改， `_config.主题名.yml` 来源于 `themes/主题名/_config.yml` ，如主题有更新请自行同步
-4. Git基础用法和MarkDown语法等很多基础知识都可以自行求助战略合作伙伴 Google 或百度，遇问题解决问题
-5. 关于怎么用入门教程汇总参考：[从零开始建个小站](https://yiwangmeng.cn/guide-how-to-build-site-0.html)
+4. Git 基础用法和 MarkDown 语法等很多基础知识都可以自行求助战略合作伙伴 Google 或百度，遇问题解决问题
+5. 关于怎么用入门教程汇总参考：[从零开始建个小站](https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-0.html)
 
 
 ## Stargazers over time
