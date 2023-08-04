@@ -1,6 +1,7 @@
 ---
 title: 关于本站
-layout: page
+type: 'about'
+layout: 'about'
 sitemap: false
 comments: true
 toc: false
