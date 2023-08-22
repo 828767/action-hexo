@@ -1,12 +1,17 @@
 ---
 title: 学术简历样本
-date: 2022-02-22 02:02:02
+date: 2023-02-22 02:02:02
 tag: Example
 academia: true
 ---
-> 这是个学术简历示例，内容源文件：`source/_posts/academia-example.md`
 
-> 如果本页排序在站内靠后，该页内容不会在 `Academia` 主题首页显示，不知道为何，如果遇到不显示的问题，删除其他内容或者将本页排序调整到靠前几页
+> 这是个简历示例页，内容源文件：`source/_posts/academia-example.md`
+
+> 如果本页排序在站内靠后，该页内容不会在 `Academia` 主题首页显示，如果遇到不显示的问题，删除其他内容或者将本页排序调整到靠前几页，如：修改本文档 `date` 值
+> 
+> ```
+> date: 2023-8-22 16:59:16    //修改这个时间到最新一般就排前面去了
+> ```
 
 # About me
 This is a simple page for academic website based on Hexo. It just provides a theme frame and all depends on your markdown posts’ styles.
