@@ -1,7 +1,7 @@
 # /images/本地路径为：source/images，本地source/文件夹渲染后对应网络路径为/
-favicon: /images/favicon.png
+favicon: /favicon.ico
 # Change to your profile picture
-avatar: /images/hexo.jpeg
+avatar: /images/profile.png
 # if author sets in hexo_config, this string doesn't work
 author: 'Jason'
 author_bio: 'Your biography can be writed down here.'
