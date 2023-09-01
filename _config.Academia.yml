@@ -10,13 +10,14 @@ since: 2022
 
 # Top Menu 顶部菜单
 # #title 为页内跳转，单页模式
-# 可以选择外链或其他页面
+# 可以配置为外链或其他页面
 menu:
   Publications: /#Publications
+  Introduction: /#Introduction
+  Configurtion: /#Theme-Configurtion #带空格标题锚点需要添加‘-’替代空格路径
   About: /about/
   Blog: https://yiwangmeng.cn
   Guide: https://yiwangmeng.com
-  Introduction: /#Introduction
 
 
 # flink picture will load if avator link calls on error

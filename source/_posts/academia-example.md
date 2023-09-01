@@ -5,12 +5,12 @@ tag: Example
 academia: true
 ---
 
-> 这是个简历示例页，内容源文件：`source/_posts/academia-example.md`
+> 这是个简历示例页，内容源文件：`source/_posts/academia-example.md`，可以修改此文件内容为自己想要的，使用 `Markdown` 或者 `HTML` 语法都可以。
 
-> 如果本页排序在站内靠后，该页内容不会在 `Academia` 主题首页显示，如果遇到不显示的问题，删除其他内容或者将本页排序调整到靠前几页，如：修改本文档 `date` 值
+> 如果本页排序在站内靠后，该页内容不会在 `Academia` 主题首页显示，如果遇到不显示的问题，删除其他内容或者将本页排序调整到靠前几页，如：修改本文档 `date` 值：
 > 
-> ```
-> date: 2023-8-22 16:59:16    //修改这个时间到最新一般就排前面去了
+> ```YML
+> date: 2023-8-22 16:59:16    //一般情况下修改这个时间到最新就会排前面
 > ```
 
 # About me
@@ -36,15 +36,6 @@ The theme adopts only `post` and `page` in Hexo to show your informations. For a
 Example page: [phosphorw.github.io](https://phosphorw.github.io/)
 
 ![mockup](https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_mockup.jpg)
-
-## Preparation
-
-Some skills you need:
-- Publish a Hexo blog: [Learn more](https://hexo.io)
-- Git
-- Markdown: [Learn more](https://www.appinn.com/markdown/#list)
-- Deploy a server (Optional)
-- Balabala...
 
 ## Installation
 
@@ -84,7 +75,7 @@ Only post with `academia: true` front_matter will be shown on home (index) page.
 
 
 ## Theme Configurtion
-All of below options can be config in theme folder `_config.yml`
+All of below options can be config in site folder `_config.Academia.yml`
 
 - Top Menu: in-page anchor, new page links or any links you like
 - Side Bar: Support avatar, social links, extra social links (optional), CV_download_link
@@ -97,15 +88,6 @@ All icons in page is supported with [font-awesome-5](https://fontawesome.com/) (
 If you need rss feed, use hexo plugin: [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
 
 ![theme-layout](https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_layout.png)
-
-### Update Theme
-This theme supports `data files` smooth update. Copy `_config.yml` in theme folder to site folder `/source/_data/theme.yml`, if there is no `_data` folder, create it.
-
-Then you can modify your theme configuration in the mentioned `theme.yml`. If there is any update, just pull the new branch and your configurations won't be merged. 
-
-**Note:**
-1. When use `data files` to config theme, you must restart hexo server after any modifictions. `hexo server` again.
-2. Sometimes there will be changes in theme `_config.yml`, please refer to [release page](https://github.com/PhosphorW/hexo-theme-academia/releases) for more details before update.
 
 ## Document
 中文文档：[Hexo-Theme-Academia 说明文档](https://phower.me/2020/03/Hexo-theme-academia-%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/)
