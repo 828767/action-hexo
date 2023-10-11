@@ -1,12 +1,12 @@
 ###################################
 # 配置整理备注：https://yiwangmeng.cn
-# 本文件为网站基础配置，主题内容相关请到 `_config.主题名.yml` 中去设置修改
+# 强烈不建议使用Windows系统自带的记事本修改本配置文件
+# `.yml` 配置值中有特殊符号/长文本等都建议用英文 '' 或 "" 包起来，注意要成对出现
+# 本文件为网站基础配置，主题功能相关请到 `_config.主题名.yml` 中去设置修改
 # `_config.主题名.yml` 来源于 `themes/主题名/_config.yml`，如主题有更新请自行同步
 # Hexo 会将 `_config.主题名.yml` 和 `themes/主题名/_config.yml` 配置合并使用
 # 相同配置项则以 `_config.主题名.yml` 中的值为准
 # 推荐用 vscode、atom 之类的编辑器更改，一些格式会显色，如果改错了显色格式不一样
-# 强烈不建议使用Windows系统自带的记事本修改本配置文件
-# `.yml` 配置值中有特殊符号/长文本等都建议用 ''（英文引号）包起来，注意要成对出现
 ###################################
 
 # Hexo Configuration
@@ -38,7 +38,6 @@ theme: butterfly  #多功能主题，配置文件：_config.butterfly.yml
 # theme: next #简约的博客主题，配置文件：_config.next.yml
 # theme: Academia #学术简历主题，配置文件：_config.Academia.yml
 # theme: yelee #双栏博客主题，配置文件：_config.yelee.yml
-# theme: nexmoe #二次元主题，配置文件：_config.nexmoe.yml
 # theme: stellar #简约商务风主题，配置文件：_config.stellar.yml
 
 # URL
@@ -140,6 +139,7 @@ deploy:
   type: git
   repo: <repository url> # eg: git@github.com:<username>/<username>.github.io.git
   branch: main #无此项时，默认分支：gh-pages (GitHub)，coding-pages (Coding.net)，master (others)
+  message: "deploy by hexo g -D" # 提交说明信息，无此项也行
 
 # 基于jQuery的本地搜索引擎，需要安装hexo-generator-search插件使用
 ##  path - file path. Default is search.xml .

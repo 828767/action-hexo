@@ -40,17 +40,17 @@ Example page: [phosphorw.github.io](https://phosphorw.github.io/)
 ## Installation
 
 The simplest way to install is to clone the entire repository:
-```
+```BASH
 git clone https://github.com/PhosphorW/hexo-theme-academia.git themes/Academia
 ```
 
 Some required renderers:
-```
+```BASH
 npm install hexo-renderer-pug hexo-renderer-stylus --save
 ```
 
 Set theme in hexo work folder's `_config.yml`
-```
+```YML
 theme: Academia
 ```
 
@@ -58,11 +58,11 @@ theme: Academia
 
 Only `post` and `page` are supported in this theme.
 
-```
+```BASH
 hexo n post "any title"
 ```
 or
-```
+```BASH
 hexo n page "any title"
 ```
 

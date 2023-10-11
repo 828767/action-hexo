@@ -12,12 +12,12 @@ since: 2022
 # #title 为页内跳转，单页模式
 # 可以配置为外链或其他页面
 menu:
-  Publications: /#Publications
+  Publications: /#Publications  #链接到一个标题锚点
   Introduction: /#Introduction
   Configurtion: /#Theme-Configurtion #带空格标题锚点需要添加‘-’替代空格路径
-  About: /about/
+  About: /about/  #链接到一个页面
   Blog: https://yiwangmeng.cn
-  Guide: https://yiwangmeng.com
+  Guide: https://yiwangmeng.com #外链
 
 
 # flink picture will load if avator link calls on error
@@ -66,9 +66,12 @@ box_shadow:
 CDN_USE:
   css:
     - /css/index.css
-#    - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
-    - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css # fontawesome 5
+    # - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
+    # - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css # fontawesome 5
+    - https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css
   js:
-    - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #/js/third-party/jquery.min.js
-    - https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js
     - /js/main.js
+    # - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #/js/third-party/jquery.min.js
+    # - https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js
+    - https://cdn.staticfile.org/jquery/3.7.1/jquery.min.js
+    - https://cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js
