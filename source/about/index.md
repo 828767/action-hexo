@@ -22,9 +22,9 @@ toc: false
 
 QQ群：键盘侠 `260489333`，[**点此加群**](https://jq.qq.com/?_wv=1027&k=bsazUgJ3)
 
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-atm.png"  width="200" height="260" ></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://fastly.jsdelivr.net/gh/828767/static/images/QR-atm.png"  width="200" height="260" ></div>
 
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-Taobao.png" width="200" height="260" ></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://fastly.jsdelivr.net/gh/828767/static/images/QR-Taobao.png" width="200" height="260" ></div>
 
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-QQ-260489333.png" width="200" height="260" ></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://fastly.jsdelivr.net/gh/828767/static/images/QR-QQ-260489333.png" width="200" height="260" ></div>
 <div style="float:none;clear:both;"></div>

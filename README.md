@@ -6,7 +6,7 @@
 3. HTML 静态页自动发布到：`owner.github.io` 「需自行建立 pages 仓库和配置授权」，分支：`pages-hexo`
 4. 如果网址非 `github.io`，则自动生成 `CNAME` 「需自行在DNS托管商处做好cname解析」
    
-![本仓库方案](https://cdn.jsdelivr.net/gh/828767/static/images/github_page_free.png)
+![本仓库方案](https://fastly.jsdelivr.net/gh/828767/static/images/github_page_free.png)
 
 ## 本地预览环境
 为更好地预览即将发布的内容，建议将本仓库克隆到本地电脑维护 MarkDown 源码，那么本地就需要安装一个预览环境。
@@ -18,7 +18,7 @@
 
 仓库同步就需要通过 `git` 客户端，Windows 系统安装完成后，会在右键菜单添加 `Git Bash Here` 入口，方便后续使用。
 
-![Git Bash Here](https://cdn.jsdelivr.net/gh/828767/static/images/git_menu_gitbashhere.png)
+![Git Bash Here](https://fastly.jsdelivr.net/gh/828767/static/images/git_menu_gitbashhere.png)
 
 如果以前未使用过 Git，一般都需要设置用户名和邮箱，随便一个目录空白地方 点右键「Windows系统，其他系统打开系统终端输命令」》 `Git Bash Here` ，运行以下命令设置：
 ```bash
@@ -100,7 +100,7 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 3. 与Git集成，可以界面化操作Git提交同步，比较等
 4. 集成命令终端，预览调试方便
  
-![VSCODE](https://cdn.jsdelivr.net/gh/828767/static/images/vscode-hexo.png)
+![VSCODE](https://fastly.jsdelivr.net/gh/828767/static/images/vscode-hexo.png)
 
 其他如 Atom、Sublime Text、Typroa 之类的编辑器，甚至是专业的代码编辑器请自行研究。
 ### 推荐插件

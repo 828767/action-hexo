@@ -66,12 +66,12 @@ box_shadow:
 CDN_USE:
   css:
     - /css/index.css
-    # - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
-    # - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css # fontawesome 5
+    # - https://fastly.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
+    # - https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css # fontawesome 5
     - https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css
   js:
     - /js/main.js
-    # - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #/js/third-party/jquery.min.js
-    # - https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js
+    # - https://fastly.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #/js/third-party/jquery.min.js
+    # - https://fastly.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js
     - https://cdn.staticfile.org/jquery/3.7.1/jquery.min.js
     - https://cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js

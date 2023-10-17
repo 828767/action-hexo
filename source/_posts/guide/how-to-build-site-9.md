@@ -10,11 +10,11 @@ tags:
 懒那就没辙了，快发动你的钞能力！
 > `按次付费`，花了钱也不可能一直伺候你，有些人想付费站长也不乐意接，毕竟彼此选择才能幸福！
 
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-atm.png"  width="200" height="260" ></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://fastly.jsdelivr.net/gh/828767/static/images/QR-atm.png"  width="200" height="260" ></div>
 
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-Taobao.png" width="200" height="260" ></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://fastly.jsdelivr.net/gh/828767/static/images/QR-Taobao.png" width="200" height="260" ></div>
 
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://cdn.jsdelivr.net/gh/828767/static/images/QR-QQ-260489333.png" width="200" height="260" ></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://fastly.jsdelivr.net/gh/828767/static/images/QR-QQ-260489333.png" width="200" height="260" ></div>
 <div style="clear:both"></div>
 
 ## 问就发教程，就不能直接给我远程解决吗？

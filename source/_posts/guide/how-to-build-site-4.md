@@ -30,16 +30,16 @@ git submodule init && git submodule update
 
 仓库地址获取方法：打开源码仓库主页》在文件列表右上方有个 `Code` ，点击下拉复制，如下图所示可选择 `HTTPS`「首选」 或 `SSH`：
 
-![获取项目仓库地址](https://cdn.jsdelivr.net/gh/828767/static/images/github_clone_https_url.png)
+![获取项目仓库地址](https://fastly.jsdelivr.net/gh/828767/static/images/github_clone_https_url.png)
 
 {% tabs 仓库链接协议 %}
 <!-- tab HTTPS -->
 
 第一次使用 GitHub 账号需要授权，默认会有如下图授权提示弹窗，选择从浏览器登录授权，打开浏览器后按提示输入账号密码登录后点击授权，直到出现授权成功的提示就表示授权成功。
 
-![连接GitHub账号授权](https://cdn.jsdelivr.net/gh/828767/static/images/github-auth-connect.png)
+![连接GitHub账号授权](https://fastly.jsdelivr.net/gh/828767/static/images/github-auth-connect.png)
 
-![浏览器登录授权成功](https://cdn.jsdelivr.net/gh/828767/static/images/git-repo-authentication.jpg)
+![浏览器登录授权成功](https://fastly.jsdelivr.net/gh/828767/static/images/git-repo-authentication.jpg)
 
 > 如果由于网络原因，`HTTPS` 协议无法拉取/推送仓库，可尝试使用 `SSH` 协议
 
@@ -108,7 +108,7 @@ ssh-keygen -t rsa -b 4096 -C "Your_Email"
 
 3. 选择左侧 `Access`》 点击 `SSH and GPG keys`，点击 `New SSH key（新 SSH 密钥）`
     
-    ![Add New SSH key](https://cdn.jsdelivr.net/gh/828767/static/images/github_set_access_new_ssh.png)
+    ![Add New SSH key](https://fastly.jsdelivr.net/gh/828767/static/images/github_set_access_new_ssh.png)
 
 4. 在 `Title`（标题）字段中，为新密钥添加描述性标签便于识别用途。 例如，如果您使用在个人Mac上，此密钥名称可能是 `Personal MacBook`。
 

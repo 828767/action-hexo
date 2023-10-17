@@ -11,7 +11,7 @@ tags:
 
 针对 GitHub 仓库版方案，我们 **`只需要对私有源码仓库`** 做两件事：`增/删/改` --> `Git提交同步`
 
-![内容增删改](https://cdn.jsdelivr.net/gh/828767/static/images/github-zsg.png)
+![内容增删改](https://fastly.jsdelivr.net/gh/828767/static/images/github-zsg.png)
 
 - 增：新增文章、页面、图片等
 - 删：删除文章、页面、图片等
@@ -50,7 +50,7 @@ tags:
 
 一个MarkDown 源码文件，除了 `Front-matter` 头部信息，其他的就是基本的 MarkDown 语法，MarkDown 语法是页面内容展示，错误与否都只是关系到展示内容样式，而 `Front-matter` 则直接关系到 hexo 能不能把 MarkDown 源码文件正确渲染成 HTML ，所以遵循正确的 `Front-matter` 至关重要。
 
-![新建文章示例](https://cdn.jsdelivr.net/gh/828767/static/images/hexo-edit.gif)
+![新建文章示例](https://fastly.jsdelivr.net/gh/828767/static/images/hexo-edit.gif)
 
 不管是Hugo还是Hexo，他们都只是一种渲染框架，所以MarkDown源代码都需要特定的 `Front-matter` 标记，也就是两行 `---` 中间的那段。
 ```yml
