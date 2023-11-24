@@ -44,7 +44,7 @@ copy:
 social:
   fab fa-github: https://github.com || Github
   fas fa-envelope: mailto:xxxxxx@gmail.com || Email
-  fa-solid fa-download: https://yiwangmeng.com || Download Site
+  fa-solid fa-download: https://www.yiwangmeng.com || Download Site
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統

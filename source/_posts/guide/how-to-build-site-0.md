@@ -12,7 +12,7 @@ sticky: 10
 
 虽然有微信朋友圈，QQ空间，微博等可以记录点点滴滴，但他们要么是没法扩大圈子，要么是加以各种限制，到头来这些数据产权还都属于马家，更不用谈某天实现增值获取收益，寄人篱下终究不如自己做主：建个自己掌控的网站！
 
-![易网盟](https://fastly.jsdelivr.net/gh/828767/static/images/hugo-hexo.png)
+![易网盟](https://raw.gitmirror.com/828767/static/master/images/hugo-hexo.png)
 
 
 # 建站须知
@@ -37,4 +37,4 @@ sticky: 10
 8. {% post_link guide-how-to-build-site-8 %}
 9. {% post_link guide-how-to-build-site-9 %}
 
-> 从零开始的详细教程可参考：[从零开始建个小站](https://yiwangmeng.com/?p=226)。
+> 从零开始的详细教程可参考：[从零开始建个小站](https://www.yiwangmeng.com/?p=226)。
