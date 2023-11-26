@@ -23,7 +23,7 @@ tags:
 
 Windows 系统安装完成后，会在右键菜单添加 `Git Bash Here` 入口，方便后续使用。
 
-![Git Bash Here](https://raw.gitmirror.com/828767/static/master/images/git_menu_gitbashhere.png)
+![Git Bash Here](https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/git_menu_gitbashhere.png)
 
 如果以前未使用过 Git，一般都需要设置用户名和邮箱，随便一个目录空白地方 点右键》 `Git Bash Here` ，运行以下命令设置：
 
