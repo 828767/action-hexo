@@ -141,6 +141,18 @@ deploy:
   branch: main #无此项时，默认分支：gh-pages (GitHub)，coding-pages (Coding.net)，master (others)
   message: "deploy by hexo g -D" # 提交说明信息，无此项也行
 
+# 网站地图
+# Docs: https://github.com/hexojs/hexo-generator-sitemap
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  # template: ./sitemap_template.xml
+  # template_txt: ./sitemap_template.txt
+  rel: false
+  tags: true
+  categories: true
+
 # 基于jQuery的本地搜索引擎，需要安装hexo-generator-search插件使用
 ##  path - file path. Default is search.xml .
 ##  field - the search scope you want to search, you can chose:
