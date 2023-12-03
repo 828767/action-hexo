@@ -14,46 +14,26 @@ top:
 mathjax: true
 ---
 
-只有少数编辑器支持，或者需要安装相应的扩展渲染，使用前请先预览确认。
+有少数编辑器不支持，或者需要安装相应的扩展渲染，使用前请先预览确认。
 <!--more-->
 
-# 定义列表
-
-```MarkDown
-Term 1
-Term 2
-:   Definition A
-:   Definition B
-```
-
-会被编译成
-
-```HTML
-<dl>
-<dd>Term 1</dd>
-<dd>Term 2</dd>
-<dt>Definition A<dt>
-<dt>Definition A<dt>
-</dl>
-```
-
-# 目录
+## 目录
 
 通过`[TOC]`标记来插入目录。
 
 在编辑器不支持`[TOC]`标记的情况下可以使用添加id的方法构建目录。
 
 ```MarkDown
-## Directory
 * [1.Content one](#chapter1)
 * [2.Content two](#chapter2)
-
-## <span id="chapter1">1.Content one</span>
-## <span id="chapter2">2.Content two</span>
 ```
 
+显示效果：
+  * [1.Content one](#chapter1)
+  * [2.Content two](#chapter2)
 
-# TeX公式
+
+## TeX公式
 
 内联的TeX公式使用一个美元符号标记。
 
@@ -74,7 +54,12 @@ $$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$
 
 $$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$
 
-如果你的编辑器不支持这个功能，可以手动解决。首先引入mathjax脚本：
+一段解题演示:
+  1. $\because f(x)$的定义域为$(0,+\infty)$，$f{^{\prime}}(x)=\dfrac{1-a-ln x}{x^2}$，$ \therefore f{^{\prime}}(\mathrm{e})=-\dfrac{a}{e^2}$，由已知可得$f{^{\prime}}(\mathrm{e})\times 2=-1$，即$a=\dfrac{\mathrm{e}^2}{2}$
+        
+  2. 当 $x>0$ 时$g(x)\geq f(x)$，即：$$\mathrm{e}^x+\dfrac{2}{x}-1\geq\dfrac{\ln x+a}{x}$$ 化简可得：$a\le x\left(\mathrm{e}^x-1\right)-\ln x+2$
+
+以上公式渲染，一般编辑器或渲染模板都会支持，如果你的环境恰好不支持这个功能，可以手动解决。首先引入mathjax脚本：
 
 ```HTML
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
@@ -90,9 +75,9 @@ $$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$
 </script>
 ```
 
-以上公式展示效果，在实际显示过程中，根据网络加载速度不同会有不同的解析展示速度，TeX的语法参考请见[这里](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)。
+以上公式展示效果，在实际显示过程中，根据网络加载速度不同会有不同的解析展示速度，`TeX`/`LaTex` 公式语法参考请见[这里](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)。
 
-# UML图
+## UML图
 语法为在代码块开始行后面加入语法声明，如 \`\`\`mermaid ，然后可以像这样来画uml时序图：
 
 ```mermaid
@@ -134,16 +119,17 @@ graph LR;
 
 流程图的语法请见 [这里](https://mermaidjs.github.io/flowchart.html)， 更复杂点的flowchart可以看 [这里](http://adrai.github.io/flowchart.js/) 。
 
-# 参考文档
-1. [MarkDown文档中如何画出流程图](/how-to-draw-flowchart-with-markdown.html)
-2. https://github.com/wizardforcel/markdown-simple-world
-3. http://stevenshi.me/2017/06/26/hexo-insert-formula/
-4. https://blog.csdn.net/u013282174/article/details/80666123
-5. https://www.liuyude.com/How_to_make_your_HEXO_blog_support_handwriting_flowchart.html
-6. https://mermaidjs.github.io/
+## 参考文档
+1. [Markdown 入门参考](http://xianbai.me/learn-md/article/about/readme.html)
+2. [MarkDown文档中如何画出流程图](https://sobaigu.com/how-to-draw-flowchart-with-markdown.html)
+3. https://github.com/wizardforcel/markdown-simple-world
+4. http://stevenshi.me/2017/06/26/hexo-insert-formula/
+5. https://blog.csdn.net/u013282174/article/details/80666123
+6. https://www.liuyude.com/How_to_make_your_HEXO_blog_support_handwriting_flowchart.html
+7. https://mermaidjs.github.io/
 
 
 
 <script type="text/javascript" async
-  src="https://unpkg.com/mermaid@9.1.1/dist/mermaid.min.js">
+  src="https://cdn.staticfile.org/mermaid/10.6.1/mermaid.min.js">
 </script>
