@@ -25,7 +25,7 @@ tags:
 你有问题，站长提供解决思路，已经是友情帮助了，站长的时间精力也不是无限的。友好文明一点，指不定站长闲得慌还能友情远程搭把手，上帝就不要指望空手套站长24小时守着你了，站长的世界里人人平等！
 
 ## GitHub咋打不开？
-GitHub默认是不用爬墙的，但各地网络管制松紧度不一样，无法访问就上梯子吧。Windows 系统强烈推荐用 [`winXray`](https://github.com/cdnf/winxray/tree/master "只知开源软件地址，代理服务请自己去找") 这个代理软件，简单好用，简直是[为 GitHub 而生](https://yiwangmeng.com/pcsoft-winxray "winXray简介")。
+GitHub默认是不用爬墙的，但各地网络管制松紧度不一样，无法访问就上梯子吧。Windows 系统强烈推荐用 [`winXray`](https://github.com/cdnf/winxray/tree/master "只知开源软件地址，代理服务请自己去找") 这个代理软件，简单好用，简直是[为 GitHub 而生](https://www.yiwangmeng.com/pcsoft-winxray "winXray简介")。
 
 1. Git 客户端仓库同步可以先尝试免梯子方法：配置好 `SSH` 密钥后使用 `SSH` 协议，方法可参考：{% post_link guide-how-to-build-site-4 %} 中 `生成 SSH 密钥对` 章节内容
 2. Git 客户端启用梯子配置方法请见：{% post_link guide-how-to-build-site-8 %} 中相关内容
@@ -48,7 +48,7 @@ GitHub默认是不用爬墙的，但各地网络管制松紧度不一样，无�
 每个人的审美和需求都不一样，如果自带的这几套主题都看不上眼，请自行到 [Hexo官方主题展示页](https://hexo.io/themes/) 去挑选，萝卜白菜都是你自己的喜好。
 
 ## 关于页面怎么来的？
-是自己建的，内容是自己写的，有些主题文档中也会提及，或者请参考：[关于菜单怎么来](https://yiwangmeng.com/common-problems-and-solutions-of-goodhexo#%E5%85%B3%E4%BA%8E%E8%8F%9C%E5%8D%95%E6%80%8E%E4%B9%88%E6%9D%A5)
+是自己建的，内容是自己写的，有些主题文档中也会提及，或者请参考：[关于菜单怎么来](https://www.yiwangmeng.com/common-problems-and-solutions-of-goodhexo#%E5%85%B3%E4%BA%8E%E8%8F%9C%E5%8D%95%E6%80%8E%E4%B9%88%E6%9D%A5)
 
 > 其他 `标签`，`分类`，`友链`等页面以此类推，更多需要参考主题实现文档
 

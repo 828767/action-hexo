@@ -17,7 +17,7 @@ menu:
   Configurtion: /#Theme-Configurtion #带空格标题锚点需要添加‘-’替代空格路径
   About: /about/  #链接到一个页面
   Blog: https://yiwangmeng.cn
-  Guide: https://yiwangmeng.com #外链
+  Guide: https://www.yiwangmeng.com #外链
 
 
 # flink picture will load if avator link calls on error
