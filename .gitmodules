@@ -16,3 +16,6 @@
 [submodule "themes/stellar"]
 	path = themes/stellar
 	url = https://github.com/xaoxuu/hexo-theme-stellar.git
+[submodule "themes/solitude"]
+	path = themes/solitude
+	url = https://github.com/DuoSco/Hexo-theme-solitude.git
