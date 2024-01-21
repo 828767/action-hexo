@@ -40,7 +40,7 @@ git config --global user.email "email" #设置Git邮箱
 `nodejs` 是跨平台的 JavaScript 运行环境和包管理工具。同样的，到 [Nodejs官网](https://nodejs.org/zh-cn/) 或者 [墙内淘宝源](https://registry.npmmirror.com/binary.html?path=node/) 下载安装包，建议选择长期维护版，默认安装完成即可。
 
 安装完成后，在前文安装完成的 `Git Bash` 或者系统终端中输入命令 `npm version` 验证安装结果：
-```bash
+```JSON
 $ npm version
 {
   npm: '8.5.5',
@@ -49,10 +49,11 @@ $ npm version
 }
 ```
 
-为了后面安装依赖包顺利完成，运行以下命令设置 npm 淘宝源：
-```bash
-# 墙内设置 npm 淘宝源，加快网络下载速度，墙外就不要做了
-npm config set registry https://registry.npm.taobao.org
+为了后面安装依赖包顺利完成，运行以下命令设置 npm 墙内源：
+```BASH
+# 设置 npm 墙内源，加快网络下载速度，墙外就不要做了
+npm config set registry https://registry.npm.taobao.org # 淘宝源
+npm config set registry http://mirrors.cloud.tencent.com/npm/ # 腾讯源
 ```
 
 # 1.3 安装 hexo

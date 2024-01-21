@@ -33,11 +33,12 @@ language: zh-CN  #theme: maupassant，landscape，Annie
 # theme: landscape  #默认主题，最简单
 # theme: maupassant #简洁的博客主题，配置文件：_config.maupassant.yml
 theme: butterfly  #多功能主题，配置文件：_config.butterfly.yml
+# theme: solitude  #多功能主题，配置文件：_config.solitude.yml，从此切到其他主题时先 `hexo clean`
 # theme: matery #响应式布局多媒体主题，配置文件：_config.matery.yml
 # theme: fluid #Material Design 风格主题，配置文件：_config.fluid.yml
 # theme: next #简约的博客主题，配置文件：_config.next.yml
 # theme: Academia #学术简历主题，配置文件：_config.Academia.yml
-# theme: yelee #双栏博客主题，配置文件：_config.yelee.yml
+# theme: yelee #双栏博客主题，配置文件：_config.yelee.yml，从此切到其他主题时先 `hexo clean`
 # theme: stellar #简约商务风主题，配置文件：_config.stellar.yml
 
 # URL
@@ -72,15 +73,14 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+syntax_highlighter: highlight.js # highlight.js | prismjs | <empty>
 highlight:
-  enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
   preprocess: true
   line_number: true
   tab_replace: ''
