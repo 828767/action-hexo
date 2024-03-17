@@ -52,7 +52,7 @@ $ npm version
 为了后面安装依赖包顺利完成，运行以下命令设置 npm 墙内源：
 ```BASH
 # 设置 npm 墙内源，加快网络下载速度，墙外就不要做了
-npm config set registry https://registry.npm.taobao.org # 淘宝源
+npm config set registry https://registry.npmmirror.com # 最新淘宝源
 npm config set registry http://mirrors.cloud.tencent.com/npm/ # 腾讯源
 ```
 
