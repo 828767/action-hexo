@@ -31,7 +31,7 @@ Windows 系统安装完成后，会在右键菜单添加 `Git Bash Here` 入口�
 git config --global user.name name #设置Git用户名
 git config --global user.email "email" #设置Git邮箱
 ```
-> 这里只是最基本的Git信息设置，后续提交同步 GitHub 等需要额外授权，详见站内后文：{% post_link guide-how-to-build-site-4 %}
+> 这里只是最基本的Git信息设置，后续提交同步 GitHub 等需要额外授权，详见站内后文：{% post_link '从零开始建个小站 - 2. 拉取仓库到本地' %}
 
 
 `Git Bash Here` 这个右键菜单，在哪个目录下点就会将工作路径自动切换到哪，可以省去切换工作路径的麻烦，小白可以多用用。

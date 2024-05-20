@@ -27,14 +27,14 @@ sticky: 10
 本简版教程旨在试图引导小白快速上手 Hexo 建站框架，免费或者低成本建个自己的小站，部分工作已经完成的直接跳到后续需要的步骤开始看即可。
 > 本站内容支持按关键词搜索，不想一页页翻请 **`善用搜索和内容目录导航`**
 
-1. {% post_link guide-how-to-build-site-1 %}
-2. {% post_link guide-how-to-build-site-2 %}
-3. {% post_link guide-how-to-build-site-3 %}
-4. {% post_link guide-how-to-build-site-4 %}
-5. {% post_link guide-how-to-build-site-5 %}
-6. {% post_link guide-how-to-build-site-6 %}
-7. {% post_link guide-how-to-build-site-7 %}
-8. {% post_link guide-how-to-build-site-8 %}
-9. {% post_link guide-how-to-build-site-9 %}
+1. {% post_link '从零开始建个小站 - 前置知识' %}
+2. {% post_link '从零开始建个小站 - 建站方案选择' %}
+3. {% post_link '从零开始建个小站 - 1. 搭个本地预览环境' %}
+4. {% post_link '从零开始建个小站 - 2. 拉取仓库到本地' %}
+5. {% post_link '从零开始建个小站 - 3. 搞个编辑器' %}
+6. {% post_link '从零开始建个小站 - 4. 练手内容维护' %}
+7. {% post_link '从零开始建个小站 - 5. 个性化设置' %}
+8. {% post_link '从零开始建个小站 - 其他知识' %}
+9. {% post_link '从零开始建个小站 - 常见问题' %}
 
 > 从零开始的详细教程可参考：[从零开始建个小站](https://www.yiwangmeng.com/?p=226)。
