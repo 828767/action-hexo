@@ -1,28 +1,25 @@
 # theme: butterfly
-- class_name: 友情鏈接
-  class_desc: 那些人，那些事
+- class_name: 黄金搭档
+  class_desc: 为本站提供灵感、共享优质内容、各领域发光发热的优秀网站
   link_list:
-    - name: Hexo
-      link: https://hexo.io/zh-cn/
-      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
-      descr: 快速、簡單且強大的網誌框架
-    - name: 一网盟
-      link: https://www.yiwangmeng.com/
-      avatar: https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/logo_yiwangmeng.png
-      descr: 资源分享综合站
-
-- class_name: 網站
-  class_desc: 值得推薦的網站
-  link_list:
-    - name: Youtube
-      link: https://www.youtube.com/
-      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
-      descr: 視頻網站
-    - name: Weibo
-      link: https://www.weibo.com/
-      avatar: https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png
-      descr: 中國最大社交分享平臺
-    - name: Twitter
-      link: https://twitter.com/
-      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
-      descr: 社交分享平臺
+    - name: 易网盟 # 友链名称
+      link: https://yiwangmeng.cn/action-hexo/ # 友链地址
+      avatar: https://yiwangmeng.cn/action-hexo/favicon.ico  # 显示头像
+      descr: Hexo 建站教程 - 从零开始建个小站   # 友链简介
+      topimg: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png  # 如果是card模式下，将显示
+      tag: 文档站
+      color: speed
+    - name: 一网盟 # 友链名称
+      link: https://www.yiwangmeng.com/ # 友链地址
+      avatar: https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/favicon_yiwangmeng.png  # 显示头像
+      descr: 致力于知识技能、网络技术研究，挖掘网络羊毛福利，分享可靠的网赚项目   # 友链简介
+      topimg: https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/favicon_yiwangmeng.png  # 如果是card模式下，将显示
+      tag: 资源站
+      color: white
+    - name: 开心屋发卡   # 友链名称
+      link: https://faka.kaixinwu.vip/  # 友链地址
+      avatar: https://faka.kaixinwu.vip/favicon.ico  # 显示头像
+      descr: 主营外区水果账号  # 友链简介
+      topimg: https://faka.kaixinwu.vip/favicon.ico  # 如果是card模式下，将显示
+      tag: 资源站
+      color: vip

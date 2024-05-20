@@ -60,13 +60,6 @@ cover:
   intervalTime: 5000 # 自动切换下一张的间隔时间. Automatically switch the interval of the next one.
   useConfig: false # 是否使用配置文件, 在 _data/covers.json 下配置推荐文章, false则使用主题在文章中的配置 cover coverImg
   # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/covers.json 移动到 my-blog/source/_data/下修改配置即可
-  video:
-    enable: false
-    src: 
-      - https://txmov2.a.yximgs.com/upic/2021/04/09/22/BMjAyMTA0MDkyMjMwMDhfMTg1ODk2MDg4N180NzUyOTMyMjA4Nl8xXzM=_b_B8e080d7ede19e6674d48a9f12545007b.mp4?pkey=AAVAfNhi5_f-HGkIPXrY5w6nyf4JibwOY-WwdHgSJ2aSoi-2WQLpiYDunLbRZQuESz875eMdsepRlVFtXg9nuQY58uRc-7AsF0kEMNR6QYBj56g9JFFMSGdsoKK2-SV27u8&tag=1-1617978682-xpcwebprofile-0-lcvipceuti-9e40072f87531f1a&clientCacheKey=3xbbtbrfxqpccp4_b.mp4
-      - https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTQyNDRfMTg1ODk2MDg4N180NzUyNjAyMzA0N18xXzM=_b_B83b004b85aba8eca3ded270637616575.mp4
-      - https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTU4MDNfMTg1ODk2MDg4N180NzUyNzE0MzkyNV8xXzM=_b_Bf94cee6bd181efeaca64049bd2e4e276.mp4
-# index page dream text,
 
 # index page dream text,
 # 配置首页显示"梦想"的语句.
@@ -97,34 +90,13 @@ music:
   listFolded: true  # 列表默认折叠
   hideLrc: true     # 隐藏歌词
 
-# Whether to display the musics.
-# 单独的音乐页面.
-musics:
-  enable: false
-  title:          #非吸底模式有效
-    enable: true
-    show: 听听音乐
-  server: tencent   #require music platform: netease, tencent, kugou, xiami, baidu
-  type: playlist    #require song, playlist, album, search, artist
-  id: 1776127550     #require song id / playlist id / album id / search keyword
-  fixed: false      # 开启吸底模式
-  autoplay: true   # 是否自动播放
-  theme: '#42b983'
-  loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
-  order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
-  preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
-  volume: 0.7       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
-  listFolded: false  # 列表默认折叠
-  listMaxHeight: "525px" #列表最大高度
-
 # Whether to display the videos.
 # 是否在首页显示视频.
 video:
   enable: false
   showTitle: true
   title: 精彩视频
-  url: # url和iframeUrl其中一个必填
-  iframeUrl: #在bilibili或者爱奇艺分享时选择iframe，然后填那个url来这里，sample: //player.bilibili.com/player.html?aid=669520137&bvid=BV1oa4y1L7mw&cid=234543483&page=1
+  url: # 必填
   pic:
   thumbnails:
   height: # 如：400
@@ -228,29 +200,6 @@ postInfo:
 clicklove:
   enable: true
 
-# | 文件名             | 说明                   |
-# | :----------------- | :--------------------- |
-# | sakura-small.js    | 少量樱花               |
-# | sakura-half.js     | 樱花相对原效果数量减半 |
-# | sakura-reduce.js   | 樱花相对原效果减少1/4  |
-# | sakura.js          | 樱花数量不变（原效果） |
-# 默认事sakura.js，如需修改，请到下面地址修改
-# libs
-#   js:
-#     sakura: /libs/others/sakura-reduce.js
-# 是否激活页面樱花效果, 只在桌面版网页启用特效
-# 下面三种特效建议选择一种就够了，
-sakura:
-  enable: false
-
-# 是否激活页面鼠标星星跟随效果, 只在桌面版网页启用特效
-mouseStar:
-  enable: false
-
-  # 是否激活页面飘雪效果, 只在桌面版网页启用特效
-snowdown:
-  enable: false
-
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
@@ -323,7 +272,7 @@ postCalendar: true
 
 # https://github.com/utterance/utterances 是个 GitHub App，它的权限仅限于某个仓库。像 hugo hexo 这种静态页面类型的博客，clientID/clientSecret 泄露是不可避免的。我认为较好的解决方式是像 utteras 这种 GitHubApp，只有一个仓库的读写权限，将破坏降到最小。
 
-# valine是使用的免费的leancloud开发版资源，即使数据丢了leancloud也不用负任何的责任。此外valine的src目录已在1.4.0后停止更新。。。薛定谔的开源。
+# valine和minivaline都是使用的免费的leancloud开发版资源，即使数据丢了leancloud也不用负任何的责任。此外valine的src目录已在1.4.0后停止更新。。。薛定谔的开源。
 
 # 当初多说国内最大都倒了，livere不一定靠谱。
 
@@ -364,22 +313,13 @@ livere:
   enable: false
   uid:
 
-# 腾讯人机验证
-# 注意：目前只适配和测试了valine，其它评论系统未调试验证！
-# 介绍: https://cloud.tencent.com/document/product/1110/36841
-# 管理验证码: https://console.cloud.tencent.com/captcha/graphical
-tcaptcha:
-  enable: true
-  appid: xxxxxxxxxx # 你的appid
-
 # The configuration of the Valine comment module is not activated by default.
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
   enable: false
-  appId:  # 必填
-  appKey: # 必填
-  serverURLs: # 必填 https://你的api
+  appId:
+  appKey:
   notify: false
   verify: false
   visitor: true
@@ -387,18 +327,50 @@ valine:
   pageSize: 10
   placeholder: 'just go go' # Comment Box placeholder
   background: /medias/comment_bg.png
-  coolpushkey: 
 
-# The configuration of the Waline comment module is not activated by default.
-# To use it, activate the configuration item.
-# Waline 评论模块的配置，默认为不激活，如要使用，就请激活该配置项
-# See: https://waline.js.org/
-waline:
+# The configuration of the MiniValine comment module is not activated by default.
+# To use it, activate the configuration item and set appId and appKey.
+# MiniValine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
+# See: https://github.com/MiniValine/MiniValine
+minivaline:
   enable: false
-  # Waline 服务端部署参考 https://waline.js.org/guide/server/intro.html 客户端和服务端版本需一致
-  # 下面是一个例子，请替换成自己的服务端
-  serverURL: https://waline.your-domain.com
-  avatar: 'mp' # Gravatar style : ''/mp/identicon/monsterid/wavatar/retro/hide
+  appId: zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz # Your leancloud application appid
+  appKey: itmzT1JbXfAjVwMqDhGPzU45 # Your leancloud application appkey
+  mode: DesertsP # DesertsP or xCss
+  placeholder: Write a Comment # Comment box placeholder
+  math: true # Support MathJax.
+  md: true # Support Markdown.
+  enableQQ: false # Enable QQ avatar API.
+  NoRecordIP: false # Do not record commenter IP.
+  visitor: true # Article reading statistics.
+  maxNest: 6 # Sub-comment maximum nesting depth.
+  pageSize: 6 # Pagination size.
+  adminEmailMd5: de8a7aa53d07e6b6bceb45c64027763d # The MD5 of Admin Email to show Admin Flag.[Just Only DesertsP Style mode]
+  tagMeta: # The String Array of Words to show Flag.[Just Only xCss Style mode]
+    - 管理员
+    - 小伙伴
+    - 访客
+  master: # The MD5 String Array of master Email to show master Flag.[Just Only xCss Style mode]
+    - de8a7aa53d07e6b6bceb45c64027763d
+  friends: # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]
+    - b5bd5d836c7a0091aa8473e79ed4c25e
+    - adb7d1cd192658a55c0ad22a3309cecf
+    - 3ce1e6c77b4910f1871106cb30dc62b0
+    - cfce8dc43725cc14ffcd9fb4892d5bfc
+  # MiniValine's display language depends on user's browser or system environment
+  # If you want everyone visiting your site to see a uniform language, you can set a force language value
+  # Available values: en  | zh-CN | (and many more)
+  # More i18n info: https://github.com/MiniValine/minivaline-i18n
+  lang:
+  # Expression Url.
+  # https://github.com/MiniValine/MiniValine/blob/master/.github/FAQ.md#how-to-customize-emoticons
+  emoticonUrl:
+    - https://cdn.jsdelivr.net/npm/alus@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/qq@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest
+    - https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest
 
 changyan:
   enable: false
@@ -410,16 +382,6 @@ githubLink:
   enable: true
   url: https://github.com/blinkfox/hexo-theme-matery
   title: Fork Me
-
-# The configuration of the Twikoo comment module is not activated by default.
-# To use it, activate the configuration item and set envId.
-# Twikoo 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置环境 ID envId.
-# See: https://twikoo.js.org
-twikoo:
-  enable: false
-  envId: twikoo-1gs9l0fb17e7897a # 环境 ID，搭建教程：https://twikoo.js.org/quick-start.html
-  # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
-  # path: 'window.location.pathname' # 自定义文章路径
 
 # The password verification feature of read post. To use this feature,
 # activate the configuration item and write the 'password' key and Cipher in the post's Front-matter.
@@ -462,51 +424,34 @@ libs:
   css:
     matery: /css/matery.css
     mycss: /css/my.css
-    post: /css/post.css
-    reward: /css/reward.css
-    dark: /css/dark.css
-    indexcover: /css/indexcover.css
-    gallery: /css/gallery.css
-    fontAwesome: /libs/awesome/css/all.min.css # V6.1.2 20220809
-    materialize: /libs/materialize/materialize.min.css # 1.0.0 20211109
+    fontAwesome: /libs/awesome/css/all.css # V5.11.1
+    materialize: /libs/materialize/materialize.min.css # 1.0.0
     aos: /libs/aos/aos.css
     animate: /libs/animate/animate.min.css # V3.5.1
-    lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.10.0
+    lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.6.11
     aplayer: /libs/aplayer/APlayer.min.css
     dplayer: /libs/dplayer/DPlayer.min.css
     gitalk: /libs/gitalk/gitalk.css
     jqcloud: /libs/jqcloud/jqcloud.css
     tocbot: /libs/tocbot/tocbot.css
-    prism: /libs/prism/prism.min.css
-    mermaid: /libs/mermaid/mermaid.min.css
-    fancybox: /libs/fancybox/jquery.fancybox.css
-    justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.css
+    prism: /libs/prism/prism.css
   js:
     matery: /js/matery.js
-    sc2tc: /js/tw_cn.js
-    jquery: /libs/jquery/jquery-3.6.0.min.js  #3.6.0 20211109
+    jquery: /libs/jquery/jquery.min.js
     materialize: /libs/materialize/materialize.min.js # 1.0.0
     masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
     aos: /libs/aos/aos.js
     scrollProgress: /libs/scrollprogress/scrollProgress.min.js
-    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.10.0
-    typed: /libs/typed/typed.js
+    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.6.11
     clicklove: /libs/others/clicklove.js
-    sakura: /libs/others/sakura.js
-    star: /libs/others/star.js
-    snow: /libs/others/snow.js
-    tcaptcha: /libs/others/TencentCaptcha.js
     busuanzi: /libs/others/busuanzi.pure.mini.js
     aplayer: /libs/aplayer/APlayer.min.js
-    meting: /libs/aplayer/Meting.min.js
     dplayer: /libs/dplayer/DPlayer.min.js
     crypto: /libs/cryptojs/crypto-js.min.js
     echarts: /libs/echarts/echarts.min.js
     gitalk: /libs/gitalk/gitalk.min.js
     valine: /libs/valine/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
-    minivaline: /libs/minivaline/MiniValine.js # latest
-    waline: /libs/waline/Waline.min.js # 若想保持最新版，请替换为 https://fastly.jsdelivr.net/npm/@waline/client/dist/Waline.min.js 默认为(1.5.2版本) /libs/valine/Valine.min.js
-    twikoo: /libs/twikoo/twikoo.all.min.js # 若想保持最新版，请替换为 https://fastly.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js  默认为 /libs/twikoo/twikoo.all.min.js
+    minivaline: /libs/minivaline/MiniValine.js
     jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
     tocbot: /libs/tocbot/tocbot.min.js
     canvas_nest: /libs/background/canvas-nest.js
@@ -514,14 +459,6 @@ libs:
     ribbonRefresh: /libs/background/ribbon-refresh.min.js
     ribbon_dynamic: /libs/background/ribbon-dynamic.js
     instantpage: /libs/instantpage/instantpage.js
-    mermaid: /libs/mermaid/mermaid.min.js
-    fancybox: /libs/fancybox/fancybox.js
-    justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.js
-    prism: /libs/prism/prism.min.js
-    codeblock: /libs/codeBlock/codeBlockFuction.js
-    codelang: /libs/codeBlock/codeLang.js
-    codecopy: /libs/codeBlock/codeCopy.js
-    codeshrink: /libs/codeBlock/codeShrink.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
@@ -629,9 +566,8 @@ subtitle:
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
-  sub:
-    - 从来没有真正的绝境, 只有心灵的迷途
-    - Never really desperate, only the lost of the soul
+  sub1: 从来没有真正的绝境, 只有心灵的迷途
+  sub2: Never really desperate, only the lost of the soul
 
 # 手机二级菜单.
 navMenu:
@@ -647,11 +583,6 @@ instantpage:
 banner:
   enable: true
 
-# 中文繁简转换开关
-# 显示在底部 footer 栏
-translate:
-  enable: false
-
 #ICP备案信息尾部显示
 icp:
   enable: false
@@ -661,19 +592,19 @@ icp:
 # CDN访问加速 
 # 第一次使用本功能，一定要先配置url，再`hexo cl && hexo g && hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
 # 如果必须要使用国内的coding或者gitee，可以采用双部署，同时将网站部署到两个仓库（其中一个必须是GitHub的仓库）
-# URL配置规则（例子如下）： https://fastly.jsdelivr.net/gh/你的GitHub用户名/你的仓库名
+# URL配置规则（例子如下）： https://cdn.jsdelivr.net/gh/你的GitHub用户名/你的仓库名
 # 如果想关闭此功能，将 url地址 注释或删除即可！
 #
 # 注：配置了此项，就代表着本地调试的时候，网站依然会去GitHub请求资源（原来的资源），本地调试的时候记得将 此项配置 注释或者删除掉
 # 更多关于访问速度优化，请查看：https://blog.sky03.cn/posts/42790.html
 # 注：jsdelivr可以自动帮你生成.min版的js和css，所以你在上面设置js及css路径中可以直接写.min.xxx
 jsDelivr:
-  url: # https://fastly.jsdelivr.net/gh/skyls03/skyls03.github.io
+  url: # https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io
   
 # 网站背景图
 background:
   enable: false
-  url: "https://fastly.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg"
+  url: "https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg"
 
 # 说说 https://artitalk.js.org/
 artitalk:
@@ -696,39 +627,7 @@ artitalk:
 # 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI
 # 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com
 bbtime:
-  enable: false
-  appId: # 你的appId
-  appKey: # 你的appKey
-  serverURLs: # https://你的api
-
-
-# 图表绘制插件
-# 建议更换更换hexo-renderer-markdown-it引擎。参考下面链接
-# https://github.com/hexojs/hexo-renderer-markdown-it
-# https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Advanced-Configuration
-# 使用教程： https://blog.17lai.site/posts/cf0f47fd/#Mermaid
-# 安装配置方法
-# yarn remove hexo-renderer-marked
-# yarn add hexo-renderer-markdown-it hexo-tag-mermaid
-# 注意：hexo-renderer-markdown-it 比默认引擎更快，可选择插件较多，请认真看上面两个链接教程。
-# mermaid语法教程 https://mermaid-js.github.io/mermaid/#/
-# 使用方法：
-# 在post文章中填写mermaid语句，需要使用{% mermaid %} 包裹
-# {% mermaid %}
-# [mermaid 语句正文]
-# {% endmermaid %}
-# 样例如下所示：
-# {% mermaid %}
-# graph TD
-#     A[Christmas] -->|Get money| B(Go shopping)
-#     B --> C{Let me think}
-#     C -->|One| D[Laptop]
-#     C -->|Two| E[iPhone]
-#     C -->|Three| F[Car]
-# {% endmermaid %}
-# mermaid chart。 依赖hexo-tag-mermaid
-mermaid: ## mermaid url https://github.com/knsv/mermaid
-  enable: false  # default false
-  version: "latest" # default v7.1.2
-  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
-    #startOnload: true  // default true
+ enable: false
+ appId: # 你的appId
+ appKey: # 你的appKey
+ serverURLs: # https://你的api
