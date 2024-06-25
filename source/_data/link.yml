@@ -2,6 +2,13 @@
 - class_name: 黄金搭档
   class_desc: 为本站提供灵感、共享优质内容、各领域发光发热的优秀网站
   link_list:
+    - name: 网联基地
+      link: https://www.wubase.com/
+      descr: 云服务器评测，分享国内外VPS、网站服务器等资讯
+      avatar: https://s21.ax1x.com/2024/05/16/pknrxxI.png
+      topimg: https://s21.ax1x.com/2024/05/16/pknrvRA.png
+      tag: 资讯站
+      color: vip
     - name: 易网盟 # 友链名称
       link: https://yiwangmeng.cn/action-hexo/ # 友链地址
       avatar: https://yiwangmeng.cn/action-hexo/favicon.ico  # 显示头像
@@ -23,3 +30,4 @@
       topimg: https://faka.kaixinwu.vip/favicon.ico  # 如果是card模式下，将显示
       tag: 资源站
       color: vip
+      

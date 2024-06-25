@@ -17,7 +17,7 @@ menu:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
   图库: /gallery/ || fas fa-images
-  Link: /link/ || fas fa-link
+  友情链接: /link/ || fas fa-link
   About: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
@@ -34,8 +34,10 @@ code_word_wrap: false
 # formal:
 #   icon: link || the description || color
 social:
-  fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-  fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
+  fas fa-server: https://www.wubase.com/ || 服务器推荐 || '#24a96e'
+  fab fa-qq: https://wpa.qq.com/msgrd?v=1&uin=961452396 || QQ || '#64299e'
+  fas fa-envelope: mailto:961452396@qq.com || Email || '#4a7dbe'
 
 # Image (圖片設置)
 # --------------------------------------
@@ -240,12 +242,12 @@ aside:
     description:
     button:
       enable: true
-      icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
+      icon: fas fa-concierge-bell
+      text: 购买服务
+      link: https://nethouse.taobao.com/
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 这是个 Hexo 框架示例站，由简入深可解锁更多玩法，也可以氪金请人代劳
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -296,7 +298,7 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: false
+  enable: true
   sort_order: # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
