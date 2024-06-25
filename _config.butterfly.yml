@@ -7,6 +7,7 @@ nav:
   display_title: true
   fixed: false # fixed navigation bar
 
+# 内置支持图标：https://fontawesome.com/v5/search?m=free
 # Menu 目錄
 menu:
   # Home: / || fas fa-home

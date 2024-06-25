@@ -170,7 +170,7 @@ deploy:
 # 如果在此文件中配置秘钥，请不要把它直接发布在公众仓库里!
 url_submission:
   enable: false
-  count: 5 # Submit limit
+  count: 10 # Submit limit
   urls_path: 'submit_url.txt' # URL list file path
   sitemap: 'sitemap.xml' # Sitemap path(e.g. the url is like this https://abnerwei.com/baidusitemap.xml, you can fill in `baidusitemap.xml`)
   type: 'latest' # latest or all( latest: modified pages; all: posts & pages)
