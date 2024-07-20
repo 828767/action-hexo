@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>从零开始建个小站 - 常见问题 | 易网盟</title><meta name="author" content="易网盟"><meta name="copyright" content="易网盟"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我不会&#x2F;看不懂&#x2F;不想看&#x2F;太麻烦&#x2F;不要发教程…… 懒那就没辙了，快发动你的钞能力！  按次付费，花了钱也不可能一直伺候你，有些人想付费站长也不乐意接，毕竟彼此选择才能幸福！      问就发教程，就不能直接给我远程解决吗？ 请看上一条！ 有教程都不舍得看一眼，这么珍惜自己的时间精力就该想到别人也一样。劳动是按次付出的，之前的需求已完成那么站长就履约结束，请问这次你付费了吗？ 你有问题，站长提供解决思">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始建个小站 - 常见问题">
+<meta property="og:url" content="https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-9.html">
+<meta property="og:site_name" content="易网盟">
+<meta property="og:description" content="我不会&#x2F;看不懂&#x2F;不想看&#x2F;太麻烦&#x2F;不要发教程…… 懒那就没辙了，快发动你的钞能力！  按次付费，花了钱也不可能一直伺候你，有些人想付费站长也不乐意接，毕竟彼此选择才能幸福！      问就发教程，就不能直接给我远程解决吗？ 请看上一条！ 有教程都不舍得看一眼，这么珍惜自己的时间精力就该想到别人也一样。劳动是按次付出的，之前的需求已完成那么站长就履约结束，请问这次你付费了吗？ 你有问题，站长提供解决思">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png">
+<meta property="article:published_time" content="2022-11-11T03:11:11.000Z">
+<meta property="article:modified_time" content="2024-07-20T00:21:46.246Z">
+<meta property="article:author" content="易网盟">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png"><link rel="shortcut icon" href="/action-hexo/img/favicon.png"><link rel="canonical" href="https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-9.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/action-hexo/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>(()=>{
+      const saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+      
+      window.btf = {
+        saveToLocal: saveToLocal,
+        getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+          script.src = url
+          script.async = true
+          script.onerror = reject
+          script.onload = script.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            script.onload = script.onreadystatechange = null
+            resolve()
+          }
+
+          Object.keys(attr).forEach(key => {
+            script.setAttribute(key, attr[key])
+          })
+
+          document.head.appendChild(script)
+        }),
+
+        getCSS: (url, id = false) => new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = url
+          if (id) link.id = id
+          link.onerror = reject
+          link.onload = link.onreadystatechange = function() {
+            const loadState = this.readyState
+            if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+            link.onload = link.onreadystatechange = null
+            resolve()
+          }
+          document.head.appendChild(link)
+        }),
+
+        addGlobalFn: (key, fn, name = false, parent = window) => {
+          const pjaxEnable = false
+          if (!pjaxEnable && key.startsWith('pjax')) return
+
+          const globalFn = parent.globalFn || {}
+          const keyObj = globalFn[key] || {}
+    
+          if (name && keyObj[name]) return
+    
+          name = name || Object.keys(keyObj).length
+          keyObj[name] = fn
+          globalFn[key] = keyObj
+          parent.globalFn = globalFn
+        }
+      }
+    
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+      
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })()</script><script>const GLOBAL_CONFIG = {
+  root: '/action-hexo/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '从零开始建个小站 - 常见问题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-20 08:21:46'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/action-hexo/atom.xml" title="易网盟" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/action-hexo/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/action-hexo/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/action-hexo/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/action-hexo/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png')"><nav id="nav"><span id="blog-info"><a href="/action-hexo/" title="易网盟"><span class="site-name">易网盟</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/action-hexo/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">从零开始建个小站 - 常见问题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-11T03:11:11.000Z" title="发表于 2022-11-11 11:11:11">2022-11-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-20T00:21:46.246Z" title="更新于 2024-07-20 08:21:46">2024-07-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/action-hexo/categories/%E5%81%9A%E7%BD%91%E7%AB%99/">做网站</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="从零开始建个小站 - 常见问题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="我不会-看不懂-不想看-太麻烦-不要发教程……"><a class="headerlink" href="#我不会-看不懂-不想看-太麻烦-不要发教程……"></a>我不会/看不懂/不想看/太麻烦/不要发教程……</h2>
+<p>懒那就没辙了，快发动你的钞能力！</p>
+<blockquote>
+<p><code>按次付费</code>，花了钱也不可能一直伺候你，有些人想付费站长也不乐意接，毕竟彼此选择才能幸福！</p>
+</blockquote>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/QR-atm.png"  width="200" height="260" ></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/QR-Taobao.png" width="200" height="260" ></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/QR-QQ-260489333.png" width="200" height="260" ></div>
+<div style="clear:both"></div>
+<h2 id="问就发教程，就不能直接给我远程解决吗？"><a class="headerlink" href="#问就发教程，就不能直接给我远程解决吗？"></a>问就发教程，就不能直接给我远程解决吗？</h2>
+<p>请看上一条！</p>
+<p>有教程都不舍得看一眼，这么珍惜自己的时间精力就该想到别人也一样。劳动是按次付出的，之前的需求已完成那么站长就履约结束，请问这次你付费了吗？</p>
+<p>你有问题，站长提供解决思路，已经是友情帮助了，站长的时间精力也不是无限的。友好文明一点，指不定站长闲得慌还能友情远程搭把手，上帝就不要指望空手套站长24小时守着你了，站长的世界里人人平等！</p>
+<h2 id="GitHub咋打不开？"><a class="headerlink" href="#GitHub咋打不开？"></a>GitHub咋打不开？</h2>
+<p>GitHub默认是不用爬墙的，但各地网络管制松紧度不一样，无法访问就上梯子吧。Windows 系统强烈推荐用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/cdnf/winxray/tree/master" title="只知开源软件地址，代理服务请自己去找"><code>winXray</code></a> 这个代理软件，简单好用，简直是<a target="_blank" rel="noopener" href="https://www.yiwangmeng.com/pcsoft-winxray" title="winXray简介">为 GitHub 而生</a>。</p>
+<ol>
+<li>Git 客户端仓库同步可以先尝试免梯子方法：配置好 <code>SSH</code> 密钥后使用 <code>SSH</code> 协议，方法可参考：<a href="/action-hexo/guide-how-to-build-site-4.html" title="从零开始建个小站 - 2. 拉取仓库到本地">从零开始建个小站 - 2. 拉取仓库到本地</a> 中 <code>生成 SSH 密钥对</code> 章节内容</li>
+<li>Git 客户端启用梯子配置方法请见：<a href="/action-hexo/guide-how-to-build-site-8.html" title="从零开始建个小站 - 其他知识">从零开始建个小站 - 其他知识</a> 中相关内容</li>
+</ol>
+<h2 id="换电脑怎么办？"><a class="headerlink" href="#换电脑怎么办？"></a>换电脑怎么办？</h2>
+<p>本站提供的仓库方案，只要你仓库不删就不会丢，新电脑上照本站使用教程克隆源码仓库安装一遍本地预览环境就可以了，如果你会遵循Git提交规则，不管到哪有多少个设备都可以一起用，也可以随时恢复到任意一次提交的版本。</p>
+<h2 id="怎么更换-安装-配置主题？"><a class="headerlink" href="#怎么更换-安装-配置主题？"></a>怎么更换/安装/配置主题？</h2>
+<p>请打开网站配置文件 <code>_config.yml</code> 仔细看下，有更换主题的配置注释。至于主题安装及功能配置，每个主题大同小异，但言而总之，请找到主题的说明文档，根据主题文档去操作，方法详见：<a href="/action-hexo/guide-how-to-build-site-7.html" title="从零开始建个小站 - 5. 个性化设置">从零开始建个小站 - 5. 个性化设置</a></p>
+<h2 id="为什么换了个主题就报错了？"><a class="headerlink" href="#为什么换了个主题就报错了？"></a>为什么换了个主题就报错了？</h2>
+<p>主题不一样，有可能要求的依赖不一样，或者支持的功能不一样，如：有的主题支持 <code>&#123;% xxx %&#125;</code> 标签功能，有的不支持，如果你的内容中用了这些标签，当切换到一个不支持的主题时就会渲染失败报错，所以：请阅读主题文档，根据主题要求去使用！</p>
+<blockquote>
+<p>示例站内容中就使用了标签语法，如果切换到其他主题报错请删除以下包含了标签语法的示例目录：</p>
+<ol>
+<li>图库页面：<code>source/gallery</code></li>
+<li>引导教程：<code>source/_posts/guide</code></li>
+</ol>
+</blockquote>
+<h2 id="去哪找自己喜欢的主题？"><a class="headerlink" href="#去哪找自己喜欢的主题？"></a>去哪找自己喜欢的主题？</h2>
+<p>本站提供的仓库方案中，自带 <a href="/action-hexo/gallery/" title="自带主题预览图汇总">数套精选特色主题</a>，只需要更改网站配置中的主题配置项启用即可。</p>
+<p>每个人的审美和需求都不一样，如果自带的这几套主题都看不上眼，请自行到 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/themes/">Hexo官方主题展示页</a> 去挑选，萝卜白菜都是你自己的喜好。</p>
+<h2 id="关于页面怎么来的？"><a class="headerlink" href="#关于页面怎么来的？"></a>关于页面怎么来的？</h2>
+<p>是自己建的，内容是自己写的，有些主题文档中也会提及，或者请参考：<a target="_blank" rel="noopener" href="https://www.yiwangmeng.com/common-problems-and-solutions-of-goodhexo#%E5%85%B3%E4%BA%8E%E8%8F%9C%E5%8D%95%E6%80%8E%E4%B9%88%E6%9D%A5">关于菜单怎么来</a></p>
+<blockquote>
+<p>其他 <code>标签</code>，<code>分类</code>，<code>友链</code>等页面以此类推，更多需要参考主题实现文档</p>
+</blockquote>
+<h2 id="怎么我改了没效果？"><a class="headerlink" href="#怎么我改了没效果？"></a>怎么我改了没效果？</h2>
+<p>任何增删改都需要提交同步到上端仓库，请确保你所做的更改已经提交同步完成，然后等几分钟服务器刷新缓存，对照内容维护可参考：<a href="/action-hexo/guide-how-to-build-site-6.html" title="从零开始建个小站 - 4. 练手内容维护">从零开始建个小站 - 4. 练手内容维护</a> 中相关内容。</p>
+<blockquote>
+<p>很多小白以为点了 <code>commit</code> 就万事大吉了，请仔细看下上面的教程，点完 <code>commit</code> 只是提交到了本地版本库，<code>push</code> 或者 <code>sync</code> 完成前别处并不知道有这回事。</p>
+<p>而且，点 <code>commit</code> 前请务必填写 <code>message</code> ，告知后来人改了什么，为什么会有这次变更，这是 Git 版本管理基本规范。</p>
+</blockquote>
+<h2 id="改了几行代码，就异常了"><a class="headerlink" href="#改了几行代码，就异常了"></a>改了几行代码，就异常了</h2>
+<p>改了啥自己清楚，Git 历史记录中也能对比前后差异，所以改完建议本地预览一下结果，启动 <code>hexo s</code> 预览的时候就会显示日志，循着异常日志去看下具体什么问题，然后对应修正即可。</p>
+<p>或者把错误提示关键词丢给本站战略合作伙伴 Google 和百度，让我们的战略伙伴助你一臂之力。</p>
+<h2 id="删了些东西后外网-403，本地预览提示-can-t-get"><a class="headerlink" href="#删了些东西后外网-403，本地预览提示-can-t-get"></a>删了些东西后外网 <code>403</code>，本地预览提示 <code>can't get /</code></h2>
+<p>一些 <code>page</code> 文件夹可以随意删，最多提示 <code>404</code>，但 <code>source/_posts</code> 目录下 <code>必须存在一篇以上文章</code>，否则视为空站无内容，无内容就不会生成 <code>index.html</code>，此时推送到外网就会不存在网站首页，访问时 <code>nginx</code> 就会抛 <code>403</code> 错误。</p>
+<p>所以：推送发布前你预览了吗？预览不正常还推送发布？</p>
+<h2 id="MarkDown语法我不会😢"><a class="headerlink" href="#MarkDown语法我不会😢"></a>MarkDown语法我不会😢</h2>
+<p>MarkDown语法已经很简单易懂了，这里有一个章节列了几个常用到的基本语法： <a href="/action-hexo/guide-how-to-build-site-8.html" title="从零开始建个小站 - 其他知识">从零开始建个小站 - 其他知识</a> ，更多可以阅读后文更专业的MarkDown语法教程。</p>
+<p>对照教程敲一两遍就会了，用啥查啥临时抱佛脚都能应付得了。实在不会可以借助编辑器界面化操作，或者你就当Word或记事本写内容都行，无非就是少了点格式样式。</p>
+<blockquote>
+<p>在 <a href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器">从零开始建个小站 - 3. 搞个编辑器</a> 章节中推荐的 <code>VSCODE</code>，可以对 MarkDown 源码实时预览实现所见即所得编辑，装上 MarkDown 扩展后更是事半功倍，请自行摸索学习。</p>
+</blockquote>
+<h2 id="我添加的图片怎么不显示？"><a class="headerlink" href="#我添加的图片怎么不显示？"></a>我添加的图片怎么不显示？</h2>
+<p>请自行按 MarkDown 或者 HTML 语法添加图片，也可以打开本站自带的示例源码依葫芦画瓢，语法具体可见：<a href="/action-hexo/guide-how-to-build-site-8.html" title="从零开始建个小站 - 其他知识">从零开始建个小站 - 其他知识</a> 中 <code>MarkDown 语法</code> 及后续贴出的相关教程。</p>
+<blockquote>
+<p>如果是网络封锁严重的地区，建议将图片传图床后从图床引用，防止 <code>jsdelivr</code>、<code>Github</code> 等被屏蔽导致图片加载失败</p>
+</blockquote>
+<h2 id="要修改网址怎么办？"><a class="headerlink" href="#要修改网址怎么办？"></a>要修改网址怎么办？</h2>
+<p>Hexo 网站网址在网站配置 <code>_config.yml</code> 中修改如下配置项：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  网址, 必须以 http[s]:// 开头</span></span><br><span class="line"><span class="comment">#  没有自己的域名就用免费 username.github.io</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://yiwangmeng.cn</span></span><br></pre></td></tr></table></figure>
+<p>如果用自己的域名，请修改配置的同时，在域名解析托管商处做好 <code>CNAME</code> 解析，<strong>一般都是</strong>添加这样的两条记录：</p>
+<ul>
+<li>记录/名称/<code>Name</code>：<code>@</code> 和 <code>www</code></li>
+<li>方式/类型/<code>Type</code>：<code>CNAME</code></li>
+<li>记录值/解析目标/<code>Target</code>：<code>username.github.io</code></li>
+</ul>
+<p><code>username</code> 是你 GitHub 用户名，所以当你想更改 GitHub 提供的免费二级域名时，需要：</p>
+<ol>
+<li>先更改自己的用户名</li>
+<li>其次同步修改这个 <code>username.github.io</code> 的 Pages 仓库名</li>
+<li>然后配置中或者 DNS 解析记录也要相应的同步修改</li>
+</ol>
+<h2 id="这个样式我不喜欢，怎么改？"><a class="headerlink" href="#这个样式我不喜欢，怎么改？"></a>这个样式我不喜欢，怎么改？</h2>
+<p>请去翻下 <code>主题配置</code> 和 <code>主题文档</code> ，如果没看到相关设置或者满足不了你的需求，能问这问题的同学还是建议别折腾魔改主题了，去换个主题更实际点，更换主题方法请参考前文 <a href="#%E6%80%8E%E4%B9%88%E6%9B%B4%E6%8D%A2-x2F-%E5%AE%89%E8%A3%85-x2F-%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%EF%BC%9F">怎么更换/安装/配置主题</a>。</p>
+<blockquote>
+<p>如果有能力折腾修改主题的同学，恰好修改的主题是示例站自带，那么请注意 <code>submodule</code> 的问题。</p>
+<p>示例站自带主题在项目中只提交了源仓库版本链接，你本地修改了也不能提交到自己的仓库，请将要修改的主题从 <code>submodule</code> 中删除后再完整提交到自己的源码仓库中，删除 <code>submodule</code> 可参考：<a href="/action-hexo/guide-how-to-build-site-8.html" title="从零开始建个小站 - 其他知识">从零开始建个小站 - 其他知识</a> 中 <code>添加/删除 submodule</code> 相关内容。</p>
+</blockquote>
+<h2 id="VSCODE-里-Git-提交点-commit-后一直转圈圈？"><a class="headerlink" href="#VSCODE-里-Git-提交点-commit-后一直转圈圈？"></a>VSCODE 里 Git 提交点 <code>commit</code> 后一直转圈圈？</h2>
+<p>正如 <a href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器">从零开始建个小站 - 3. 搞个编辑器</a> 中 <code>界面化Git操作</code> 章节明确提示的内容：</p>
+<blockquote>
+<p>点 <code>commit</code> 前请务必填写 <code>message</code> ，告知后来人改了什么，为什么会有这次变更，这是 Git 版本管理基本规范。</p>
+</blockquote>
+<p>一直转圈圈请退出 <code>Git</code> 或者 <code>VSCODE</code> 后重新提交，记得 <code>提交前填写变更信息</code>、<code>提交前填写变更信息</code>、<code>提交前填写变更信息</code>！</p>
+<h2 id="有没有后台？能不能在线维护？"><a class="headerlink" href="#有没有后台？能不能在线维护？"></a>有没有后台？能不能在线维护？</h2>
+<p>有做后台的方案，也有将 GitHub 仓库再拖到第三方平台去部署的方案，但都不推荐。本来 <code>hexo</code> 或 <code>hugo</code> 就只是个渲染框架，用的时候拎出来跑一圈，跑完就没啥事放生掉，有些人却要强迫这俩货长期站街营业，或者再转一次第三方，如果不是特殊需求，都属于舍本逐末瞎折腾。</p>
+<p>如果想在线维护内容，本站仓库方案也可以直接在 GitHub 仓库 <code>code</code> 界面增删改文件，然后网页上就地提交变更就完事，和克隆到本地使用区别就是线上只能单个文件增删改然后提交，小改临时用用倒没什么问题，变更得多还是建议克隆到本地电脑维护。</p>
+<h2 id="能部署到自己的云服务器上吗？"><a class="headerlink" href="#能部署到自己的云服务器上吗？"></a>能部署到自己的云服务器上吗？</h2>
+<p>能，方案大致有：</p>
+<ol>
+<li>仍然延用本站仓库方案，部署好相关权限，在 <code>GitHub Action</code> 中添加发布到自己的服务器步骤</li>
+<li>丢弃本站仓库方案，按官方文档修改发布配置，然后用 <code>hexo g &amp;&amp; hexo d</code> 命令发布到自己的服务器</li>
+<li>在服务器上部署 hexo 环境，把 MarkDown 源码推送到自己的服务器，触发 <code>hexo g</code> 发布 <code>html</code></li>
+</ol>
+<blockquote>
+<p>强烈不推荐在服务器上运行 <code>hexo s</code> 提供长期营业的残暴行为，这种做法极其愚蠢</p>
+</blockquote>
+<p>具体怎么做请自行求助本站战略合作伙伴。</p>
+<h2 id="Git-推送同步失败"><a class="headerlink" href="#Git-推送同步失败"></a>Git 推送同步失败</h2>
+<p>这问题比较复杂，网络或者权限问题居多，具体还需要看 Git 输出日志，提取关键信息求助战略合作伙伴基本上能解决。</p>
+<p>常见处理方式：</p>
+<ol>
+<li>多试几次，或者挂梯子后再试，见前文</li>
+<li>有一些系统无法自动保存 <code>~/.ssh/known_hosts</code> ，致使每次同步都要确认，而该确认提示在界面上看不到，可以切换到终端模式，按提示输入 <code>yes</code>，具体怎么做请自行求助本站战略合作伙伴。</li>
+<li>检查密钥对，确保已经部署妥当</li>
+</ol>
+<h2 id="外网访问提示-not-found-404"><a class="headerlink" href="#外网访问提示-not-found-404"></a>外网访问提示 <code>not found 404</code></h2>
+<ol>
+<li>请确认访问的地址是正确的，是不是线上渲染工作还没完成</li>
+<li>本地请先预览，如果本地不正常，先解决本地的问题，参考前文 <code>403</code> 问题</li>
+<li>请检查线上对外展示仓库指定的 <code>page</code> 分支是否正确，刚推送的仓库请稍等片刻，清理本地浏览器缓存，静态上端刷新缓存完成</li>
+<li>一些被党和人民特别关照的内容，请上梯子访问</li>
+</ol>
+<h2 id="GitHub-页面上怎么创建文件夹"><a class="headerlink" href="#GitHub-页面上怎么创建文件夹"></a>GitHub 页面上怎么创建文件夹</h2>
+<p>GitHub 仓库页面上默认是不能创建文件夹的，只能创建一个文件，然后文件路径中添加一层文件夹，如创建一个 <code>README.md</code>，在文件名输入相应内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">README.md <span class="comment">#直接在当前路径下创建README.md文件</span></span><br><span class="line"><span class="built_in">test</span>/README.md <span class="comment">#先创建test目录，在test目录创建README.md文件</span></span><br><span class="line"><span class="built_in">test</span>/test2/README.md <span class="comment">#同时创建了test和test2两级目录,test2目录创建README.md文件</span></span><br></pre></td></tr></table></figure>
+<p>建议 <code>README.md</code> 里写点有意义的内容，如这个文件夹的用途说明介绍。</p>
+<blockquote>
+<p>如前文<a href="#%E6%9C%89%E6%B2%A1%E6%9C%89%E5%90%8E%E5%8F%B0%EF%BC%9F%E8%83%BD%E4%B8%8D%E8%83%BD%E5%9C%A8%E7%BA%BF%E7%BB%B4%E6%8A%A4%EF%BC%9F">能不能在线维护</a>中提及，单个文件偶尔在页面上维护没什么问题，多文件建议将代码克隆到本地操作，</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yiwangmeng.cn/action-hexo">易网盟</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-9.html">https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-9.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://yiwangmeng.cn/action-hexo" target="_blank">易网盟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/action-hexo/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post_share"><div class="social-share" data-image="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/action-hexo/academia-example.html" title="学术简历样本"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" onerror="onerror=null;src='/action-hexo/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">学术简历样本</div></div></a></div><div class="next-post pull-right"><a href="/action-hexo/guide-how-to-build-site-3.html" title="从零开始建个小站 - 1. 搭个本地预览环境"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" onerror="onerror=null;src='/action-hexo/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">从零开始建个小站 - 1. 搭个本地预览环境</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/action-hexo/guide-how-to-build-site-0.html" title="从零开始建个小站 - 教程导航"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-20</div><div class="title">从零开始建个小站 - 教程导航</div></div></a></div><div><a href="/action-hexo/guide-how-to-build-site-1.html" title="从零开始建个小站 - 前置知识"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-20</div><div class="title">从零开始建个小站 - 前置知识</div></div></a></div><div><a href="/action-hexo/guide-how-to-build-site-2.html" title="从零开始建个小站 - 建站方案选择"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-2.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-20</div><div class="title">从零开始建个小站 - 建站方案选择</div></div></a></div><div><a href="/action-hexo/guide-how-to-build-site-3.html" title="从零开始建个小站 - 1. 搭个本地预览环境"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-06</div><div class="title">从零开始建个小站 - 1. 搭个本地预览环境</div></div></a></div><div><a href="/action-hexo/guide-how-to-build-site-4.html" title="从零开始建个小站 - 2. 拉取仓库到本地"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-9.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-24</div><div class="title">从零开始建个小站 - 2. 拉取仓库到本地</div></div></a></div><div><a href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-23</div><div class="title">从零开始建个小站 - 3. 搞个编辑器</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/action-hexo/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">易网盟</div><div class="author-info__description">Hexo/Hugo... + GitHub 免费仓库托管入门教程引导。用最简单的方案，办最实用的事，微软不倒，羊毛到老！</div></div><div class="card-info-data site-data is-center"><a href="/action-hexo/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/action-hexo/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/action-hexo/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://nethouse.taobao.com/"><i class="fas fa-concierge-bell"></i><span>购买服务</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://www.wubase.com/" target="_blank" title="服务器推荐"><i class="fas fa-server" style="color: #24a96e;"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=1&amp;uin=961452396" rel="external nofollow noreferrer" target="_blank" title="QQ"><i class="fab fa-qq" style="color: #64299e;"></i></a><a class="social-icon" href="mailto:961452396@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是个 Hexo 框架示例站，由简入深可解锁更多玩法，也可以氪金请人代劳</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E4%B8%8D%E4%BC%9A-%E7%9C%8B%E4%B8%8D%E6%87%82-%E4%B8%8D%E6%83%B3%E7%9C%8B-%E5%A4%AA%E9%BA%BB%E7%83%A6-%E4%B8%8D%E8%A6%81%E5%8F%91%E6%95%99%E7%A8%8B%E2%80%A6%E2%80%A6"><span class="toc-number">1.</span> <span class="toc-text">我不会&#x2F;看不懂&#x2F;不想看&#x2F;太麻烦&#x2F;不要发教程……</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E5%B0%B1%E5%8F%91%E6%95%99%E7%A8%8B%EF%BC%8C%E5%B0%B1%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E7%BB%99%E6%88%91%E8%BF%9C%E7%A8%8B%E8%A7%A3%E5%86%B3%E5%90%97%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">问就发教程，就不能直接给我远程解决吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub%E5%92%8B%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">GitHub咋打不开？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%A2%E7%94%B5%E8%84%91%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">换电脑怎么办？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E6%9B%B4%E6%8D%A2-%E5%AE%89%E8%A3%85-%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">怎么更换&#x2F;安装&#x2F;配置主题？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8D%A2%E4%BA%86%E4%B8%AA%E4%B8%BB%E9%A2%98%E5%B0%B1%E6%8A%A5%E9%94%99%E4%BA%86%EF%BC%9F"><span class="toc-number">6.</span> <span class="toc-text">为什么换了个主题就报错了？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%BB%E5%93%AA%E6%89%BE%E8%87%AA%E5%B7%B1%E5%96%9C%E6%AC%A2%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%9F"><span class="toc-number">7.</span> <span class="toc-text">去哪找自己喜欢的主题？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%80%8E%E4%B9%88%E6%9D%A5%E7%9A%84%EF%BC%9F"><span class="toc-number">8.</span> <span class="toc-text">关于页面怎么来的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E6%88%91%E6%94%B9%E4%BA%86%E6%B2%A1%E6%95%88%E6%9E%9C%EF%BC%9F"><span class="toc-number">9.</span> <span class="toc-text">怎么我改了没效果？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9%E4%BA%86%E5%87%A0%E8%A1%8C%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%B0%B1%E5%BC%82%E5%B8%B8%E4%BA%86"><span class="toc-number">10.</span> <span class="toc-text">改了几行代码，就异常了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E4%BA%86%E4%BA%9B%E4%B8%9C%E8%A5%BF%E5%90%8E%E5%A4%96%E7%BD%91-403%EF%BC%8C%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E6%8F%90%E7%A4%BA-can-t-get"><span class="toc-number">11.</span> <span class="toc-text">删了些东西后外网 403，本地预览提示 can&#39;t get &#x2F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MarkDown%E8%AF%AD%E6%B3%95%E6%88%91%E4%B8%8D%E4%BC%9A%F0%9F%98%A2"><span class="toc-number">12.</span> <span class="toc-text">MarkDown语法我不会😢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%B7%BB%E5%8A%A0%E7%9A%84%E5%9B%BE%E7%89%87%E6%80%8E%E4%B9%88%E4%B8%8D%E6%98%BE%E7%A4%BA%EF%BC%9F"><span class="toc-number">13.</span> <span class="toc-text">我添加的图片怎么不显示？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A6%81%E4%BF%AE%E6%94%B9%E7%BD%91%E5%9D%80%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-number">14.</span> <span class="toc-text">要修改网址怎么办？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E4%B8%AA%E6%A0%B7%E5%BC%8F%E6%88%91%E4%B8%8D%E5%96%9C%E6%AC%A2%EF%BC%8C%E6%80%8E%E4%B9%88%E6%94%B9%EF%BC%9F"><span class="toc-number">15.</span> <span class="toc-text">这个样式我不喜欢，怎么改？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VSCODE-%E9%87%8C-Git-%E6%8F%90%E4%BA%A4%E7%82%B9-commit-%E5%90%8E%E4%B8%80%E7%9B%B4%E8%BD%AC%E5%9C%88%E5%9C%88%EF%BC%9F"><span class="toc-number">16.</span> <span class="toc-text">VSCODE 里 Git 提交点 commit 后一直转圈圈？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E6%B2%A1%E6%9C%89%E5%90%8E%E5%8F%B0%EF%BC%9F%E8%83%BD%E4%B8%8D%E8%83%BD%E5%9C%A8%E7%BA%BF%E7%BB%B4%E6%8A%A4%EF%BC%9F"><span class="toc-number">17.</span> <span class="toc-text">有没有后台？能不能在线维护？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%BD%E9%83%A8%E7%BD%B2%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E5%90%97%EF%BC%9F"><span class="toc-number">18.</span> <span class="toc-text">能部署到自己的云服务器上吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-%E6%8E%A8%E9%80%81%E5%90%8C%E6%AD%A5%E5%A4%B1%E8%B4%A5"><span class="toc-number">19.</span> <span class="toc-text">Git 推送同步失败</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE%E6%8F%90%E7%A4%BA-not-found-404"><span class="toc-number">20.</span> <span class="toc-text">外网访问提示 not found 404</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub-%E9%A1%B5%E9%9D%A2%E4%B8%8A%E6%80%8E%E4%B9%88%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">21.</span> <span class="toc-text">GitHub 页面上怎么创建文件夹</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/academia-example.html" title="学术简历样本"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="学术简历样本"/></a><div class="content"><a class="title" href="/action-hexo/academia-example.html" title="学术简历样本">学术简历样本</a><time datetime="2023-02-21T18:02:02.000Z" title="发表于 2023-02-22 02:02:02">2023-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-9.html" title="从零开始建个小站 - 常见问题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 常见问题"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-9.html" title="从零开始建个小站 - 常见问题">从零开始建个小站 - 常见问题</a><time datetime="2022-11-11T03:11:11.000Z" title="发表于 2022-11-11 11:11:11">2022-11-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-3.html" title="从零开始建个小站 - 1. 搭个本地预览环境"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 1. 搭个本地预览环境"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-3.html" title="从零开始建个小站 - 1. 搭个本地预览环境">从零开始建个小站 - 1. 搭个本地预览环境</a><time datetime="2022-06-06T12:20:20.000Z" title="发表于 2022-06-06 20:20:20">2022-06-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-4.html" title="从零开始建个小站 - 2. 拉取仓库到本地"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-9.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 2. 拉取仓库到本地"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-4.html" title="从零开始建个小站 - 2. 拉取仓库到本地">从零开始建个小站 - 2. 拉取仓库到本地</a><time datetime="2022-05-24T12:20:20.000Z" title="发表于 2022-05-24 20:20:20">2022-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 3. 搞个编辑器"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器">从零开始建个小站 - 3. 搞个编辑器</a><time datetime="2022-05-23T12:20:20.000Z" title="发表于 2022-05-23 20:20:20">2022-05-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 易网盟</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/action-hexo/js/utils.js"></script><script src="/action-hexo/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://xdata.wubase.com/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://xdata.wubase.com/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(init)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
