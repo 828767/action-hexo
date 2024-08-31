@@ -44,6 +44,7 @@ theme: butterfly  #多功能主题，配置文件：_config.butterfly.yml
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://yiwangmeng.cn/action-hexo # 网址, 必须以 http[s]:// 开头，没有自己的域名就用免费 username.github.io
+# root: /action-hexo # 存储在GitHub项目仓库时可用此种组织形式
 permalink: :title.html #链接发布格式
 permalink_defaults:
 pretty_urls:
