@@ -13,9 +13,9 @@ tags:
 VSCODE 就是个不错的选择，自行到 [微软官方网站](https://code.visualstudio.com/download) 去下载安装。
 > 如果墙内下载慢，可把下载地址中 `az764295.vo.msecnd.net`  改为 `vscode.cdn.azure.cn` 可实现秒下，如:
 > 
-> Windows版墙内地址：https://vscode.cdn.azure.cn/stable/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/VSCodeSetup-x64-1.76.2.exe
+> Windows版墙内地址：https://vscode.cdn.azure.cn/stable/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/VSCodeUserSetup-x64-1.92.2.exe
 >
-> macOS版墙内地址：https://vscode.cdn.azure.cn/stable/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/VSCode-darwin-universal.zip
+> macOS版墙内地址：https://vscode.cdn.azure.cn/stable/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/VSCode-darwin-universal.zip
 
 ![VSCODE](https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/vscode-hexo.png)
 
@@ -80,6 +80,7 @@ VSCODE 界面上其他按钮功能可以将鼠标移动到对应图形上方悬�
 更多操作建议去学习下 Git 基础知识，可求助我们的战略合作伙伴 Google 和百度。
 
 虽然项目仓库主页直接增删改文件都可以，但网页上只能一个一个文件操作，建议还是同步到本地使用，借助编辑器事半功倍，也相当于多了个源码本地备份。
+> 如果不是使用本站的仓库自动渲染方案，项目可能不是 Git 管理方式，在 vscode 中将显示不是 Git 仓库
 
 # 3.4 推荐插件
 作为 MarkDown 编辑器和文件管理器，建议安装以下插件：
