@@ -38,7 +38,7 @@ tags:
 
 打开命令行终端，输入：`hexo n post-name` ，如：`hexo n just-a-test` ，就会在 `source/_post` 目录下生成一个名称为 `just-a-test.md` 的文件，这就是新文章的 MarkDown 源码了。
 
-> 生成的新文章源码名称不建议含有特殊符号、汉字
+> 生成的新文章MarkDown源码文件名称不建议含有特殊符号、汉字
 
 打开源码文件就能看到自动生成了文章标题等基本的 `Front-matter` 信息，文章标题等按自己的实际内容编写修改。
 

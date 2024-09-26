@@ -87,7 +87,7 @@ MarkDown语法已经很简单易懂了，这里有一个章节列了几个常用
 > 如果是网络封锁严重的地区，建议将图片传图床后从图床引用，防止 `jsdelivr`、`Github` 等被屏蔽导致图片加载失败
 
 ## 要修改网址怎么办？
-Hexo 网站网址在网站配置 `_config.yml` 中修改如下配置项：
+网站网址在 Hexo 配置文件 `_config.yml` 中修改如下配置项：
 ```yml
 #  网址, 必须以 http[s]:// 开头
 #  没有自己的域名就用免费 username.github.io
@@ -104,6 +104,18 @@ url: https://yiwangmeng.cn
 2. 其次同步修改这个 `username.github.io` 的 Pages 仓库名
 3. 然后配置中或者 DNS 解析记录也要相应的同步修改
  
+## 文章 URL 不符合预期
+URL 组织形式可以按配置指定，详细可参考 [Hexo 官方文档 permalinks 说明](https://hexo.io/docs/permalinks)。
+
+当想按目录路径组织文章时，默认文章 URL 形式为：`https://yiwangmeng.cn/action-hexo/guide/how-to-build-site-0.html`，某些设置可能影响 URL 中路径表现形式，如 Hexo 配置：
+```YAML
+# Writing
+new_post_name: :title.md # 新建文章文件命名格式
+# 配置`:title.md`格式URL路径支持目录：`/dir/title`
+# 配置`:year-:month-:title.md`时URL将变成：`/dir-title`
+```
+已发现问题中，新建文章的文件名命名配置会影响 URL 路径形式，当配置 `:year-:month-:title.md` 时 URL 将变成：`https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-0.html`，`/guide/` 目录路径被同化成了文件名的前缀。
+
 
 ## 这个样式我不喜欢，怎么改？
 请去翻下 `主题配置` 和 `主题文档` ，如果没看到相关设置或者满足不了你的需求，能问这问题的同学还是建议别折腾魔改主题了，去换个主题更实际点，更换主题方法请参考前文 [怎么更换/安装/配置主题](#%E6%80%8E%E4%B9%88%E6%9B%B4%E6%8D%A2-x2F-%E5%AE%89%E8%A3%85-x2F-%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%EF%BC%9F)。

@@ -62,7 +62,7 @@ i18n_dir: :lang
 skip_render: [README.md]
 
 # Writing
-new_post_name: :year-:month-:title.md # 新建文章文件命名格式，`:title.md`格式URL路径支持目录：`/dir/title`:year-:month-:title.md`时URL将变成：`/dir-title`
+new_post_name: :year-:month-:title.md # 新建文章文件命名格式，`:title.md`格式URL路径支持目录：`/dir/title`，`:year-:month-:title.md`时URL将变成：`/dir-title`
 default_layout: post # 默认框架，hexo new xx 不指定框架时默认post
 titlecase: false # Transform title into titlecase
 external_link:
