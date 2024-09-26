@@ -19,7 +19,7 @@ subtitle: '专注网站建设优化，做互联网的搬砖人' #网站副标题
 description: 'Hexo/Hugo... + GitHub 免费仓库托管入门教程引导。用最简单的方案，办最实用的事，微软不倒，羊毛到老！' #网站描述
 keywords: '静态网站,hexo教程,搭建学术简历,免费建站,GitHub博客,免备案网站'  #网站关键词，不是所有的主题都支持
 author: 易网盟  #作者
-timezone: 'Asia/Shanghai' #时区，一般中国时区
+timezone: 'Asia/Shanghai' #时区，一般中国时区不用动
 # language: en  #网站语言，默认 en，请根据主题文档设置
 # language: zh-Hans #theme: yelee，next
 language: zh-CN  #theme: maupassant，landscape，Annie
@@ -27,7 +27,7 @@ language: zh-CN  #theme: maupassant，landscape，Annie
 # Extensions 
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-# 只能启用1个主题，启用后本地使用 `hexo s` 命令即可启动预览服务进行预览
+# 只能启用1个主题，启用后本地使用 `hexo server` 命令即可启动预览服务进行预览
 # 切换主题后如果预览样式不对，请启动预览服务前运行一遍 `hexo clean` 命令
 # 主题相关请严格按照主题文档去配置，主题相关请严格按照主题文档去配置，主题相关请严格按照主题文档去配置
 # theme: landscape  #默认主题，最简单
@@ -45,7 +45,7 @@ theme: butterfly  #多功能主题，配置文件：_config.butterfly.yml
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://yiwangmeng.cn/action-hexo # 网址, 必须以 http[s]:// 开头，没有自己的域名就用免费 username.github.io
 # root: /action-hexo # 存储在GitHub项目仓库时可用此种组织形式
-permalink: :title.html #链接发布格式
+permalink: :title.html #链接发布格式： :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -63,7 +63,7 @@ skip_render: [README.md]
 
 # Writing
 new_post_name: :year-:month-:title.md # 新建文章文件命名格式，`:title.md`格式URL路径支持目录：`/dir/title`:year-:month-:title.md`时URL将变成：`/dir-title`
-default_layout: post
+default_layout: post # 默认框架，hexo new xx 不指定框架时默认post
 titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
@@ -71,7 +71,7 @@ external_link:
   exclude: ''
 filename_case: 0 # 把文件名称转换为 (1) 小写或 (2) 大写
 render_drafts: false
-post_asset_folder: false # 是否创建文章资源文件夹
+post_asset_folder: false # 是否按文章创建单个资源文件夹
 relative_link: false # 是否把链接改为与根目录的相对路径
 future: true
 syntax_highlighter: highlight.js # highlight.js | prismjs | <empty>
@@ -132,7 +132,6 @@ include:
 exclude:
 ignore:
 
-
 # 网站地图
 # Docs: https://github.com/hexojs/hexo-generator-sitemap
 sitemap:
@@ -156,6 +155,7 @@ search:
   field: post
   format: html
   limit: 10000
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 ## 使用 'hexo deploy' 命令发布才用到此处配置，仓库版不需要本地 'hexo g -D' 动作
