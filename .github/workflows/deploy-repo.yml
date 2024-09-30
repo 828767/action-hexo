@@ -40,7 +40,7 @@ jobs:
       if: ${{ env.PAGE_REPO != 'true' }}
       uses: actions/setup-node@v4
       with:
-        node-version: 18
+        node-version: 20
       
     - name: Install hexo and build
       if: ${{ env.PAGE_REPO != 'true' }}
