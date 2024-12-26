@@ -16,7 +16,7 @@ tags:
 
 还是在 `Git Bash` 中，输入这样的命令：
 ```bash
-cd d:\Git   #先切换到要存放Git文件的目录路径
+cd d:\GitHub   #先切换到存放本地文件的路径
 git clone --recurse-submodules 源码仓库地址 #带子模块一起克隆到本地
 ```
 
@@ -45,7 +45,7 @@ git submodule init && git submodule update
 
 > **已拉取的仓库修改协议**：用文本编辑器打开仓库目录下的 `.git/config` 修改对应 `url = 复制的仓库地址` ，别修改错了！
 >
-> 如果涉及到 `submodules`，也请在 `.gitmodules` 中将子模块项目一并修改为 `SSH` 地址
+> 如果涉及到**管理有修改权限的** `submodules`，也请在 `.gitmodules` 中将子模块项目一并修改为 `SSH` 地址
 
 <!-- endtab -->
 
