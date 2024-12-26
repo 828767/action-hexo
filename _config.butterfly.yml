@@ -166,7 +166,7 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -182,6 +182,11 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+    - How are you?
+    - I am fine. Thx, and U?
+    - I am fine too.
+    - 春有百花秋有月，夏有凉风冬有雪。
+    - 若无闲事挂心头，便是人间好时节。
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right

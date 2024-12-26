@@ -80,10 +80,9 @@ VSCODE 界面上其他按钮功能可以将鼠标移动到对应图形上方悬�
 # 3.4 推荐插件
 作为 MarkDown 编辑器和文件管理器，建议安装以下插件：
 1. `Git History`/`Git Graph`：界面化查看及管理 Git 提交记录
-2. `GitLens supercharges`：在文件内容中提示 Git 变更异同等信息
-3. `Markdown All in One`：MarkDown 预览及一些快捷方式
-4. `Markdown Preview Mermaid Support`：MarkDown 流程图、时序图等渲染支持
-5. `Markdown Table`：快速插入 MarkDown 表格或者转换成表格代码
-6. `Markdown Shortcuts`：MarkDown 各种语法快捷方式
+2. `Markdown All in One`：MarkDown 预览及一些快捷方式
+3. `Markdown Preview Mermaid Support`：MarkDown 流程图、时序图等渲染支持
+4. `Markdown Table`：快速插入 MarkDown 表格或者转换成表格代码
+5. `Markdown Shortcuts`：MarkDown 各种语法快捷方式
 
 其他有用的插件请自行探索。
