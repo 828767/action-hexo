@@ -132,7 +132,7 @@ npm install
 
 
 # 2.3 预览测试
-在仓库 `根目录路径下` 运行 `hexo s` 即可启动预览服务：
+在仓库 `根目录路径下` 运行 `hexo server` 即可启动预览服务：
 ```bash
 user@IAY MINGW64 /d/Git/action-hexo (main)
 $ hexo s

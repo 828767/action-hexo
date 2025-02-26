@@ -10,7 +10,7 @@ tags:
 懒那就没辙了，快发动你的钞能力！
 > `按次付费`，花了钱也不可能一直伺候你，有些人想付费站长也不乐意接，毕竟彼此选择才能幸福！
 
-<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/QR-atm.png"  width="200" height="260" ></div>
+<!-- <div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/QR-atm.png"  width="200" height="260" ></div> -->
 
 <div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/QR-Taobao.png" width="200" height="260" ></div>
 
@@ -20,15 +20,9 @@ tags:
 ## 问就发教程，就不能直接给我远程解决吗？
 请看上一条！
 
-有教程都不舍得看一眼，这么珍惜自己的时间精力就该想到别人也一样。劳动是按次付出的，之前的需求已完成那么站长就履约结束，请问这次你付费了吗？
+有教程都不舍得看一眼，这么珍惜自己的时间精力就该想到别人也一样。劳动是按次付出的，之前的需求已完成那么站长就履约结束，请问这次是付费了吗？
 
-你有问题，站长提供解决思路，已经是友情帮助了，站长的时间精力也不是无限的。友好文明一点，指不定站长闲得慌还能友情远程搭把手，上帝就不要指望空手套站长24小时守着你了，站长的世界里人人平等！
-
-## GitHub咋打不开？
-GitHub默认是不用爬墙的，但各地网络管制松紧度不一样，无法访问就上梯子吧。Windows 系统强烈推荐用 [`winXray`](https://github.com/cdnf/winxray/tree/master "只知开源软件地址，代理服务请自己去找") 这个代理软件，简单好用，简直是[为 GitHub 而生](https://www.yiwangmeng.com/pcsoft-winxray "winXray简介")。
-
-1. Git 客户端仓库同步可以先尝试免梯子方法：配置好 `SSH` 密钥后使用 `SSH` 协议，方法可参考：{% post_link '从零开始建个小站 - 2. 拉取仓库到本地' %} 中 `生成 SSH 密钥对` 章节内容
-2. Git 客户端启用梯子配置方法请见：{% post_link '从零开始建个小站 - 其他知识' %} 中相关内容
+你丢出问题，站长提供解决思路，不是什么态度不好的问题，站长的时间精力有限，废话多说无益！耐心友好一点，指不定站长闲得慌还能友情远程搭把手，上帝就不要指望空手套站长24小时守着你了，站长的世界里人人平等！
 
 ## 换电脑怎么办？
 本站提供的仓库方案，只要你仓库不删就不会丢，新电脑上照本站使用教程克隆源码仓库安装一遍本地预览环境和 SSH 密钥就可以了，如果你遵循 Git 提交规则，不管到哪有多少个设备都可以一起用，也可以随时恢复到任意一次提交的版本。
@@ -59,9 +53,9 @@ GitHub默认是不用爬墙的，但各地网络管制松紧度不一样，无�
 > 而且，点 `commit` 前请务必填写 `message` ，告知后来人改了什么，为什么会有这次变更，这是 Git 版本管理基本规范。
 
 ## 改了几行代码，就异常了
-改了啥自己清楚，Git 历史记录中也能对比前后差异，所以改完建议本地预览一下结果，启动 `hexo s` 预览的时候就会显示日志，循着异常日志去看下具体什么问题，然后对应修正即可。
+改了啥自己清楚，Git 历史记录中也能对比前后差异，所以改完建议本地预览一下结果，启动 `hexo server` 预览的时候就会显示日志，循着异常日志去看下具体什么问题，然后对应修正即可。
 
-或者把错误提示关键词丢给本站战略合作伙伴 Google 和百度，让我们的战略伙伴助你一臂之力。
+或者把错误提示关键词丢给本站战略合作伙伴 Google、百度及各种 AI 工具，让我们的战略伙伴助你一臂之力。
 
 ## 删了些东西后外网 `403`，本地预览提示 `can't get /`
 一些 `page` 文件夹可以随意删，最多提示 `404`，但 `source/_posts` 目录下 `必须存在一篇以上文章`，否则视为空站无内容，无内容就不会生成 `index.html`，此时推送到外网就会不存在网站首页，访问时 `nginx` 就会抛 `403` 错误。
@@ -88,7 +82,7 @@ MarkDown语法已经很简单易懂了，这里有一个章节列了几个常用
 
 ## 要修改网址怎么办？
 网站网址在 Hexo 配置文件 `_config.yml` 中修改如下配置项：
-```yml
+```YAML
 #  网址, 必须以 http[s]:// 开头
 #  没有自己的域名就用免费 username.github.io
 url: https://yiwangmeng.cn
@@ -142,9 +136,15 @@ new_post_name: :title.md # 新建文章文件命名格式
 2. 丢弃本站仓库方案，按官方文档修改发布配置，然后用 `hexo g && hexo d` 命令发布到自己的服务器
 3. 在服务器上部署 hexo 环境，把 MarkDown 源码推送到自己的服务器，触发 `hexo g` 发布 `html`
 
-> 强烈不推荐在服务器上运行 `hexo s` 提供长期营业的残暴行为，这种做法极其愚蠢
+> 强烈不推荐在服务器上运行 `hexo server` 提供长期营业的残暴行为，这种做法极其愚蠢
 
 具体怎么做请自行求助本站战略合作伙伴。
+
+## GitHub咋打不开？
+GitHub默认是不用爬墙的，但各地网络管制松紧度不一样，无法访问就上梯子吧。Windows 系统强烈推荐用 [`winXray`](https://github.com/cdnf/winxray/tree/master "只知开源软件地址，代理服务请自己去找") 这个代理软件，简单好用，简直是[为 GitHub 而生](https://www.yiwangmeng.com/pcsoft-winxray "winXray简介")。
+
+1. Git 客户端仓库同步可以先尝试免梯子方法：配置好 `SSH` 密钥后使用 `SSH` 协议，方法可参考：{% post_link '从零开始建个小站 - 2. 拉取仓库到本地' %} 中 `生成 SSH 密钥对` 章节内容
+2. Git 客户端启用梯子配置方法请见：{% post_link '从零开始建个小站 - 其他知识' %} 中相关内容
 
 ## Git 推送同步失败
 这问题比较复杂，网络或者权限问题居多，具体还需要看 Git 输出日志，提取关键信息求助战略合作伙伴基本上能解决。

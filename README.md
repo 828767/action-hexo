@@ -79,7 +79,7 @@ git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆
 npm install
 ```
 
-以上命令实际上是下载 `package.json` 中定义好的依赖包，等依赖包下载完成，整个本地预览环境就全部安装完成了，在仓库根目录路径下运行 `hexo s` 即可启动预览服务：
+以上命令实际上是下载 `package.json` 中定义好的依赖包，等依赖包下载完成，整个本地预览环境就全部安装完成了，在仓库根目录路径下运行 `hexo server` 即可启动预览服务：
 ```bash
 user@IAY MINGW64 /d/Git/action-hexo (main)
 $ hexo s

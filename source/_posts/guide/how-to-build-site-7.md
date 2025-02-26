@@ -65,7 +65,7 @@ permalink: :title.html #链接发布格式
 # Extensions 
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-# 只能启用1个主题，启用后本地使用 `hexo s` 命令即可启动预览服务进行预览
+# 只能启用1个主题，启用后本地使用 `hexo server` 命令即可启动预览服务进行预览
 # 切换主题后如果预览样式不对，请启动预览服务前运行一遍 `hexo clean` 命令
 # theme: landscape  #默认主题，最简单
 # theme: maupassant #简洁的博客主题，配置文件：_config.maupassant.yml
