@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>从零开始建个小站 - 2. 拉取仓库到本地 | 易网盟</title><meta name="author" content="易网盟"><meta name="copyright" content="易网盟"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前面的准备工作已完成，剩下就是将仓库文件克隆同步到本地电脑，方便后续维护与预览。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始建个小站 - 2. 拉取仓库到本地">
+<meta property="og:url" content="https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-4.html">
+<meta property="og:site_name" content="易网盟">
+<meta property="og:description" content="前面的准备工作已完成，剩下就是将仓库文件克隆同步到本地电脑，方便后续维护与预览。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-4.png">
+<meta property="article:published_time" content="2022-05-24T12:20:20.000Z">
+<meta property="article:modified_time" content="2025-02-26T03:37:56.633Z">
+<meta property="article:author" content="易网盟">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-4.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "从零开始建个小站 - 2. 拉取仓库到本地",
+  "url": "https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-4.html",
+  "image": "https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-4.png",
+  "datePublished": "2022-05-24T12:20:20.000Z",
+  "dateModified": "2025-02-26T03:37:56.633Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "易网盟",
+      "url": "https://yiwangmeng.cn/action-hexo/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/action-hexo/favicon.ico"><link rel="canonical" href="https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-4.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/action-hexo/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/action-hexo/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'true',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '从零开始建个小站 - 2. 拉取仓库到本地',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/action-hexo/atom.xml" title="易网盟" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/action-hexo/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/action-hexo/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/action-hexo/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/action-hexo/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/action-hexo/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-4.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/action-hexo/"><span class="site-name">易网盟</span></a><a class="nav-page-title" href="/action-hexo/"><span class="site-name">从零开始建个小站 - 2. 拉取仓库到本地</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/action-hexo/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">从零开始建个小站 - 2. 拉取仓库到本地</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-24T12:20:20.000Z" title="发表于 2022-05-24 20:20:20">2022-05-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-26T03:37:56.633Z" title="更新于 2025-02-26 11:37:56">2025-02-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/action-hexo/categories/%E5%81%9A%E7%BD%91%E7%AB%99/">做网站</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>前面的准备工作已完成，剩下就是将仓库文件克隆同步到本地电脑，方便后续维护与预览。</p>
+<span id="more"></span>
+<h1>2.1 git clone</h1>
+<blockquote>
+<p>本站方案 <code>只需要维护私有源码仓库</code>，所以只需要将 <code>私有源码仓库</code> 克隆到本地使用即可，网页会自动发布到对外展示服务仓库对应分支，用户名和对外展示仓库不删不改就行。</p>
+<p>如果改了 GItHub 用户名，请参考 <a href="/action-hexo/guide-how-to-build-site-9.html" title="从零开始建个小站 - 常见问题">从零开始建个小站 - 常见问题</a> 中 <code>要修改网址怎么办</code> 中提及项做相应修改。</p>
+</blockquote>
+<p>还是在 <code>Git Bash</code> 中，输入这样的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> d:\GitHub   <span class="comment">#先切换到存放本地文件的路径</span></span><br><span class="line">git <span class="built_in">clone</span> --recurse-submodules 源码仓库地址 <span class="comment">#带子模块一起克隆到本地</span></span><br></pre></td></tr></table></figure>
+<p>如果第一次克隆时未带 <code>--recurse-submodules</code> 参数或者没有完整完成，可以 <code>在源码仓库根目录路径下</code> 运行以下命令继续完成子模块更新：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#请在仓库根目录路径下运行以下命令</span></span><br><span class="line">git submodule init &amp;&amp; git submodule update</span><br></pre></td></tr></table></figure>
+<p>以上命令中请将 <code>源码仓库地址</code> 换成自己的源码仓库实际地址，建议从仓库页面上复制。</p>
+<p>仓库地址获取方法：打开源码仓库主页》在文件列表右上方有个 <code>Code</code> ，点击下拉复制，如下图所示可选择 <code>HTTPS</code>「首选」 或 <code>SSH</code>：</p>
+<p><img src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/github_clone_https_url.png" alt="获取项目仓库地址" loading="lazy"></p>
+<div class="tabs"><div class="nav-tabs"><button type="button" class="tab active">HTTPS</button><button type="button" class="tab">SSH</button></div><div class="tab-contents"><div class="tab-item-content active"><p>第一次使用 GitHub 账号需要授权，默认会有如下图授权提示弹窗，选择从浏览器登录授权，打开浏览器后按提示输入账号密码登录后点击授权，直到出现授权成功的提示就表示授权成功。</p>
+<p><img src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/github-auth-connect.png" alt="连接GitHub账号授权" loading="lazy"></p>
+<p><img src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/git-repo-authentication.jpg" alt="浏览器登录授权成功" loading="lazy"></p>
+<blockquote>
+<p>如果由于网络原因，<code>HTTPS</code> 协议无法拉取/推送仓库，可尝试使用 <code>SSH</code> 协议</p>
+</blockquote>
+<blockquote>
+<p><strong>已拉取的仓库修改协议</strong>：用文本编辑器打开仓库目录下的 <code>.git/config</code> 修改对应 <code>url = 复制的仓库地址</code> ，别修改错了！</p>
+<p>如果涉及到<strong>管理有修改权限的</strong> <code>submodules</code>，也请在 <code>.gitmodules</code> 中将子模块项目一并修改为 <code>SSH</code> 地址</p>
+</blockquote></div><div class="tab-item-content"><p>如果要使用 <code>SSH</code> 协议链接，需要先配置 <code>SSH</code> 连接密钥。当前 GitHub 强制用户使用超长随机串密码，需要遵循规则使用 <code>SHA-2</code> 签名规则密钥。</p>
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #8a6d3b;; background-color: #fcf8e3; border-color: #faebcc;">
+<strong>注意：</strong> 
+<p>2021年8月14号开始，GitHub弃用账密验证Git操作，改用token或SSH密钥</p>
+<p>GitHub 在 2022 年 3 月 15 日通过删除较旧的不安全密钥类型提高了安全性，不再支持 DSA 密钥 (<code>ssh-dss</code>)。</p>
+<p>在 2021 年 11 月 2 日之前 <code>valid_after</code> 的 RSA 密钥 (<code>ssh-rsa</code>) 可以继续使用任何签名算法。 在该日期之后生成的 RSA 密钥必须使用 SHA-2 签名算法。 某些较旧的客户端可能需要升级才能使用 SHA-2 签名。</p></div>
+<h2 id="生成-SSH-密钥对"><a class="headerlink" href="#生成-SSH-密钥对"></a>生成 SSH 密钥对</h2>
+<p>打开 <code>Git Bash Here</code> 或者系统终端，通过以下命令生成私钥和公钥：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成密钥对，一路回车默认即可</span></span><br><span class="line"><span class="comment"># 如已有其他密钥对在用，自己改下生成的文件名以防覆盖</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;Your_Email&quot;</span></span><br></pre></td></tr></table></figure>
+<p>如果您使用的是不支持 <code>ed25519</code> 算法的旧系统，请使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;Your_Email&quot;</span></span><br></pre></td></tr></table></figure>
+<p>更多密钥相关详细信息可参阅 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">GitHub官方文档</a></p>
+<p>如果你是一路回车生成密钥对，那么生成的密钥对会保存在：<code>~/.ssh/</code> 目录下，<code>~</code> 表示用户目录，如操作系统登录用户名是 <code>xyz</code> ，那么在 Windows 下路径一般为 <code>C:\Users\xyz\.ssh</code> ，macOS/Linux下路径为 <code>/home/xyz/.ssh</code> ，其中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/.ssh/id_ed25519 //私钥，保存在本地</span><br><span class="line">~/.ssh/id_ed25519.pub //公钥，配置到远端</span><br></pre></td></tr></table></figure>
+<p>至此，本地 Git 认证环境已准备妥当，下一步将公钥配置到 GitHub 中就能使用了。</p>
+<h2 id="配置到-GitHub"><a class="headerlink" href="#配置到-GitHub"></a>配置到 GitHub</h2>
+<p>为了使用方便，直接给 GitHub 添加一个用户密钥，一个密钥可作用于整个账号的增删改查操作。</p>
+<ol>
+<li>
+<p>将 SSH 公钥内容复制到剪贴板「假设都按前面的默认操作」</p>
+ <details open><summary>Windows</summary>
+<p>打开 <code>Git Bash Here</code> ，复制粘贴如下命令</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_ed25519.pub</span><br><span class="line">//该命令自动将公钥存到剪贴板，直接用文本编辑器打开公钥再复制也是一样的</span><br></pre></td></tr></table></figure>
+ </details>
+ <details><summary>macOS/Linux</summary>
+<p>打开 <code>Terminal</code>（终端），复制粘贴如下命令：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_ed25519.pub</span><br><span class="line">// 执行完将打印出来的公钥内容完整复制待用</span><br></pre></td></tr></table></figure>
+ </details>
+</li>
+<li>
+<p>登录GitHub账号后，在任何页面的右上角，单击右上角个人资料照片，然后单击弹出下拉中的 <code>Settings（设置）</code></p>
+</li>
+<li>
+<p>选择左侧 <code>Access</code>》 点击 <code>SSH and GPG keys</code>，点击 <code>New SSH key（新 SSH 密钥）</code></p>
+<p><img src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/github_set_access_new_ssh.png" alt="Add New SSH key" loading="lazy"></p>
+</li>
+<li>
+<p>在 <code>Title</code>（标题）字段中，为新密钥添加描述性标签便于识别用途。 例如，如果您使用在个人Mac上，此密钥名称可能是 <code>Personal MacBook</code>。</p>
+</li>
+<li>
+<p>将前面复制的公钥串粘贴到 <code>Key</code>（密钥）字段</p>
+<p><img src="https://docs.github.com/assets/cb-24796/images/help/settings/ssh-key-paste.png" alt="粘贴公钥串" loading="lazy"></p>
+</li>
+<li>
+<p>最后点击 <code>Add SSH key（添加 SSH 密钥）</code> 完成添加</p>
+</li>
+</ol></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div>
+<h1>2.2 安装依赖包</h1>
+<p>仓库中只包含网站必须的内容源码文件，一些依赖包文件是忽略提交的，所以本地需要重新安装，在仓库 <code>根目录路径下</code> 运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>以上命令实际上是下载 <code>package.json</code> 中定义好的依赖包，等依赖包下载完成，整个本地预览环境就全部安装完成了。</p>
+<h1>2.3 预览测试</h1>
+<p>在仓库 <code>根目录路径下</code> 运行 <code>hexo server</code> 即可启动预览服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">user@IAY MINGW64 /d/Git/action-hexo (main)</span><br><span class="line">$ hexo s</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<p>以上输出信息中，<code>/d/Git/action-hexo (main)</code> 就是所谓 <code>运行路径</code> ，Windows系统表示 <code>d:\Git\action-hexo</code> 目录，当前在 <code>main</code> 分支。</p>
+<p>浏览器中打开 <code>http://localhost:4000</code> 就可以预览，按 <code>Ctrl+C</code> 组合键停止预览服务，一些主题或者网站设置变更需要重启该预览服务才能看到效果。</p>
+<h1>2.4 用得到的命令</h1>
+<ol>
+<li><code>hexo server</code> ：开启本地预览服务，默认端口 <code>4000</code>，可以添加 <code> -p port</code> 指定预览端口，<code>Ctrl + C</code> 关闭，一些网站更改需要重启预览才能看到效果</li>
+<li><code>hexo new &quot;postName&quot;</code> ：新建文章，<code>postName</code> 不建议是中文，也不要添加特殊符号，生成MarkDown 文件在 <code>source/_post</code> 目录下，<code>hexo new</code> 默认新生成的就是 <code>post</code> 类型</li>
+<li><code>hexo new page &quot;pageName&quot;</code> ：新建页面，会在 <code>source</code> 目录下生成 <code>pageName</code> 文件夹及对应 <code>index.md</code></li>
+</ol>
+<p>上面用到的命令对应缩写：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo s == hexo server</span><br><span class="line">hexo n == hexo new</span><br></pre></td></tr></table></figure>
+<p>更多命令可自行学习</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yiwangmeng.cn/action-hexo">易网盟</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-4.html">https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-4.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://yiwangmeng.cn/action-hexo" target="_blank">易网盟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/action-hexo/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post-share"><div class="social-share" data-image="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-4.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器"><img class="cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" onerror="onerror=null;src='/action-hexo/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">从零开始建个小站 - 3. 搞个编辑器</div></div><div class="info-2"><div class="info-item-1">工欲善其事必先利其器，一个好用的编辑器可以事半功倍。  3.1 下载安装编辑器 VSCODE 就是个不错的选择，自行到 微软官方网站 去下载安装。  VSCODE...</div></div></div></a><a class="pagination-related" href="/action-hexo/guide-how-to-build-site-3.html" title="从零开始建个小站 - 1. 搭个本地预览环境"><img class="cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" onerror="onerror=null;src='/action-hexo/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">从零开始建个小站 - 1. 搭个本地预览环境</div></div><div class="info-2"><div class="info-item-1">如果你选择的是自备服务器的付费动态网站方案，那么直接在服务器上安装环境部署网站程序即可，本文不做演示，下文只针对免费静态站方案进行详细说明。 其实官方默认自带的 hello world...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/action-hexo/guide-how-to-build-site-0.html" title="从零开始建个小站 - 教程导航"><img class="cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-20</div><div class="info-item-2">从零开始建个小站 - 教程导航</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/action-hexo/guide-how-to-build-site-1.html" title="从零开始建个小站 - 前置知识"><img class="cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-5.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-20</div><div class="info-item-2">从零开始建个小站 - 前置知识</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/action-hexo/guide-how-to-build-site-2.html" title="从零开始建个小站 - 建站方案选择"><img class="cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-8.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-20</div><div class="info-item-2">从零开始建个小站 - 建站方案选择</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a><a class="pagination-related" href="/action-hexo/guide-how-to-build-site-3.html" title="从零开始建个小站 - 1. 搭个本地预览环境"><img class="cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-06</div><div class="info-item-2">从零开始建个小站 - 1. 搭个本地预览环境</div></div><div class="info-2"><div class="info-item-1">如果你选择的是自备服务器的付费动态网站方案，那么直接在服务器上安装环境部署网站程序即可，本文不做演示，下文只针对免费静态站方案进行详细说明。 其实官方默认自带的 hello world...</div></div></div></a><a class="pagination-related" href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器"><img class="cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-23</div><div class="info-item-2">从零开始建个小站 - 3. 搞个编辑器</div></div><div class="info-2"><div class="info-item-1">工欲善其事必先利其器，一个好用的编辑器可以事半功倍。  3.1 下载安装编辑器 VSCODE 就是个不错的选择，自行到 微软官方网站 去下载安装。  VSCODE...</div></div></div></a><a class="pagination-related" href="/action-hexo/guide-how-to-build-site-6.html" title="从零开始建个小站 - 4. 练手内容维护"><img class="cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-2.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-22</div><div class="info-item-2">从零开始建个小站 - 4. 练手内容维护</div></div><div class="info-2"><div class="info-item-1">本实操仅针对 建站方案选择 中提及的免费静态站方案：hugo/hexo + GitHub + GitHub免费二级域名/自备域名...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/action-hexo/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">易网盟</div><div class="author-info-description">Hexo/Hugo... + GitHub 免费仓库托管入门教程引导。用最简单的方案，办最实用的事，微软不倒，羊毛到老！</div><div class="site-data"><a href="/action-hexo/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/action-hexo/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/action-hexo/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://nethouse.taobao.com/"><i class="fas fa-concierge-bell"></i><span>购买服务</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://www.wubase.com/" target="_blank" title="服务器推荐"><i class="fas fa-server" style="color: #24a96e;"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=1&amp;uin=961452396" rel="external nofollow noreferrer" target="_blank" title="QQ"><i class="fab fa-qq" style="color: #64299e;"></i></a><a class="social-icon" href="mailto:961452396@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是个 Hexo 框架示例站，由简入深可解锁更多玩法，也可以氪金请人代劳</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">2.1 git clone</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90-SSH-%E5%AF%86%E9%92%A5%E5%AF%B9"><span class="toc-number">1.1.</span> <span class="toc-text">生成 SSH 密钥对</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%88%B0-GitHub"><span class="toc-number">1.2.</span> <span class="toc-text">配置到 GitHub</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">2.2 安装依赖包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">2.3 预览测试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">2.4 用得到的命令</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/academia-example.html" title="学术简历样本"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="学术简历样本"/></a><div class="content"><a class="title" href="/action-hexo/academia-example.html" title="学术简历样本">学术简历样本</a><time datetime="2023-02-21T18:02:02.000Z" title="发表于 2023-02-22 02:02:02">2023-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-9.html" title="从零开始建个小站 - 常见问题"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-7.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 常见问题"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-9.html" title="从零开始建个小站 - 常见问题">从零开始建个小站 - 常见问题</a><time datetime="2022-11-11T03:11:11.000Z" title="发表于 2022-11-11 11:11:11">2022-11-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-3.html" title="从零开始建个小站 - 1. 搭个本地预览环境"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 1. 搭个本地预览环境"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-3.html" title="从零开始建个小站 - 1. 搭个本地预览环境">从零开始建个小站 - 1. 搭个本地预览环境</a><time datetime="2022-06-06T12:20:20.000Z" title="发表于 2022-06-06 20:20:20">2022-06-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-4.html" title="从零开始建个小站 - 2. 拉取仓库到本地"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-4.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 2. 拉取仓库到本地"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-4.html" title="从零开始建个小站 - 2. 拉取仓库到本地">从零开始建个小站 - 2. 拉取仓库到本地</a><time datetime="2022-05-24T12:20:20.000Z" title="发表于 2022-05-24 20:20:20">2022-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 3. 搞个编辑器"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器">从零开始建个小站 - 3. 搞个编辑器</a><time datetime="2022-05-23T12:20:20.000Z" title="发表于 2022-05-23 20:20:20">2022-05-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By 易网盟</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.3</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/action-hexo/js/utils.js"></script><script src="/action-hexo/js/main.js"></script><script src="/action-hexo/"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://xdata.wubase.com/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://xdata.wubase.com/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

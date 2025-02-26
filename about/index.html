@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>关于本站 | 易网盟</title><meta name="author" content="易网盟"><meta name="copyright" content="易网盟"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这是个互联网爱好者个人小站，完全出于兴趣爱好自封互联网研究院院长，乐于分享计算机相关使用方法，推广优质实用软件。所有技术类文章除特别说明外均为本站原创，所提供的软件为院长原创或由网络整理而来。 本院始终坚信：  分享是种美德，好人一生平安！  本着尊重国家法律的精神，根据中华人民共和国国务院令第632号规定：  第十七条 为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于本站">
+<meta property="og:url" content="https://yiwangmeng.cn/action-hexo/about/index.html">
+<meta property="og:site_name" content="易网盟">
+<meta property="og:description" content="这是个互联网爱好者个人小站，完全出于兴趣爱好自封互联网研究院院长，乐于分享计算机相关使用方法，推广优质实用软件。所有技术类文章除特别说明外均为本站原创，所提供的软件为院长原创或由网络整理而来。 本院始终坚信：  分享是种美德，好人一生平安！  本着尊重国家法律的精神，根据中华人民共和国国务院令第632号规定：  第十七条 为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2025-02-26T03:37:56.634Z">
+<meta property="article:modified_time" content="2025-02-26T03:37:56.634Z">
+<meta property="article:author" content="易网盟">
+<meta property="article:tag" content="静态网站,hexo教程,搭建学术简历,免费建站,GitHub博客,免备案网站">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/action-hexo/favicon.ico"><link rel="canonical" href="https://yiwangmeng.cn/action-hexo/about/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/action-hexo/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/action-hexo/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'true',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '关于本站',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'about'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/action-hexo/atom.xml" title="易网盟" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/action-hexo/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/action-hexo/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/action-hexo/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/action-hexo/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/action-hexo/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page type-about" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/action-hexo/"><span class="site-name">易网盟</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/action-hexo/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/action-hexo/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">关于本站</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><p>这是个互联网爱好者个人小站，完全出于兴趣爱好自封互联网研究院院长，乐于分享计算机相关使用方法，推广优质实用软件。所有技术类文章除特别说明外均为本站原创，所提供的软件为院长原创或由网络整理而来。</p>
+<p>本院始终坚信：</p>
+<blockquote>
+<p>分享是种美德，好人一生平安！</p>
+</blockquote>
+<p>本着尊重国家法律的精神，根据中华人民共和国国务院令第632号规定：</p>
+<blockquote>
+<p>第十七条 为了学习和研究软件内含的设计思想和原理，通过安装、显示、传输或者存储软件等方式使用软件的，可以不经软件著作权人许可，不向其支付报酬。</p>
+</blockquote>
+<p>本站所有资源均为学习，交流使用，不得用于任何商业用途。使用的软件请下载后24小时内自行删除，若由于研究学习本站提供文件或链接下载的软件而带来损失，本站不负任何责任。</p>
+<p>如果您发现本站侵害了您的版权，请联系院长并出示版权证明，院长将第一时间进行相关处理。</p>
+<p>如果您也一样热爱互联网，喜欢捣鼓软件，欢迎评论留言或与院长联系。</p>
+<p>QQ群：键盘侠 <code>260489333</code>，<a target="_blank" rel="noopener external nofollow noreferrer" href="https://jq.qq.com/?_wv=1027&amp;k=bsazUgJ3"><strong>点此加群</strong></a></p>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/QR-atm.png"  width="200" height="260" ></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/QR-Taobao.png" width="200" height="260" ></div>
+<div style="float:left;border:solid 1px 000;margin:2px;"><img src="https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/QR-QQ-260489333.png" width="200" height="260" ></div>
+<div style="float:none;clear:both;"></div>
+</div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/action-hexo/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">易网盟</div><div class="author-info-description">Hexo/Hugo... + GitHub 免费仓库托管入门教程引导。用最简单的方案，办最实用的事，微软不倒，羊毛到老！</div><div class="site-data"><a href="/action-hexo/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/action-hexo/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/action-hexo/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://nethouse.taobao.com/"><i class="fas fa-concierge-bell"></i><span>购买服务</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://www.wubase.com/" target="_blank" title="服务器推荐"><i class="fas fa-server" style="color: #24a96e;"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=1&amp;uin=961452396" rel="external nofollow noreferrer" target="_blank" title="QQ"><i class="fab fa-qq" style="color: #64299e;"></i></a><a class="social-icon" href="mailto:961452396@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是个 Hexo 框架示例站，由简入深可解锁更多玩法，也可以氪金请人代劳</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/academia-example.html" title="学术简历样本"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="学术简历样本"/></a><div class="content"><a class="title" href="/action-hexo/academia-example.html" title="学术简历样本">学术简历样本</a><time datetime="2023-02-21T18:02:02.000Z" title="发表于 2023-02-22 02:02:02">2023-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-9.html" title="从零开始建个小站 - 常见问题"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-7.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 常见问题"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-9.html" title="从零开始建个小站 - 常见问题">从零开始建个小站 - 常见问题</a><time datetime="2022-11-11T03:11:11.000Z" title="发表于 2022-11-11 11:11:11">2022-11-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-3.html" title="从零开始建个小站 - 1. 搭个本地预览环境"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 1. 搭个本地预览环境"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-3.html" title="从零开始建个小站 - 1. 搭个本地预览环境">从零开始建个小站 - 1. 搭个本地预览环境</a><time datetime="2022-06-06T12:20:20.000Z" title="发表于 2022-06-06 20:20:20">2022-06-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-4.html" title="从零开始建个小站 - 2. 拉取仓库到本地"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-4.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 2. 拉取仓库到本地"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-4.html" title="从零开始建个小站 - 2. 拉取仓库到本地">从零开始建个小站 - 2. 拉取仓库到本地</a><time datetime="2022-05-24T12:20:20.000Z" title="发表于 2022-05-24 20:20:20">2022-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png" onerror="this.onerror=null;this.src='/action-hexo/img/404.jpg'" alt="从零开始建个小站 - 3. 搞个编辑器"/></a><div class="content"><a class="title" href="/action-hexo/guide-how-to-build-site-5.html" title="从零开始建个小站 - 3. 搞个编辑器">从零开始建个小站 - 3. 搞个编辑器</a><time datetime="2022-05-23T12:20:20.000Z" title="发表于 2022-05-23 20:20:20">2022-05-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/action-hexo/categories/%E5%81%9A%E7%BD%91%E7%AB%99/"><span class="card-category-list-name">做网站</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/action-hexo/categories/%E5%AD%A6%E7%BC%96%E7%A8%8B/"><span class="card-category-list-name">学编程</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/action-hexo/tags/%E6%B7%B7%E6%8A%80%E8%83%BD/" style="font-size: 1.1em; color: #999">混技能</a> <a href="/action-hexo/tags/Example/" style="font-size: 1.1em; color: #999">Example</a> <a href="/action-hexo/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.5em; color: #99a9bf">教程</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/action-hexo/archives/2023/02/">
+            <span class="card-archive-list-date">
+              二月 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/action-hexo/archives/2022/11/">
+            <span class="card-archive-list-date">
+              十一月 2022
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/action-hexo/archives/2022/06/">
+            <span class="card-archive-list-date">
+              六月 2022
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/action-hexo/archives/2022/05/">
+            <span class="card-archive-list-date">
+              五月 2022
+            </span>
+            <span class="card-archive-list-count">9</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-02-26T03:38:25.478Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By 易网盟</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.3</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/action-hexo/js/utils.js"></script><script src="/action-hexo/js/main.js"></script><script src="/action-hexo/"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://xdata.wubase.com/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://xdata.wubase.com/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
