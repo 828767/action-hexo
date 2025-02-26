@@ -34,7 +34,6 @@ language: zh-CN  #theme: maupassant，landscape，Annie
 # theme: maupassant #简洁的博客主题，配置文件：_config.maupassant.yml
 theme: butterfly  #多功能主题，配置文件：_config.butterfly.yml
 # theme: anzhiyu  #butterfly魔改主题，配置文件：_config.anzhiyu.yml，从此切到其他主题时先 `hexo clean` 再 `hexo server`
-# theme: matery #响应式布局多媒体主题，配置文件：_config.matery.yml
 # theme: fluid #Material Design 风格主题，配置文件：_config.fluid.yml
 # theme: next #简约的博客主题，配置文件：_config.next.yml
 # theme: Academia #学术简历主题，配置文件：_config.Academia.yml
