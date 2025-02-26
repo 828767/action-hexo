@@ -1,6 +1,7 @@
 ---
 title: '从零开始建个小站 - 5. 个性化设置'
 date: 2022-05-21 20:20:20
+update: 2025-2-26 11:21:42
 categories:
   - 做网站
 tags:
@@ -33,8 +34,8 @@ action-hexo    #hexo程序工作目录
 |   |
 +---themes  #主题存放目录
 |   \---landscape #默认主题
-|   \---butterfly #另一个主题
-|   \---fluid #另一个主题
+|   \---butterfly #本地另一个主题
+|   \---fluid #本地另一个主题
 |   |
 ```
 ![认识hexo文件](https://static.yiwangmeng.com/https://raw.githubusercontent.com/828767/static/master/images/hexo-files-tree.png "Hexo 项目文件结构")
@@ -81,9 +82,9 @@ theme: butterfly  #时尚的博客主题，配置文件：_config.butterfly.yml
 
 为了以后更新主题时不覆盖我们已经配置好的内容，可以将主题目录下的 `_config.yml` 复制到 `hexo根目录` 下，并重命名为：`_config.主题名.yml` ，如：`_config.fluid.yml` 。
 
-> `_config.主题名.yml` 来源于 `themes/主题名/_config.yml`，如主题有更新请自行同步
+> `_config.主题名.yml` 来源于 `themes/主题名/_config.yml` 或 `node_modules/hexo-theme-主题名/_config.yml`，如主题有更新请自行同步
 
-> Hexo 会将 `_config.主题名.yml` 和 `themes/主题名/_config.yml` 配置内容 **合并**  **合并**  **合并** 使用，相同配置项则以 `_config.主题名.yml` 中的值为准
+> Hexo 会将 `_config.主题名.yml` 和主题目录下的 `_config.yml` 配置内容 **合并**  **合并**  **合并** 使用，相同配置项则以 `_config.主题名.yml` 中的值为准
 
 
 然后按照主题说明文档在新复制的主题配置中按需进行配置，以后主题有更新，如果涉及到该配置文件变更，请将最新内容同步到 `_config.主题名.yml` 中即可。
