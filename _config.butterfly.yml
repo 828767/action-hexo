@@ -61,7 +61,7 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.png
+favicon: /favicon.ico
 
 avatar:
   img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png #/img/butterfly-icon.png
@@ -1046,6 +1046,10 @@ Open_Graph_meta:
     # google_plus:
     # fb_admins:
     # fb_app_id:
+
+# Structured Data
+# https://developers.google.com/search/docs/guides/intro-structured-data
+structured_data: true
 
 # Add the vendor prefixes to ensure compatibility
 css_prefix: true

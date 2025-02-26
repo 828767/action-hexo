@@ -98,7 +98,7 @@ algolia_search:
     # - Hexo
 
 # Docsearch
-# Apply and Docs: see https://docsearch.algolia.com/
+# Apply and Option Docs: see https://docsearch.algolia.com/
 # Crawler Admin Console: see https://crawler.algolia.com/
 # Settings: https://www.algolia.com/
 docsearch:
